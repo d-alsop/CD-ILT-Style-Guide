@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CD ILT Style Guide</title>
@@ -8,6 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Open+Sans:wght@400;600;700&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet">
+    <script>
+      // Custom Tailwind Configuration for Pega Colors
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'pega-navy': '#001F5F',
+              'pega-violet': '#5F67B9',
+              'pega-ice-blue': '#D7E2F2',
+              'pega-mint': '#82CEC7',
+              'pega-teal': '#10A5AC',
+              'pega-sapphire': '#344A9B',
+              'pega-orange': '#F76923',
+              'pega-yellow': '#FFC836',
+              'pega-pink': '#EB3987',
+              'pega-black-pearl': '#0C1935',
+              'pega-bright-purple': '#828CFF',
+              'pega-emerald': '#005154',
+              'pega-berry': '#AC1361',
+              'pega-wine': '#661D34',
+              'pega-extra-light-gray': '#F6F6F9',
+              'pega-dark-gray': '#63666F',
+              'pega-extra-dark-gray': '#2E2E33',
+            }
+          }
+        }
+      }
+    </script>
     <style>
       :root {
         /* Primary from PDF */
@@ -35,7 +63,8 @@
       }
 
       body { font-family: 'Open Sans', sans-serif; color: #333; line-height: 1.6; }
-      h1, h2, h3, h4, h5 { font-family: 'Lora', serif; color: var(--pega-black-pearl); }
+      h1, h2, h4, h5 { font-family: 'Lora', serif; color: var(--pega-black-pearl); }
+      h3 { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 1.25rem; /* text-xl */ color: var(--pega-black-pearl); }
       .eyebrow-text { font-family: 'Chakra Petch', sans-serif; color: var(--pega-violet); font-weight: 600; text-transform: uppercase; }
 
       .sidebar-link { transition: all 0.2s ease-in-out; border-left: 3px solid transparent; }
@@ -55,646 +84,384 @@
       .visuals-section .dont-item::before { content: '✗'; color: #dc2626; margin-right: 0.5rem; }
       .resource-link { color: var(--pega-sapphire); text-decoration: underline; }
       .resource-link:hover { color: var(--pega-orange); }
+      mark { background-color: var(--pega-yellow); color: var(--pega-black-pearl); padding: 2px; border-radius: 3px; }
+      .leading-term { font-weight: 600; color: var(--pega-violet); }
     </style>
-  </head>
-  <body class="bg-gray-100">
+</head>
+<body class="bg-gray-100">
 
     <div class="flex">
-      <!-- Sidebar Navigation -->
-      <aside class="w-1/4 min-w-[320px] max-w-[320px] h-screen sticky top-0 bg-white border-r border-gray-200 p-6 flex flex-col">
-        <div class="flex items-center gap-3 mb-8">
-            <h1 class="text-2xl font-bold">CD ILT<br>Style Guide</h1>
-        </div>
-        <nav id="sidebar-nav" class="flex flex-col gap-2 overflow-y-auto">
-            <a href="#!" data-page="introduction" class="sidebar-link p-2 rounded-md font-semibold">Welcome</a>
-            <a href="#!" data-page="brand-elements" class="sidebar-link p-2 rounded-md font-semibold">Brand elements</a>
-            <a href="#!" data-page="visuals" class="sidebar-link p-2 rounded-md font-semibold">Visuals</a>
-            <a href="#!" data-page="writing" class="sidebar-link p-2 rounded-md font-semibold">Writing guidelines</a>
-            <a href="#!" data-page="powerpoint" class="sidebar-link p-2 rounded-md font-semibold">PowerPoint guidelines</a>
-            <a href="#!" data-page="appendix-a" class="sidebar-link p-2 rounded-md font-semibold">Terms that take headline case</a>
-            <a href="#!" data-page="appendix-b" class="sidebar-link p-2 rounded-md font-semibold">Terms to avoid</a>
-            <a href="#!" data-page="appendix-c" class="sidebar-link p-2 rounded-md font-semibold">Interacting with UI elements</a>
-        </nav>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="w-3/4 p-12 bg-white overflow-y-auto h-screen">
-
-        <!-- Page: Introduction -->
-        <div id="page-introduction" class="page-content">
-          <section>
-            <p class="eyebrow-text">Introduction</p>
-            <h2 class="text-3xl font-bold mt-2">What is a style guide?</h2>
-            <p class="mt-4 text-base text-gray-700">A style guide is a comprehensive document that outlines the standards and best practices for creating consistent and professional content. Its purpose is to ensure that all materials align with our brand identity, providing a unified and high-quality experience for our audience.</p>
-          </section>
-           <section>
-            <h3 class="text-2xl font-bold">Contact</h3>
-            <p class="mt-4 text-base text-gray-700">For any additions or edits to this style guide, please contact the Curriculum Development team.</p>
-          </section>
-          <section>
-            <h3 class="text-2xl font-bold">Resources</h3>
-            <div class="mt-4">
-                <h4 class="text-xl font-semibold">Authoring resources</h4>
-                <div class="mt-2 space-y-2 text-gray-700">
-                    <p><a href="https://pega.widen.net/s/vl2lmzghxc" target="_blank" rel="noopener noreferrer" class="resource-link">Pega Brand Guide:</a> Corporate guidelines.</p>
-                    <p><a href="https://pega-dev.zoominsoftware.io/bundle/guidebook/page/tech-doc-guidebook/content/guidebook-ref.html" target="_blank" rel="noopener noreferrer" class="resource-link">Pega Technical Documentation Guidebook:</a> Pega Community COE guidelines for technical documents.</p>
-                    <p><a href="https://pega-dev.zoominsoftware.io/bundle/guidebook/page/tech-doc-guidebook/content/word-list/terms-and-definitions-con.html" target="_blank" rel="noopener noreferrer" class="resource-link">A-Z words and terms:</a> Words, terms, and names.</p>
-                    <p><a href="https://learn.microsoft.com/en-us/style-guide/welcome/" target="_blank" rel="noopener noreferrer" class="resource-link">Microsoft Style Guide:</a> Writing guidelines are exceptions and additions to the Microsoft Writing Style Guide, which you should consult first.</p>
-                    <p><a href="https://pega-dev.zoominsoftware.io/bundle/guidebook/page/tech-doc-guidebook/content/academy/pa-academy-parent.html" target="_blank" rel="noopener noreferrer" class="resource-link">Pega Academy Guide:</a> Guidelines for Pega Academy content.</p>
-                    <p><a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" target="_blank" rel="noopener noreferrer" class="resource-link">Using Snagit:</a> Guidelines and tutorials for using Snagit.</p>
-                    <p><a href="https://pega-dev.zoominsoftware.io/bundle/guidebook/page/tech-doc-guidebook/content/community/using-camtasia.html" target="_blank" rel="noopener noreferrer" class="resource-link">Using Camtasia:</a> Guidelines and tutorials for using Camtasia.</p>
+        <aside class="w-1/4 min-w-[320px] max-w-[320px] h-screen sticky top-0 bg-white border-r border-gray-200 p-6 flex flex-col">
+            <div class="flex items-center gap-3 mb-6">
+                <h1 class="text-2xl font-bold">CD ILT<br>Style Guide</h1>
+            </div>
+            
+            <div class="relative mb-6">
+                <input type="text" id="searchInput" placeholder="Search guide..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pega-violet">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
                 </div>
             </div>
-            <div class="mt-6">
-                <h4 class="text-xl font-semibold">Design assets</h4>
-                <p class="font-semibold mt-4">Official</p>
-                <div class="mt-2 space-y-2 text-gray-700">
-                    <p><a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" target="_blank" rel="noopener noreferrer" class="resource-link">Pega Brand Hub:</a> Corporate Information and assets.</p>
-                    <p><a href="https://pe.ga/44GMKb8" target="_blank" rel="noopener noreferrer" class="resource-link">Internal team assets:</a> Collection of Pega approved icons and graphics.</p>
-                </div>
-                <p class="font-semibold mt-4">Alternatives</p>
-                 <div class="mt-2 space-y-2 text-gray-700">
-                    <p><a href="https://storyset.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Storyset:</a> Illustrations</p>
-                    <p><a href="https://undraw.co/search" target="_blank" rel="noopener noreferrer" class="resource-link">unDraw:</a> Illustrations</p>
-                    <p><a href="https://icones.js.org/" target="_blank" rel="noopener noreferrer" class="resource-link">Icônes:</a> Icons</p>
-                    <p><a href="https://uxwing.com/" target="_blank" rel="noopener noreferrer" class="resource-link">UXWing:</a> Icons</p>
-                    <p><a href="https://worldvectorlogo.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Worldvectorlogo:</a> SVG company logos</p>
-                    <p><a href="https://www.flaticon.com/animated-icons" target="_blank" rel="noopener noreferrer" class="resource-link">Flaticon:</a> Animated icons</p>
-                </div>
+
+            <nav id="sidebar-nav" class="flex flex-col gap-2 overflow-y-auto">
+                <a href="#!" data-page="introduction" class="sidebar-link p-2 rounded-md font-semibold">Introduction</a>
+                <a href="#!" data-page="naming-convention" class="sidebar-link p-2 rounded-md font-semibold">Naming convention</a>
+                <a href="#!" data-page="fonts" class="sidebar-link p-2 rounded-md font-semibold">Fonts</a>
+                <a href="#!" data-page="colors" class="sidebar-link p-2 rounded-md font-semibold">Colors</a>
+                <a href="#!" data-page="visuals" class="sidebar-link p-2 rounded-md font-semibold">Visuals</a>
+                <a href="#!" data-page="writing" class="sidebar-link p-2 rounded-md font-semibold">Writing</a>
+                <a href="#!" data-page="powerpoint" class="sidebar-link p-2 rounded-md font-semibold">PowerPoints</a>
+                <a href="#!" data-page="resources" class="sidebar-link p-2 rounded-md font-semibold">Resources</a>
+                <hr class="my-2 border-gray-200">
+                <a href="#!" data-page="appendix-a" class="sidebar-link p-2 rounded-md font-semibold">Terms that take headline case</a>
+                <a href="#!" data-page="appendix-b" class="sidebar-link p-2 rounded-md font-semibold">Terms to avoid</a>
+                <a href="#!" data-page="appendix-c" class="sidebar-link p-2 rounded-md font-semibold">Interacting with UI elements</a>
+            </nav>
+        </aside>
+
+        <main class="w-3/4 p-12 bg-white overflow-y-auto h-screen">
+
+            <div id="no-results" class="hidden text-center py-16">
+                <h2 class="text-2xl font-bold text-gray-600">No results found</h2>
+                <p class="text-gray-500 mt-2">Try adjusting your search term.</p>
             </div>
-          </section>
-        </div>
 
-        <!-- Page: Brand Elements (Typography and Color) -->
-        <div id="page-brand-elements" class="page-content hidden">
-          <div class="page-break">
-              <p class="eyebrow-text">BRAND ELEMENTS</p>
-              <h2 class="text-3xl font-bold mt-2">Typography and color</h2>
-          </div>
-          <section>
-            <h3 class="text-2xl font-bold">Fonts</h3>
-            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="border rounded-lg p-6 flex flex-col">
-                    <p class="text-2xl" style="font-family: 'Lora', serif;">Lora Medium</p>
-                    <div class="text-base space-y-1 mt-2 flex-grow">
-                        <p><span class="font-semibold">Primary use:</span> Slide titles</p>
-                        <p><span class="font-semibold">Size:</span> 22</p>
-                        <p><span class="font-semibold">Color:</span> Navy</p>
-                    </div>
-                    <div class="mt-4">
-                        <div class="inline-block bg-[--pega-navy] text-white text-xs font-mono px-3 py-1 rounded">HEX #001F5F</div>
-                    </div>
-                    <a href="https://pega.widen.net/s/rczmvq7gxn" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        Download Lora
-                    </a>
+            <div id="page-introduction" class="page-content">
+                <div class="page-break">
+                    <p class="eyebrow-text">Introduction</p>
                 </div>
-                 <div class="border rounded-lg p-6 flex flex-col">
-                    <p class="text-2xl" style="font-family: 'Open Sans', sans-serif;">Open Sans</p>
-                     <div class="text-base space-y-1 mt-2 flex-grow">
-                        <p><span class="font-semibold">Primary use:</span> Body text</p>
-                        <p><span class="font-semibold">Size:</span> 12</p>
-                        <p><span class="font-semibold">Color:</span> Dark Gray</p>
-                    </div>
-                    <div class="mt-4">
-                        <div class="inline-block bg-[--pega-dark-gray] text-white text-xs font-mono px-3 py-1 rounded">HEX #63666F</div>
-                    </div>
-                     <a href="https://pega.widen.net/s/6lpgprcgcb" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        Download Open Sans
-                    </a>
-                </div>
-                 <div class="border rounded-lg p-6 flex flex-col">
-                    <p class="text-2xl" style="font-family: 'Chakra Petch', sans-serif;">Chakra Petch</p>
-                     <div class="text-base space-y-1 mt-2 flex-grow">
-                        <p><span class="font-semibold">Primary use:</span> Eyebrow text, infographics, and quotes.</p>
-                    </div>
-                     <a href="https://pe.ga/4l9DbHC" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                        Download Chakra Petch
-                    </a>
-                </div>
+                <section>
+                    <h2 class="text-3xl font-bold">Purpose</h2>
+                    <p class="mt-4 text-base text-gray-700">This style guide provides essential standards and practices for creating consistent training and curriculum materials.</p>
+                    <p class="mt-4 text-base text-gray-700">Our material adheres to the guidelines outlined in Pega Technical Documentation Guidebook and Pega Brand Guidelines unless otherwise stated.</p>
+                </section>
             </div>
-          </section>
-           <section>
-              <h3 class="text-2xl font-bold">Color palettes</h3>
-              <p class="mt-4 text-base text-gray-700">Use the primary palette for consistency, with strategic accents from secondary and tertiary palettes to emphasize key points.</p>
-              <div class="mt-6 space-y-8">
-                <div>
-                  <h4 class="text-xl font-semibold">Primary palette</h4>
-                  <div class="flex flex-wrap gap-4 mt-2">
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-navy] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Navy</span><span class="text-xs" style="font-size: 0.7rem;">#001F5F</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-violet] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Violet</span><span class="text-xs" style="font-size: 0.7rem;">#5F67B9</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-ice-blue] flex flex-col items-center justify-center text-[--pega-navy] p-1 text-center"><span class="font-bold text-sm">Ice Blue</span><span class="text-xs" style="font-size: 0.7rem;">#D7E2F2</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-mint] flex flex-col items-center justify-center text-[--pega-navy] p-1 text-center"><span class="font-bold text-sm">Mint</span><span class="text-xs" style="font-size: 0.7rem;">#82CEC7</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-teal] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Teal</span><span class="text-xs" style="font-size: 0.7rem;">#10A5AC</span></div>
-                  </div>
+            
+            <div id="page-naming-convention" class="page-content hidden">
+                <div class="page-break">
+                    <p class="eyebrow-text">Naming convention</p>
                 </div>
-                <div>
-                  <h4 class="text-xl font-semibold">Secondary palette</h4>
-                  <div class="flex flex-wrap gap-4 mt-2">
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-sapphire] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Sapphire</span><span class="text-xs" style="font-size: 0.7rem;">#344A9B</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-orange] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Orange</span><span class="text-xs" style="font-size: 0.7rem;">#F76923</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-yellow] flex flex-col items-center justify-center text-[--pega-navy] p-1 text-center"><span class="font-bold text-sm">Yellow</span><span class="text-xs" style="font-size: 0.7rem;">#FFC836</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-pink] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Pink</span><span class="text-xs" style="font-size: 0.7rem;">#EB3987</span></div>
-                  </div>
-                </div>
-                <div>
-                  <h4 class="text-xl font-semibold">Tertiary palette</h4>
-                  <div class="flex flex-wrap gap-4 mt-2">
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-black-pearl] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Black Pearl</span><span class="text-xs" style="font-size: 0.7rem;">#0C1935</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-bright-purple] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Bright Purple</span><span class="text-xs" style="font-size: 0.7rem;">#828CFF</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-emerald] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Emerald</span><span class="text-xs" style="font-size: 0.7rem;">#005154</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-berry] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Berry</span><span class="text-xs" style="font-size: 0.7rem;">#AC1361</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-wine] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Wine</span><span class="text-xs" style="font-size: 0.7rem;">#661D34</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-extra-light-gray] flex flex-col items-center justify-center text-[--pega-navy] p-1 text-center"><span class="font-bold text-sm">Extra Light Gray</span><span class="text-xs" style="font-size: 0.7rem;">#F6F6F9</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-dark-gray] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Dark Gray</span><span class="text-xs" style="font-size: 0.7rem;">#63666F</span></div>
-                    <div class="w-28 h-24 rounded-lg shadow-md bg-[--pega-extra-dark-gray] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Extra Dark Gray</span><span class="text-xs" style="font-size: 0.7rem;">#2E2E33</span></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-        </div>
+                <section>
+                    <h2 class="text-3xl font-bold">Structure and format</h2>
+                    <div class="mt-4 space-y-2 text-gray-700">
+                        <p><span class="leading-term">Zero padding:</span> Always use two digits for each level of the hierarchy (e.g., 01, 02, ..., 10).</p>
+                        <p><span class="leading-term">Hierarchical naming:</span> Each subfolder inherits and extends the parent folder's number (e.g., 0101 is a subfolder of 01).</p>
+                        <p><span class="leading-term">No punctuation:</span> Do not use dots, underscores, hyphens, or spaces in folder names.</p>
+                        <p><span class="leading-term">Scalable:</span> This format allows for unlimited expansion without renaming existing folders.</p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-3xl font-bold">Examples</h2>
+                    <pre class="mt-4 bg-gray-100 p-4 rounded-lg text-sm font-mono text-gray-800 overflow-x-auto">
+01 Parent folder 1
+    0101 Child folder 1
+        010101 Nested folder 1
+        010102 Nested folder 2
 
-        <!-- Page: Visuals -->
-        <div id="page-visuals" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">VISUALS</p>
+02 Parent folder 2
+    0201 Child folder 1
+        020101 Nested folder 1
+        020102 Nested folder 2
+                    </pre>
+                </section>
             </div>
-            <section class="visuals-section">
-                <h3 class="text-2xl font-bold">Whitespace</h3>
-                <ul class="mt-4 space-y-2 text-gray-700">
-                    <li>Whitespace is the empty space between elements that enhances readability and balances layout.</li>
-                    <li class="do-item">Proper use of whitespace creates a clean and organized design.</li>
-                    <li class="dont-item">Insufficient whitespace leads to cluttered content, making it harder to read and process.</li>
-                </ul>
-                <img src="https://i.imgur.com/XwXSMz6.png" alt="Example of good and bad whitespace usage" class="rounded-lg shadow-md mt-4 w-full max-w-lg">
-            </section>
-            <section class="visuals-section">
-                <h3 class="text-2xl font-bold">Alignment</h3>
-                <p class="mt-4 text-base text-gray-700">Alignment is arranging elements along a common edge or center to create visual order and enhance readability.</p>
-                <div class="mt-4">
-                    <p class="text-base text-red-700 font-semibold">Not Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Misaligned elements result in a disorganized, hard-to-follow design.</p>
-                    <img src="https://i.imgur.com/AJePm5F.png" alt="Example of bad alignment" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-                <div class="mt-6">
-                    <p class="text-base text-green-700 font-semibold">Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Consistent alignment of text and images creates an organized, easy-to-read layout.</p>
-                    <img src="https://i.imgur.com/VCOTAap.png" alt="Example of good alignment" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-            </section>
-            <section class="visuals-section">
-                <h3 class="text-2xl font-bold">Visual hierarchy</h3>
-                <p class="mt-4 text-base text-gray-700">Visual hierarchy organizes design elements to guide viewer attention in a clear, prioritized order.</p>
-                 <div class="mt-4">
-                    <p class="text-base text-red-700 font-semibold">Not Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Disrupted element order breaks the natural reading flow, causing confusion.</p>
-                    <img src="https://i.imgur.com/5DDps1p.png" alt="Example of bad visual hierarchy" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-                <div class="mt-6">
-                    <p class="text-base text-green-700 font-semibold">Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Elements follow a logical flow, directing focus naturally from text to image.</p>
-                    <img src="https://i.imgur.com/11uERyH.png" alt="Example of good visual hierarchy" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-            </section>
-            <section class="visuals-section">
-                <h3 class="text-2xl font-bold">Image quality</h3>
-                 <p class="mt-4 text-base text-gray-700">Images should be sharp and clear to ensure all elements are easily distinguishable.</p>
-                <div class="mt-4">
-                    <p class="text-base text-red-700 font-semibold">Not Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Blurry visuals reduce clarity, making details hard to read and understand.</p>
-                    <img src="https://i.imgur.com/IeRmbU2.png" alt="Example of bad image quality" class="rounded-lg shadow-md w-full max-w-sm">
-                </div>
-                <div class="mt-6">
-                    <p class="text-base text-green-700 font-semibold">Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Clear visuals enhance user understanding by making details easy to read.</p>
-                    <img src="https://i.imgur.com/DW9IO0v.png" alt="Example of good image quality" class="rounded-lg shadow-md w-full max-w-sm">
-                </div>
-            </section>
-            <section class="visuals-section">
-                <h3 class="text-2xl font-bold">Image scale</h3>
-                <p class="mt-4 text-base text-gray-700">Images should fit the design without losing clarity or proportion.</p>
-                <div class="mt-4">
-                    <p class="text-base text-red-700 font-semibold">Not Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Stretched or compressed images cause distortion, reducing professionalism.</p>
-                    <img src="https://i.imgur.com/qsVXCRm.png" alt="Example of bad image scale" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-                <div class="mt-6">
-                    <p class="text-base text-green-700 font-semibold">Recommended:</p>
-                    <p class="text-sm text-gray-600 mb-2">Properly scaled images maintain clarity and proportion, avoiding distortion.</p>
-                    <img src="https://i.imgur.com/9NWBvzy.png" alt="Example of good image scale" class="rounded-lg shadow-md w-full max-w-lg">
-                </div>
-            </section>
-        </div>
 
-        <!-- Page: Writing -->
-        <div id="page-writing" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">Writing guidelines</p>
+            <div id="page-fonts" class="page-content hidden">
+                <div class="page-break">
+                    <p class="eyebrow-text">Fonts</p>
+                </div>
+                <section>
+                    <h2 class="text-3xl font-bold">Styles and usage</h2>
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="border rounded-lg p-6 flex flex-col">
+                            <p class="text-2xl" style="font-family: 'Lora', serif;">Lora Medium</p>
+                            <div class="text-base space-y-1 mt-2 flex-grow">
+                                <p><span class="font-semibold">Primary use:</span> Slide titles</p>
+                                <p><span class="font-semibold">Size:</span> 22</p>
+                                <p><span class="font-semibold">Color:</span> Navy</p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="inline-block bg-pega-navy text-white text-xs font-mono px-3 py-1 rounded">HEX #001F5F</div>
+                            </div>
+                            <a href="https://pega.widen.net/s/rczmvq7gxn" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                Download Lora
+                            </a>
+                        </div>
+                        <div class="border rounded-lg p-6 flex flex-col">
+                            <p class="text-2xl" style="font-family: 'Open Sans', sans-serif;">Open Sans</p>
+                            <div class="text-base space-y-1 mt-2 flex-grow">
+                                <p><span class="font-semibold">Primary use:</span> Body text</p>
+                                <p><span class="font-semibold">Size:</span> 12</p>
+                                <p><span class="font-semibold">Color:</span> Dark Gray</p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="inline-block bg-pega-dark-gray text-white text-xs font-mono px-3 py-1 rounded">HEX #63666F</div>
+                            </div>
+                            <a href="https://pega.widen.net/s/6lpgprcgcb" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                Download Open Sans
+                            </a>
+                        </div>
+                        <div class="border rounded-lg p-6 flex flex-col">
+                            <p class="text-2xl" style="font-family: 'Chakra Petch', sans-serif;">Chakra Petch</p>
+                            <div class="text-base space-y-1 mt-2 flex-grow">
+                                <p><span class="font-semibold">Primary use:</span> Eyebrow text, infographics, and quotes.</p>
+                            </div>
+                            <a href="https://pe.ga/4l9DbHC" target="_blank" rel="noopener noreferrer" class="resource-link mt-4 flex items-center gap-2 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                                Download Chakra Petch
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <section>
-              <h3 class="text-2xl font-bold">Learner-centric approach</h3>
-              <p class="mt-4 text-base text-gray-700">Our curriculum should always prioritize the needs of the learners. Consider the audience's diverse backgrounds, skill levels, and language proficiencies throughout content creation.</p>
-              <ul class="list-disc mt-4 space-y-2 text-gray-700 pl-6">
-                <li><b class="font-bold-navy">International audience:</b> Avoid slang and regional references. Maintain a professional tone.</li>
-                <li><b class="font-bold-navy">Inclusive language:</b> Use respectful, unbiased, and inclusive language for all learners.</li>
-                <li><b class="font-bold-navy">Plain language:</b> Be specific. Avoid jargon; if a technical term must be used, define it in context.</li>
-              </ul>
-            </section>
-            <section>
-              <div class="space-y-10 mt-6">
-                <!-- Voice and Tone -->
-                <div>
-                  <h4 class="text-xl font-semibold">Voice and tone</h4>
-                  <div class="mt-4 space-y-6">
-                    <div>
-                      <p class="text-base text-gray-700">Use active voice, meaning the subject of the sentence acts.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> The course outline can be accessed by students on the portal.</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> Students access the course outline on the portal.</div>
-                      </div>
-                    </div>
-                    <div>
-                      <p class="text-base text-gray-700">Write in the present tense and use the second person singular to address the user.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> The user clicks Start to initiate the process.</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> Click Start to initiate the process.</div>
-                      </div>
-                    </div>
-                  </div>
+            
+            <div id="page-colors" class="page-content hidden">
+                <div class="page-break">
+                    <p class="eyebrow-text">Colors</p>
                 </div>
+                <section>
+                    <h2 class="text-3xl font-bold">Color palettes</h2>
+                    <p class="mt-4 text-base text-gray-700">Use the primary palette for consistency, with strategic accents from other palettes to emphasize key points.</p>
+                </section>
+                <section>
+                    <h3 class="text-xl font-semibold font-sans">Primary</h3>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-navy flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Navy</span><span class="text-xs" style="font-size: 0.7rem;">#001F5F</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-violet flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Violet</span><span class="text-xs" style="font-size: 0.7rem;">#5F67B9</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-ice-blue flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Ice Blue</span><span class="text-xs" style="font-size: 0.7rem;">#D7E2F2</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-mint flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Mint</span><span class="text-xs" style="font-size: 0.7rem;">#82CEC7</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-teal flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Teal</span><span class="text-xs" style="font-size: 0.7rem;">#10A5AC</span></div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="text-xl font-semibold font-sans">Secondary</h3>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-sapphire flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Sapphire</span><span class="text-xs" style="font-size: 0.7rem;">#344A9B</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-orange flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Orange</span><span class="text-xs" style="font-size: 0.7rem;">#F76923</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-yellow flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Yellow</span><span class="text-xs" style="font-size: 0.7rem;">#FFC836</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-pink flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Pink</span><span class="text-xs" style="font-size: 0.7rem;">#EB3987</span></div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="text-xl font-semibold font-sans">Tertiary</h3>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-black-pearl flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Black Pearl</span><span class="text-xs" style="font-size: 0.7rem;">#0C1935</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-bright-purple flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Bright Purple</span><span class="text-xs" style="font-size: 0.7rem;">#828CFF</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-emerald flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Emerald</span><span class="text-xs" style="font-size: 0.7rem;">#005154</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-berry flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Berry</span><span class="text-xs" style="font-size: 0.7rem;">#AC1361</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-wine flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Wine</span><span class="text-xs" style="font-size: 0.7rem;">#661D34</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-extra-light-gray flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Extra Light Gray</span><span class="text-xs" style="font-size: 0.7rem;">#F6F6F9</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-dark-gray flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Dark Gray</span><span class="text-xs" style="font-size: 0.7rem;">#63666F</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-pega-extra-dark-gray flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Extra Dark Gray</span><span class="text-xs" style="font-size: 0.7rem;">#2E2E33</span></div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="text-xl font-semibold font-sans">Expansion</h3>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#99ADFF] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Lavender</span><span class="text-xs" style="font-size: 0.7rem;">#99ADFF</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#C9D6FF] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Periwinkle</span><span class="text-xs" style="font-size: 0.7rem;">#C9D6FF</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#E7A832] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Mustard</span><span class="text-xs" style="font-size: 0.7rem;">#E7A832</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#FFDF8E] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm">Pale Yellow</span><span class="text-xs" style="font-size: 0.7rem;">#FFDF8E</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#B63800] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Burnt Orange</span><span class="text-xs" style="font-size: 0.7rem;">#B63800</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#FF931E] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm">Sunset</span><span class="text-xs" style="font-size: 0.7rem;">#FF931E</span></div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="text-xl font-semibold font-sans">Grays</h3>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#F3F3F3] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#F3F3F3</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#E6E6E6] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#E6E6E6</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#CCCCCC] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#CCCCCC</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#B3B3B3] flex flex-col items-center justify-center text-pega-navy p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#B3B3B3</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#999999] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#999999</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#818181] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#818181</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#666666] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#666666</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#4E4E4E] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#4E4E4E</span></div>
+                        <div class="w-28 h-24 rounded-lg shadow-md bg-[#333333] flex flex-col items-center justify-center text-white p-1 text-center"><span class="font-bold text-sm"></span><span class="text-xs" style="font-size: 0.7rem;">#333333</span></div>
+                    </div>
+                </section>
+            </div>
 
-                <!-- Acronyms and Abbreviations -->
-                <div>
-                  <h4 class="text-xl font-semibold">Acronyms and abbreviations</h4>
-                   <div class="mt-4 space-y-6">
-                    <div>
-                      <p class="text-base text-gray-700">Spell out acronyms on the first reference, followed by the shortened version in parenthesis.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> (ILT) instructor-led training.</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> instructor-led training (ILT).</div>
-                      </div>
-                    </div>
-                     <div>
-                      <p class="text-base text-gray-700">When expressing plural acronyms and abbreviations, use a lowercase "s" without an apostrophe.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> MLP's</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> MLPs</div>
-                      </div>
-                    </div>
-                     <div>
-                      <p class="text-base text-gray-700">Use your best judgment to determine if the acronym or abbreviation is common enough to warrant not defining it.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> wireless fidelity</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> Wi-Fi</div>
-                      </div>
-                    </div>
-                  </div>
+            <div id="page-visuals" class="page-content hidden">
+                <div class="page-break">
+                    <p class="eyebrow-text">VISUALS</p>
                 </div>
-
-                <!-- Capitalization -->
-                <div>
-                  <h4 class="text-xl font-semibold">Capitalization</h4>
-                   <div class="mt-4 space-y-6">
-                    <div>
-                      <p class="text-base text-gray-700">In general use sentence case; except for proper nouns, Pega-specific terms, and mission titles.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> This is Headline Case</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> This is sentence case.</div>
-                      </div>
-                    </div>
-                     <div>
-                      <p class="text-base text-gray-700">Avoid all capital lettering when referring to UI elements.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> BUTTON</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> Button</div>
-                      </div>
-                    </div>
-                     <div>
-                      <p class="text-base text-gray-700">Capitalize the names of rule forms when the sentence is referring to the actual rule form.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> the property form</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                         <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> the Property form</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Commas -->
-                <div>
-                    <h4 class="text-xl font-semibold">Commas</h4>
-                    <div class="mt-4 space-y-6">
+                <section class="visuals-section">
+                    <h2 class="text-3xl font-bold">Whitespace</h2>
+                    <ul class="mt-4 space-y-2 text-gray-700">
+                        <li>Whitespace is the empty space between elements that enhances readability and balances layout.</li>
+                        <li class="do-item">Proper use of whitespace creates a clean and organized design.</li>
+                        <li class="dont-item">Insufficient whitespace leads to cluttered content, making it harder to read and process.</li>
+                    </ul>
+                    <img src="https://i.imgur.com/XwXSMz6.png" alt="Example of good and bad whitespace usage" class="rounded-lg shadow-md mt-4 w-full max-w-lg">
+                </section>
+                <section class="visuals-section">
+                    <h2 class="text-3xl font-bold">Alignment</h2>
+                    <p class="mt-4 text-base text-gray-700">Alignment is arranging elements along a common edge or center to create visual order and enhance readability.</p>
+                    <div class="mt-4 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <p class="text-base text-gray-700">Use an Oxford comma for a series of three or more items.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> You can import, rename or reclassify a Case Type.</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> You can import, rename, or reclassify a Case Type.</div>
-                            </div>
+                            <p><span class="font-bold text-red-800">Not Recommended:</span> Misaligned elements result in a disorganized, hard-to-follow design.</p>
+                            <img src="https://i.imgur.com/AJePm5F.png" alt="Example of bad alignment" class="rounded-lg shadow-md w-full max-w-lg mt-2">
                         </div>
+                    </div>
+                    <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
-                            <p class="text-base text-gray-700">Use a comma after introductory words, clauses, and phrases.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> For more information see the release notes.</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> For more information, see the release notes.</div>
-                            </div>
+                            <p><span class="font-bold text-green-800">Recommended:</span> Consistent alignment of text and images creates an organized, easy-to-read layout.</p>
+                            <img src="https://i.imgur.com/VCOTAap.png" alt="Example of good alignment" class="rounded-lg shadow-md w-full max-w-lg mt-2">
                         </div>
                     </div>
-                </div>
-                
-                <!-- Hyphens and Slashes -->
-                <div>
-                    <h4 class="text-xl font-semibold">Hyphens and Slashes</h4>
-                     <div class="mt-4 space-y-6">
-                        <div>
-                            <p class="text-base text-gray-700">Use a hyphen for compound words and negative numbers.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> Interface specific</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> Interface-specific</div>
-                            </div>
-                        </div>
-                         <div>
-                            <p class="text-base text-gray-700">Avoid "either/or" and "and/or;" use full phrases instead.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> You can choose to use either the AWS/Apache server, or both.</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> You can choose to use either the AWS or the Apache server, or both.</div>
-                            </div>
-                        </div>
-                    </div>
+                </section>
                 </div>
 
-                <!-- Date and Time -->
-                <div>
-                  <h4 class="text-xl font-semibold">Date and Time</h4>
-                  <div class="mt-4 space-y-6">
-                    <div>
-                      <p class="text-base text-gray-700">Use the 12-hour format, followed by a capitalized AM or PM with a space between.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> 2:15am</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> 2:15 AM</div>
-                      </div>
-                    </div>
-                    <div>
-                      <p class="text-base text-gray-700">Write full month names and use four-digit years to avoid date confusion. If a date must be expressed numerically, use the format<y_bin_858>-MM-DD.</p>
-                      <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-red-800">Not recommended:</span> 3/03/2020 or 04/05/09</div>
-                      </div>
-                      <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                        <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                        <div><span class="font-bold text-green-800">Recommended:</span> March 3, 2020 or 2009-04-05</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Numbers -->
-                 <div>
-                    <h4 class="text-xl font-semibold">Numbers</h4>
-                    <div class="mt-4 space-y-6">
-                        <div>
-                            <p class="text-base text-gray-700">Spell out numbers from zero through nine; use numerals for numbers 10 and greater.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> 3, forty</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> three, 40</div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-base text-gray-700">Spell out ordinal numbers in text.</p>
-                            <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-red-800">Not recommended:</span> 1st, 3rd, 12th</div>
-                            </div>
-                            <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                <div><span class="font-bold text-green-800">Recommended:</span> first, third, twelfth</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Guidelines -->
-                 <div class="space-y-6">
-                    <div>
-                        <p class="text-base text-gray-700"><b>Trademarking:</b> At the first occurrence of a Pega product name in the article body, use the full name of the product and include the trademark symbol. Do not add the trademark to any title, heading, or link. After the first occurrence, omit the trademark symbol.</p>
-                    </div>
-                    <div>
-                        <p class="text-base text-gray-700"><b>Latin phrases:</b> Avoid Latin terms or abbreviations.</p>
-                        <div class="mt-2 p-4 rounded-lg border border-red-200 bg-red-50 flex items-start gap-3">
-                            <svg class="w-5 h-5 text-red-500 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <div><span class="font-bold text-red-800">Not recommended:</span> etc., e.g.</div>
-                        </div>
-                        <div class="mt-2 p-4 rounded-lg border border-green-200 bg-green-50 flex items-start gap-3">
-                            <svg class="w-5 h-5 text-green-600 mt-1 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <div><span class="font-bold text-green-800">Recommended:</span> and so on, for example, such as</div>
-                        </div>
-                    </div>
-                      <div>
-                        <p class="text-base text-gray-700"><b>Ampersand:</b> Do no use an ampersand (&), unless it is part of a proper name.</p>
-                    </div>
-                </div>
-
-              </div>
-            </section>
-        </div>
-
-        <!-- Page: PowerPoint -->
-        <div id="page-powerpoint" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">POWERPOINT GUIDELINES</p>
-              <h2 class="text-3xl font-bold mt-2">Presentation design</h2>
-            </div>
-            <section>
-              <h3 class="text-2xl font-bold">Design and layout</h3>
-              <ul class="list-disc mt-4 space-y-2 text-gray-700 pl-6">
-                <li><b class="font-bold-navy">Minimal:</b> Keep slides uncluttered; avoid excessive text and overly complex graphics.</li>
-                <li><b class="font-bold-navy">Alignment:</b> Align text and graphics consistently across all slides to maintain an organized appearance.</li>
-                <li><b class="font-bold-navy">Whitespace:</b> Use ample whitespace to reduce visual fatigue; ensure balance between filled and empty spaces.</li>
-              </ul>
-            </section>
-            <section>
-              <h3 class="text-2xl font-bold">Visuals and graphics</h3>
-              <ul class="list-disc mt-4 space-y-2 text-gray-700 pl-6">
-                <li><b class="font-bold-navy">Relevance and quality:</b> Use high-quality visuals that directly support or illustrate the content and are relevant to the topic.</li>
-                <li><b class="font-bold-navy">Consistency in style:</b> Using flat or isometric styles, keep the visual style consistent throughout the presentation, including icons and diagrams.</li>
-                <li><b class="font-bold-navy">Simplification:</b> Convert complex data or processes into simplified infographics or diagrams.</li>
-              </ul>
-            </section>
-        </div>
-
-        <!-- Page: Appendix A -->
-        <div id="page-appendix-a" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">APPENDICES</p>
-              <h2 class="text-3xl font-bold mt-2">Reference tables</h2>
-            </div>
-            <section>
-              <h3 class="text-2xl font-bold">Terms that take headline case</h3>
-              <div class="mt-4 columns-3 text-sm text-gray-700">
-                <ul class="list-none p-0 space-y-1">
-                  <li>Access Control Policy</li><li>Access Group</li><li>Access Role</li><li>Action</li><li>Adaptive Model</li><li>Agile Workbench</li><li>Alternate Stage</li><li>App Logic</li><li>Application Definition</li><li>Application Layer</li><li>Assignment</li><li>Authentication Profile</li><li>Automation</li><li>Branch</li><li>Calculation Builder</li><li>Case</li><li>Case Designer</li><li>Case ID</li><li>Case Life Cycle</li><li>Case Management</li><li>Case Page</li><li>Case Status</li><li>Case Type</li><li>Case View</li><li>Channel</li><li>Clipboard</li><li>Clipboard Page</li><li>Condition</li><li>Condition Builder</li><li>Configuration</li><li>Configuration Set</li><li>Correspondence</li><li>Custom Function</li><li>Data Flow</li><li>Data Model</li><li>Data Page</li><li>Data Record</li><li>Data Set</li><li>Data Transform</li><li>Decision</li><li>Developer Assistant</li><li>Embedded Data</li><li>Expression</li><li>Expression Builder</li><li>Field Type</li><li>Flow Action</li><li>Function</li><li>Insight</li><li>JSON Transform</li><li>Multi-step Form</li><li>Notification</li><li>Object Type</li><li>Outcome</li><li>Persona</li><li>Portal</li><li>Prediction</li><li>Predictive Model</li><li>Preview</li><li>Primary Field</li><li>Primary Stage</li><li>Private Rule</li><li>Process</li><li>Public - Reusable</li><li>Public Overridable</li><li>Publish</li><li>Remote Case Type</li><li>Repeating Dynamic Layout</li><li>Reusability</li><li>Reuse Library</li><li>Rule</li><li>Rule Type</li><li>Rules Library</li><li>Ruleset</li><li>Scope</li><li>Screen Flow</li><li>Section</li><li>Self-service portal</li><li>Service-Level Agreement</li><li>Stage</li><li>Step</li><li>Subprocess</li><li>Task</li><li>Text Analyzer</li><li>Urgency</li><li>Validation</li><li>View</li><li>Visibility</li><li>When</li><li>When Rule</li><li>Work Group</li><li>Work Queue</li><li>Worklist</li>
-                </ul>
-              </div>
-            </section>
-        </div>
-        
-        <!-- Page: Appendix B -->
-        <div id="page-appendix-b" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">APPENDICES</p>
-              <h2 class="text-3xl font-bold mt-2">Reference tables</h2>
-            </div>
-            <section>
-              <h3 class="text-2xl font-bold">Terms to avoid</h3>
-              <div class="overflow-x-auto"><table class="text-sm">
-                <thead><tr><th>Avoid</th><th>Adopt</th></tr></thead>
-                <tbody>
-                  <tr><td>Filler words (in fact, quite)</td><td>Write concisely; keep sentences to the point</td></tr>
-                  <tr><td>Terms of permission (allow, may)</td><td>Use direct terms like "can"</td></tr>
-                  <tr><td>Future tense conditionals</td><td>Use present tense, imperative mood</td></tr>
-                  <tr><td>"I," "we," "our"</td><td>Use specific names or neutral descriptions</td></tr>
-                  <tr><td>Adverbs ending in "ly"</td><td>Use stronger verbs and nouns</td></tr>
-                  <tr><td>Politeness (Please, thank you)</td><td>Maintain a neutral tone</td></tr>
-                  <tr><td>Generic terms (UI)</td><td>Use specific terms (portal, window)</td></tr>
-                  <tr><td>Marketing jargon (leverage, smooth)</td><td>Use straightforward terms (use, facilitate)</td></tr>
-                  <tr><td>Latin terms (e.g., i.e., inter alia)</td><td>Use simple English alternatives</td></tr>
-                  <tr><td>Subjective language (easy, simple)</td><td>Describe specific actions or benefits</td></tr>
-                  <tr><td>Emotive language (kill, terminate)</td><td>Use neutral terms (end, close)</td></tr>
-                </tbody>
-              </table></div>
-            </section>
-        </div>
-
-        <!-- Page: Appendix C -->
-        <div id="page-appendix-c" class="page-content hidden">
-            <div class="page-break">
-              <p class="eyebrow-text">APPENDICES</p>
-              <h2 class="text-3xl font-bold mt-2">Reference tables</h2>
-            </div>
-            <section>
-              <h3 class="text-2xl font-bold">Interacting with UI elements</h3>
-              <div class="overflow-x-auto"><table class="text-sm">
-                <thead><tr><th>UI element</th><th>Prep</th><th>Verb</th></tr></thead>
-                <tbody>
-                  <tr><td>Area</td><td>In</td><td>N/A</td></tr>
-                  <tr><td>Button</td><td>N/A</td><td>Click</td></tr>
-                  <tr><td>Checkbox</td><td>In</td><td>Select, Clear</td></tr>
-                  <tr><td>Dialog box</td><td>In</td><td>N/A</td></tr>
-                  <tr><td>Drop-down list</td><td>In</td><td>Select</td></tr>
-                  <tr><td>Field</td><td>In</td><td>Enter</td></tr>
-                  <tr><td>Home page</td><td>On</td><td>N/A</td></tr>
-                  <tr><td>Icon</td><td>N/A</td><td>Click</td></tr>
-                  <tr><td>Menu</td><td>On</td><td>Click</td></tr>
-                  <tr><td>Pane</td><td>In</td><td>Click</td></tr>
-                  <tr><td>Radio button</td><td>N/A</td><td>Click</td></tr>
-                  <tr><td>Section</td><td>In</td><td>N/A</td></tr>
-                  <tr><td>Slider</td><td>N/A</td><td>Move</td></tr>
-                  <tr><td>Switch</td><td>N/A</td><td>Turn on, Turn off</td></tr>
-                  <tr><td>Tab</td><td>On</td><td>Click</td></tr>
-                  <tr><td>Window</td><td>In</td><td>Open</td></tr>
-                </tbody>
-              </table></div>
-            </section>
-        </div>
-
-      </main>
+            </main>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const navLinks = document.querySelectorAll('#sidebar-nav a[data-page]');
-        const pages = document.querySelectorAll('.page-content');
-        
-        // Function to switch pages
-        const showPage = (pageId) => {
-          // Hide all pages
-          pages.forEach(page => {
-            page.classList.add('hidden');
-          });
-          
-          // Show the target page
-          const targetPage = document.getElementById(pageId);
-          if (targetPage) {
-            targetPage.classList.remove('hidden');
-          }
-          
-          // Update active link in sidebar
-          navLinks.forEach(link => {
-            link.classList.toggle('active', 'page-' + link.dataset.page === pageId);
-          });
-        };
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const navLinks = document.querySelectorAll('#sidebar-nav a[data-page]');
+            const pages = document.querySelectorAll('.page-content');
+            const mainContent = document.querySelector('main');
+            const noResultsMessage = document.getElementById('no-results');
+            let originalPageHTML = new Map();
 
-        // Add click listeners to nav links
-        navLinks.forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const pageId = 'page-' + link.dataset.page;
-            showPage(pageId);
-            // Scroll to top of main content area on page change
-            document.querySelector('main').scrollTop = 0;
-          });
+            // Store original HTML of each page to remove highlights later
+            pages.forEach(page => {
+                originalPageHTML.set(page.id, page.innerHTML);
+            });
+
+            // Function to remove highlights
+            const removeHighlights = () => {
+                pages.forEach(page => {
+                    if (originalPageHTML.has(page.id)) {
+                        page.innerHTML = originalPageHTML.get(page.id);
+                    }
+                });
+            };
+            
+            // Function to highlight search term in a node
+            const highlightText = (node, searchTerm) => {
+                if (!searchTerm) return;
+                const regex = new RegExp(`(${searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})`, 'gi');
+                
+                const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT, null, false);
+                let textNode;
+                const nodesToReplace = [];
+
+                while (textNode = walker.nextNode()) {
+                    if (textNode.parentElement.tagName === 'MARK' || textNode.parentElement.tagName === 'SCRIPT' || textNode.parentElement.tagName === 'STYLE') continue;
+                    
+                    const text = textNode.textContent;
+                    if (text.match(regex)) {
+                        const fragment = document.createDocumentFragment();
+                        let lastIndex = 0;
+                        text.replace(regex, (match, ...args) => {
+                            const offset = args[args.length - 2];
+                            const beforeText = text.slice(lastIndex, offset);
+                            if (beforeText) {
+                                fragment.appendChild(document.createTextNode(beforeText));
+                            }
+                            const mark = document.createElement('mark');
+                            mark.textContent = match;
+                            fragment.appendChild(mark);
+                            lastIndex = offset + match.length;
+                        });
+                        const afterText = text.slice(lastIndex);
+                        if (afterText) {
+                            fragment.appendChild(document.createTextNode(afterText));
+                        }
+                        nodesToReplace.push({ oldNode: textNode, newNode: fragment });
+                    }
+                }
+                nodesToReplace.forEach(replacement => {
+                    replacement.oldNode.parentNode.replaceChild(replacement.newNode, replacement.oldNode);
+                });
+            };
+
+            // Function to switch pages
+            const showPage = (pageId, fromSearch = false) => {
+                pages.forEach(page => page.classList.add('hidden'));
+                noResultsMessage.classList.add('hidden');
+                
+                const targetPage = document.getElementById('page-' + pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                }
+                
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.dataset.page === pageId);
+                });
+
+                if (!fromSearch) {
+                    searchInput.value = '';
+                    removeHighlights();
+                    navLinks.forEach(link => link.style.display = '');
+                }
+            };
+
+            // Search logic
+            const handleSearch = () => {
+                const searchTerm = searchInput.value.trim();
+                removeHighlights();
+
+                if (!searchTerm) {
+                    navLinks.forEach(link => link.style.display = '');
+                    const activeLink = document.querySelector('.sidebar-link.active') || navLinks[0];
+                    showPage(activeLink.dataset.page);
+                    return;
+                }
+
+                let firstMatchPageId = null;
+                let matchesFound = false;
+
+                navLinks.forEach(link => {
+                    const pageId = link.dataset.page;
+                    const page = document.getElementById('page-' + pageId);
+                    if (page && page.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        if (!firstMatchPageId) {
+                            firstMatchPageId = pageId;
+                        }
+                        link.style.display = '';
+                        matchesFound = true;
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+                
+                pages.forEach(page => {
+                    if (page.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+                        highlightText(page, searchTerm);
+                    }
+                });
+
+                if (matchesFound) {
+                    showPage(firstMatchPageId, true);
+                } else {
+                    pages.forEach(page => page.classList.add('hidden'));
+                    noResultsMessage.classList.remove('hidden');
+                }
+            };
+
+            // Add event listeners
+            searchInput.addEventListener('input', handleSearch);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.dataset.page;
+                    showPage(pageId);
+                    mainContent.scrollTop = 0;
+                });
+            });
+
+            // Show the initial page
+            showPage('introduction');
         });
-
-        // Show the initial page
-        showPage('page-introduction');
-      });
     </script>
 
-  </body>
+</body>
 </html>
