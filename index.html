@@ -35,7 +35,8 @@
           fontFamily: {
             sans: ['"Open Sans"', 'sans-serif'],
             serif: ['"Lora"', 'serif'],
-            eyebrow: ['"Chakra Petch"', 'sans-serif']
+            eyebrow: ['"Chakra Petch"', 'sans-serif'],
+            mono: ['"Fragment Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace']
           }
         }
       }
@@ -50,6 +51,8 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" 
+    rel="stylesheet">
 
   <style>
     body {
@@ -142,7 +145,7 @@
 
     .inline-code {
       display: inline-block;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-family: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       line-height: 1.1;
       padding: 0.125rem 0.4rem;
       border-radius: 0.375rem;
@@ -322,10 +325,10 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Introduction</h2>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Introduction</h2>
       <div class="prose text-gray-700 max-w-none">
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Welcome to the Style Guide of the ILT Curriculum Development Team. Here, you’ll find the standards and best practices that keep our work cohesive, professional, and learner-centered. Whether you’re developing new, editing existing, or collaborating oninstructor-led content, this guide is your central resource for ensuring clarity, consistency, and quality across all our learning materials.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Our materials adhere to the guidelines outlined in the following, unless otherwise noted.</p>
+        <p class="text-base text-gray-700 mt-3 mb-6">Welcome to the Style Guide of the ILT Curriculum Development Team. Here, you’ll find the standards and best practices that keep our work cohesive, professional, and learner-centered. Whether you’re developing new, editing existing, or collaborating oninstructor-led content, this guide is your central resource for ensuring clarity, consistency, and quality across all our learning materials.</p>
+        <p class="text-base text-gray-700 mt-3 mb-6">Our materials adhere to the guidelines outlined in the following, unless otherwise noted.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
@@ -373,73 +376,73 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">General</h2>
-      <div class="mb-12">
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use sentence case.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use letters, numbers, and spaces as default; avoid special characters <span class="text-sm inline-code">/ \ : * ? " <> |</span></p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use one separator style when needed (choose and apply consistently); preferred: <span class="text-sm inline-code">space-hyphen-space (-)</span></p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a leading zero by default for numbered items so they sort correctly (<span class="text-sm inline-code">01–99</span>).</p>
-
-        <!-- Example -->
-        <div class="mt-2 ml-4 p-3 text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 space-y-2">
-          <div><strong>Example:</strong> <span class="inline-code">01 SSA 25 Getting started</span></div>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">General</h2>
+        <div class="border-l-2 border-gray-200 pl-4 space-y-4">
+          <p class="text-base text-gray-700">Use sentence case.</p>
+          <p class="text-base text-gray-700">Use letters, numbers, and spaces as default; avoid special characters <span class="text-sm inline-code">/ \ : * ? " <> |</span></p>
+          <p class="text-base text-gray-700">Use one separator style when needed (choose and apply consistently); preferred: <span class="text-sm inline-code">space-hyphen-space (-)</span></p>
+          <p class="text-base text-gray-700">Use a leading zero by default for numbered items so they sort correctly (<span class="text-sm inline-code">01–99</span>).</p>
+        </div>
+        <div class="text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 mt-4 mb-10 p-3">
+          <div><strong class="font-semibold">Example:</strong> <span class="inline-code">01 SSA 25 Getting started</span></div>
         </div>
 
-        <!-- Sub section -->
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Naming course folders</h2>
-
-        <h3 class="font-sans font-bold text-pega-pearl mb-4 mt-4">Course (top-level) folder</h3>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Name the parent folder using: <span
-            class="text-sm inline-code">[Course abbrev] [Course version]</span></p>
-        <div class="mt-2 ml-4 p-3 text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 space-y-2">
-          <div><strong>Example:</strong> <span class="inline-code">SSA 25</span></div>
-        </div>
-
-        <h3 class="font-sans font-bold text-pega-pearl mb-4 mt-8">Level 1 (required) folders</h3>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Each course parent folder should contain the following three folders:</p>
-        <div class="mt-2 ml-4 p-3 text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 space-y-2">
-          <p class="leading-normal"><span class="inline-code">00 Course Information</span></p>
-          <p class="leading-normal"><span class="inline-code">01 Facilitation Resources</span></p>
-          <p class="leading-normal mb-6"><span class="inline-code">02 Learner Resources</span></p>
-        </div>
-
-        <h3 class="font-sans font-bold text-pega-pearl mb-4 mt-8">Level 2 (module) folders</h3>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a two-digit sequence number plus module name:
-          <span class="text-sm inline-code">[##] [Module name]</span></p>
-        <div class="mt-2 ml-4 p-3 text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 space-y-2">
-          <div><strong>Example:</strong> <span class="inline-code">01 Foundations of Pega Platform</span></div>
-        </div>
-
-        <!-- Sub section -->
-        <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-4">Naming files</h2>
-        <h3 class="font-sans font-bold text-pega-pearl mb-4 mt-4">Standard file pattern for instructional assets</h3>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a four-digit number followed by a space and a descriptive title: <span class="text-sm inline-code">[####] [Topic title]</span></p>
-        <div class="mt-2 ml-4 p-3 text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 space-y-2">
-          <div><strong>Example:</strong> <span class="inline-code">0101 Introduction to Center-out architecture</span>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Naming course folders</h2>
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Course (top-level) folder</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-4">
+            <p class="text-base text-gray-700">Name the parent folder using: <span class="text-sm inline-code">[Course abbrev] [Course version]</span></p>
           </div>
+          <div class="text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 mt-4 mb-10 p-3">
+            <div><strong class="font-semibold">Example:</strong> <span class="inline-code">SSA 25</span></div>
+          </div>
+
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Level 1 (required) folders</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-4">
+            <p class="text-base text-gray-700">Each course parent folder should contain the following three folders:</p>
+          </div>
+          <div class="text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 mt-4 mb-10 p-3">
+            <p class="leading-normal"><span class="inline-code">00 Course Information</span></p>
+            <p class="leading-normal"><span class="inline-code">01 Facilitation Resources</span></p>
+            <p class="leading-normal"><span class="inline-code">02 Learner Resources</span></p>
         </div>
 
-        <!-- Folder and file structure example -->
-        <div class="mt-8 ml-4 p-3 rounded-lg border border-gray-300 bg-gray-50">
-          <h3 class="font-sans font-bold text-pega-pearl mb-4 mt-4">Example standard course folder and file structure</h3>
-          <pre class="text-xs md:text-sm font-mono leading-5 whitespace-pre text-gray-700">
-              <strong>SSA 25</strong>
-              │ 
-              ├─<strong> 00 Course Information</strong>
-              │   ├─ Course outline.xlsx
-              │   └─ Delivery guide.pptx
-              │
-              ├─<strong> 01 Facilitation Resources</strong>
-              │   │ 
-              │   ├─ <strong> 01 Foundations of Pega Platform</strong>
-              │   │   ├─ 0101 Introduction to Center-out architecture.pptx
-              │   │   └─ 0102 Low-code development and AI-powered design.pptx
-              │   │    
-              │   └─ <strong> 02 Case design</strong>
-              │       ├─ 0201 Case Lifecycle design in Pega Platform.pptx
-              │       └─ 0202 Data Model design in Pega Platform.pptx
-              │     
-              └─<strong> 02 Learner Resources</strong></pre>
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Level 2 (module) folders</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-4">
+            <p class="text-base text-gray-700">Use a two-digit sequence number plus module name: <span class="text-sm inline-code">[##] [Module name]</span></p>
+          </div>
+          <div class="text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 mt-4 mb-10 p-3">
+            <div><strong class="font-semibold">Example:</strong> <span class="inline-code">01 Foundations of Pega Platform</span></div>
+          </div>
+      
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Naming files</h2>
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Standard file pattern for instructional assets</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-4">
+            <p class="text-base text-gray-700">Use a four-digit number followed by a space and a descriptive title: <span class="text-sm inline-code">[####] [Topic title]</span></p>
+          </div>
+          <div class="text-sm text-gray-700 rounded-lg border border-gray-300 bg-gray-50 mt-4 mb-4 p-3">
+            <div><strong class="font-semibold">Example:</strong> <span class="inline-code">0101 Introduction to Center-out architecture</span></div>
+          </div>
+
+        <div class="rounded-lg border border-gray-200 bg-gray-50 p-3">
+          <h3 class="font-sans font-bold text-sm text-pega-pearl mt-0 mb-10">Example standard course folder and file structure</h3>
+          <pre class="text-sm font-mono text-gray-700">
+          <strong class="font-semibold">SSA 25</strong>
+          │ 
+          ├─<strong class="font-semibold"> 00 Course Information</strong>
+          │   ├─ Course outline.xlsx
+          │   └─ Delivery guide.pptx
+          │
+          ├─<strong class="font-semibold"> 01 Facilitation Resources</strong>
+          │   │ 
+          │   ├─ <strong class="font-semibold"> 01 Foundations of Pega Platform</strong>
+          │   │   ├─ 0101 Introduction to Center-out architecture.pptx
+          │   │   └─ 0102 Low-code development and AI-powered design.pptx
+          │   │    
+          │   └─ <strong class="font-semibold"> 02 Case design</strong>
+          │       ├─ 0201 Case Lifecycle design in Pega Platform.pptx
+          │       └─ 0202 Data Model design in Pega Platform.pptx
+          │     
+          └─<strong class="font-semibold"> 02 Learner Resources</strong></pre>
         </div>
       </div>
     </section>
@@ -451,7 +454,7 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Styles and usages</h2>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Styles and usages</h2>
       <div class="grid lg:grid-cols-3 gap-6">
 
         <!-- Lora -->
@@ -531,7 +534,7 @@
         <p class="eyebrow text-pega-violet mb-1">Colors</p>
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Palettes</h2>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Palettes</h2>
       <div id="color-grids"></div>
     </section>
 
@@ -542,57 +545,64 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Authoring</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pega.widen.net/s/n7kzc29vkv" 
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Authoring</h2>
+        <div class="border-l-2 border-gray-200 pl-4 space-y-2">
+        <p class="text-base leading-normal text-gray-700"><a href="https://pega.widen.net/s/n7kzc29vkv" 
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Pega Brand Guide:</a> Corporate guidelines.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/4qEGYyy"
+        <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/4qEGYyy"
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Pega Technical Documentation Guidebook:</a> Pega Community COE guidelines for technical documents.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/46bYT8t"
+        <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/46bYT8t"
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">A-Z words and terms:</a> Words, terms, and names.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://learn.microsoft.com/en-us/style-guide/welcome/" 
+        <p class="text-base leading-normal text-gray-700"><a href="https://learn.microsoft.com/en-us/style-guide/welcome/" 
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Microsoft Style Guide:</a> Primary reference for writing guidelines.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/3OgrcfP"
+        <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/3OgrcfP"
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Pega Academy Guide:</a> Guidelines for Pega Academy content.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/3OfDwNq"
+        <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/3OfDwNq"
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Using Snagit:</a> Guidelines and tutorials for using Snagit.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/4kGuLIg"
+        <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/4kGuLIg"
             target="_blank" rel="noopener noreferrer"
             class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Using Camtasia:</a> Guidelines and tutorials for using Camtasia.</p>
+        </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Design</h2>
-        <h3 class="text-lg font-bold font-sans mt-4 mb-4">Official</h3>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" 
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Pega Brand Hub:</a> Corporate information and assets.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://pe.ga/44GMKb8"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Internal team assets:</a> Collection of Pega approved icons and graphics.</p>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Design</h2>
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Official</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-2">
+            <p class="text-base leading-normal text-gray-700"><a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" 
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Pega Brand Hub:</a> Corporate information and assets.</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://pe.ga/44GMKb8"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Internal team assets:</a> Collection of Pega approved icons and graphics.</p>
+          </div>
+          
+        <h3 class="font-sans font-bold text-pega-pearl my-6">Alternatives</h3>
+          <div class="border-l-2 border-gray-200 pl-4 space-y-2">
+            <p class="text-base leading-normal text-gray-700"><a href="https://storyset.com/"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Storyset:</a> Illustrations</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://undraw.co/search"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">unDraw:</a> Illustrations</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://icones.js.org/"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Icônes:</a> Icons</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://uxwing.com/"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">UXWing:</a> Icons</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://worldvectorlogo.com/"
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Worldvectorlogo:</a> SVG company logos</p>
+            <p class="text-base leading-normal text-gray-700"><a href="https://www.flaticon.com/animated-icons" 
+                target="_blank" rel="noopener noreferrer"
+                class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Flaticon:</a> Animated icons</p>
+          </div>
 
-        <h3 class="text-lg font-bold font-sans mt-8 mb-4">Alternatives</h3>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://storyset.com/"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Storyset:</a> Illustrations</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://undraw.co/search"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">unDraw:</a> Illustrations</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://icones.js.org/"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Icônes:</a> Icons</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://uxwing.com/"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">UXWing:</a> Icons</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://worldvectorlogo.com/"
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Worldvectorlogo:</a> SVG company logos</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4"><a href="https://www.flaticon.com/animated-icons" 
-              target="_blank" rel="noopener noreferrer"
-              class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Flaticon:</a> Animated icons</p>
     </section>
 
     <!-- Visual design -->
@@ -644,7 +654,7 @@
 
       <div class="mb-12">
         <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Alignment</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Alignment is arranging elements along a common edge or center to create visual order and enhance readability.</p>
+        <p class="text-base leading-normal border-l-2 border-gray-200 mt-3 mb-6 pl-4">Alignment is arranging elements along a common edge or center to create visual order and enhance readability.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-red-50 p-4 rounded-lg border border-red-100">
             <div class="flex items-start gap-3 mb-3"><span
@@ -665,7 +675,7 @@
 
       <div class="mb-12">
         <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Visual hierarchy</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Visual hierarchy organizes design elements to guide viewer attention in a clear, prioritized order.</p>
+        <p class="text-base leading-normal border-l-2 border-gray-200 mt-3 mb-6 pl-4">Visual hierarchy organizes design elements to guide viewer attention in a clear, prioritized order.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-red-50 p-4 rounded-lg border border-red-100">
             <div class="flex items-start gap-3 mb-3"><span
@@ -686,7 +696,7 @@
 
       <div class="mb-12">
         <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Image quality</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Images should be sharp and clear to ensure all elements are easily distinguishable.</p>
+        <p class="text-base leading-normal border-l-2 border-gray-200 mt-3 mb-6 pl-4">Images should be sharp and clear to ensure all elements are easily distinguishable.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-red-50 p-4 rounded-lg border border-red-100">
             <div class="flex items-start gap-3 mb-3"><span
@@ -707,7 +717,7 @@
 
       <div class="mb-12">
         <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Image scale</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Images should fit the design without losing clarity or proportion.</p>
+        <p class="text-base leading-normal border-l-2 border-gray-200 mt-3 mb-6 pl-4">Images should fit the design without losing clarity or proportion.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-red-50 p-4 rounded-lg border border-red-100">
             <div class="flex items-start gap-3 mb-3"><span
@@ -734,16 +744,18 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Template and theme</h2>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use the most up-to-date <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-navy font-semibold hover:text-pega-berry transition-colors"><u>template</u></a> appropriate for the content you're creating.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">When importing content from another slide deck or source, use the "Keep text only" option and reapply the template layout to prevent theme contamination. </p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use the preset theme incuded in the template.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">If you make any additions or edits to a template, notify the team so they're aware and can make any necassary updates.</p>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Voice and tone</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use the most up-to-date <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-navy font-semibold hover:text-pega-berry transition-colors"><u>template</u></a> appropriate for the content you're creating.</p>
+          <p class="text-base text-gray-700">When importing content from another slide deck or source, use the "Keep text only" option and reapply the template layout to prevent theme contamination.</p>
+          <p class="text-base text-gray-700">Use the preset theme incuded in the template.</p>
+          <p class="text-base text-gray-700">If you make any additions or edits to a template, notify the team so they're aware and can make any necassary updates.</p>          
+        </div>
       <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
-        <p><strong>Remember</strong>: Slides support learning, not replace teaching.</p>
+        <p><strong class="font-semibold">Remember</strong>: Slides support learning, not replace teaching.</p>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Slide layouts</h2>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Slide layouts</h2>
       <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
         <table class="w-full text-left text-sm">
           <thead class="bg-pega-lightgray text-pega-navy">
@@ -756,24 +768,28 @@
         </table>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Content density</h2>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Each slide should communicate one idea; split complex topics across multiple slides.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Favor more slides with concise content over fewer slides packed with information.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Aim for no more than six bullets per slide and six words per bullet.</p>
-      <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
-        <p><strong>Remember</strong>: Slides are visual aids, not documents.</p>
-      </div>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Content density</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Each slide should communicate one idea; split complex topics across multiple slides.</p>
+          <p class="text-base text-gray-700">Favor more slides with concise content over fewer slides packed with information.</p>
+          <p class="text-base text-gray-700">Aim for no more than six bullets per slide and six words per bullet.</p>
+        </div>
+        <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
+          <p><strong class="font-semibold">Remember</strong>: Slides are visual aids, not documents.</p>
+        </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Speaker notes</h2>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Include speaker notes on every instructional slide.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Do not duplicate what is already visible on the slide.</p> 
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Do not format speaker notes as a "script."</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Write speaker notes with both instructors and students in mind.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Write speaker notes in complete sentences using active voice.</p>
-      <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use speaker notes to provide context for why the slide content matters.</p>
-     <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
-        <p><strong>Remember</strong>: Speaker notes should expand on, contextualize, or explain the slide content; not repeat it word for word.</p>
-      </div>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Content density</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Include speaker notes on every instructional slide.</p>
+          <p class="text-base text-gray-700">Do not duplicate what is already visible on the slide.</p>
+          <p class="text-base text-gray-700">Do not format speaker notes as a "script."</p>
+          <p class="text-base text-gray-700">Write speaker notes with both instructors and students in mind.</p>
+          <p class="text-base text-gray-700">Write speaker notes in complete sentences using active voice.</p>
+          <p class="text-base text-gray-700">Use speaker notes to provide context for why the slide content matters.</p>
+        </div>
+        <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
+          <p><strong class="font-semibold">Remember</strong>: Speaker notes should expand on, contextualize, or explain the slide content; not repeat it word for word.</p>
+        </div>
 
     </section>
 
@@ -784,64 +800,65 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Writing steps</h2>
-      <div class="prose text-gray-700 max-w-none">
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Capitalize the first word in each step and end the step with the appropriate end punctuation.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">When instructing the user to enter text, provide exactly how the text must be entered, including punctuation.</p>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Bold interface elements; avoid using all uppercase unless it's displayed that way in the UI.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Writing steps</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Capitalize the first word in each step and end the step with the appropriate end punctuation.</p>
+          <p class="text-base text-gray-700">When instructing the user to enter text, provide exactly how the text must be entered, including punctuation.</p>
+          <p class="text-base text-gray-700">Bold interface elements; avoid using all uppercase unless it's displayed that way in the UI.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>Click SAVE.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>Click <strong>Save</strong>.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>Click <strong class="font-semibold">Save</strong>.</div>
           </div>
         </div>
 
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a monospace font for user-entered text.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use a monospace font for user-entered text.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-            <div>In the <strong>Name</strong> field, enter <i>Office location</i>.</div>
+            <div>In the <strong class="font-semibold">Name</strong> field, enter <i>Office location</i>.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>In the <strong>Name</strong> field, enter <span class="inline-code">Office location</span>.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>In the <strong class="font-semibold">Name</strong> field, enter <span class="inline-code text-sm">Office location.</span></div>
           </div>
         </div>
 
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use parallel structure and consistent verb form.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use parallel structure and consistent verb form.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-            <div>Save the file to your local machine by clicking <strong>More</strong> and then selecting
-              <strong>Download.</strong></div>
+            <div>Save the file to your local machine by clicking <strong class="font-semibold">More</strong> and then selecting <strong class="font-semibold">Download</strong>.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>Click <strong>More</strong>, and then select <strong>Download</strong> to save the file to your local machine.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>Click <strong class="font-semibold">More</strong>, and then select <strong class="font-semibold">Download</strong> to save the file to your local machine.</div>
           </div>
         </div>
 
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Orient the user first, then state the action to take.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Orient the user first, then state the action to take.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-            <div>Click <strong>Data</strong> in the navigation pane.</div>
+            <div>Click <strong class="font-semibold">Data</strong> in the navigation pane.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>In the navigation pane, click <strong>Data</strong>.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>In the navigation pane, click <strong class="font-semibold">Data</strong>.</div>
           </div>
         </div>
-      </div>
+        
     </section>
 
 <!-- Grammar and usage -->
@@ -851,161 +868,156 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Acronyms and abbreviations</h2>
-      <div class="mb-12">
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Spell out acronyms on the first reference, followed by the shortened version in parenthesis.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Acronyms and abbreviations</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Spell out acronyms on the first reference, followed by the shortened version in parenthesis.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>Sign up for an ILT (instructor-led training) course today.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Sign up for an instructor-led training (ILT) course today.</div>
           </div>
+        </div>      
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">When expressing plural acronyms and abbreviations, use a lowercase "s" without an apostrophe.</p>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">When expressing plural acronyms and abbreviations, use a lowercase "s" without an apostrophe.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>MLP's</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>MLPs</div>
           </div>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use your best judgment to determine if the acronym or abbreviation is common enough to warrant not defining it.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use your best judgment to determine if the acronym or abbreviation is common enough to warrant not defining it.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>wireless fidelity</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Wi-Fi</div>
           </div>
         </div>
-      </div>
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Capitalization</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">In general use sentence case; except for proper nouns, Pega-specific terms, and mission titles.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Capitalization</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">In general use sentence case; except for proper nouns, Pega-specific terms, and mission titles.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>This is Headline Case.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>This is sentence case.</div>
           </div>
+        </div>      
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Do not use camel case for UI items; Rule names no longer use camel case.</p>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Do not use camel case for UI items; Rule names no longer use camel case.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>RuleSet</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Ruleset</div>
           </div>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use sentence case for placeholder text and field labels in the UI.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use sentence case for placeholder text and field labels in the UI.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>Phone Number</div>
           </div>
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>Enter Your Email Address.</div>
-          </div>
+          </div>        
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Phone number</div>
           </div>
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Enter your email address.</div>
           </div>
         </div>
-      </div>
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Date and time</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use the 12-hour format, followed by a capitalized AM or PM with a space between.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Date and time</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use the 12-hour format, followed by a capitalized AM or PM with a space between.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>2:15am</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>2:15 AM</div>
           </div>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Write full month names and use four-digit years to avoid date confusion. If a date must be expressed numerically, use the format YYYY-MM-DD.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Write full month names and use four-digit years to avoid date confusion. If a date must be expressed numerically, use the format YYYY-MM-DD.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>3/03/2020</div>
           </div>
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>04/05/09</div>
-          </div>
+          </div>        
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>March 3, 2020</div>
           </div>
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>2009-04-05</div>
           </div>
         </div>
-      </div>
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Numbers</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Spell out numbers from zero through nine; use numerals for numbers 10 and greater.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Numbers</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Spell out numbers from zero through nine; use numerals for numbers 10 and greater.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>3, forty</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>three, 40</div>
           </div>
+        </div>      
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Spell out ordinal numbers in text.</p>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Spell out ordinal numbers in text.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>1st, 3rd, 12th</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>first, third, twelfth</div>
           </div>
         </div>
-      </div>
+
     </section>
 
 <!-- Punctuation -->
@@ -1015,91 +1027,86 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Ampersands</h2>
-      <div class="mb-12">
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Avoid using ampersands (&amp;) except with proper nouns, Pega-specific terms, or UI text.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Ampersands</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Avoid using ampersands (&amp;) except with proper nouns, Pega-specific terms, or UI text.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>Tips &amp; tricks</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Tips and tricks</div>
           </div>
-        </div>
-      </div>
+        </div>      
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Commas</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use an Oxford comma for a series of three or more items.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Commas</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use an Oxford comma for a series of three or more items.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-            <div>You can import, rename or reclassify a Case Type.</div>
+            <div>You can add, rename or delete a Case Type.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>You can import, rename, or reclassify a Case Type.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>You can add, rename, or delete a Case Type.</div>
           </div>
+        </div>      
+        
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Dashes and hyphens</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use an <strong class="font-semibold">en dash (–)</strong> without spaces to indicate a range of values; think of it like the word <strong class="font-semibold">through</strong>.</p>
         </div>
-      </div>
-
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Dashes and hyphens</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use an <strong>en dash (–)</strong> without spaces to indicate a range of values; think of it like the word <strong>through</strong></p>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>2020–2022</div>
           </div>
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>Repeat steps 3–5</div>
           </div>
+        </div>        
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use an <strong class="font-semibold">em dash (—)</strong> to create an interruption in a sentence like a semicolon.</p>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use an <strong>em dash (—)</strong> to create an interruption in a sentence like a semicolon.</p>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-            <div>To indicate a break in the flow of a sentence—or an interruption—use an em dash, also known as a long dash.</div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>To indicate a break in the flow of a sentence—or an interruption—use an em dash.</div>
           </div>
         </div>
-
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a <strong>hyphen (-)</strong> to represent negative numbers, or to create a compound word; also, use to separate phone, serial, and social security numbers.</p>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use a <strong class="font-semibold">hyphen (-)</strong> to represent negative numbers, or to create a compound word; also, use to separate phone, serial, and social security numbers.</p>
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>interface-specific</div>
           </div>
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>-2</div>
           </div>
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>800-555-5555</div>
           </div>
-        </div>
+        </div>        
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Slashes</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Avoid "either/or" and "and/or;" use full phrases instead.</p>
-        <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Slashes</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Avoid "either/or" and "and/or;" use full phrases instead.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
           <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
             <div>The system sends notifications to admins and/or managers.</div>
           </div>
         </div>
-        <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-          <div class="flex items-start gap-3"><span
-              class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
             <div>The system sends notifications to admins, managers, or both.</div>
           </div>
-        </div>
-      </div>
+        </div>      
+
     </section>
 
     <!-- Style and voice -->
@@ -1109,86 +1116,92 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-          <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Voice and tone</h2>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use a natural, casual voice; aim for a conversational tone that is not overly informal.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Choose active verbs over passive nouns to encourage user action.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Write in the present tense to make the content more understandable.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Avoid passive voice. Meaning the action is performed on the sentence's subject.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use active voice. Meaning the subject of the sentence performs the action.</p>
-          <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>The updated materials are published by the curriculum development team.</div>
-            </div>
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>Customer service is improved by doing this.</div>
-            </div>            
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Voice and tone</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use a natural, casual voice; aim for a conversational tone that is not overly informal.</p>
+          <p class="text-base text-gray-700">Choose active verbs over passive nouns to encourage user action.</p>
+          <p class="text-base text-gray-700">Write in the present tense to make the content more understandable.</p>
+          <p class="text-base text-gray-700">Avoid passive voice. Meaning the action is performed on the sentence's subject.</p>          
+          <p class="text-base text-gray-700">Use active voice. Meaning the subject of the sentence performs the action.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>The updated materials are published by the curriculum development team.</div>
           </div>
-          <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>The curriculum development team publishes the updated materials.</div>
-            </div>
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>This improves customer service.</div>
-            </div>            
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>Customer service is improved by doing this.</div>
+          </div>        
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>The curriculum development team publishes the updated materials.</div>
           </div>
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>This improves customer service.</div>
+          </div>
+        </div>
 
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Person and perspective</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use second person ("you") when addressing the learner.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>The user can configure the SLA to set response deadlines.</div>
+          </div>
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>You can configure the SLA to set response deadlines.</div>
+          </div>
+        </div>      
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use imperative mood for procedures.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>You should click Save to store your changes.</div>
+          </div>
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>Click Save to store your changes.</div>
+          </div>
+        </div>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Refer to the product in third person.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>We create a new Case when you submit the form.</div>
+          </div>
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>Pega Platform creates a new Case when you submit the form.</div>
+          </div>
+        </div>        
 
-        <div class="mb-12">
-          <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Person and perspective</h2>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use second person ("you") when addressing the learner.</p>
-          <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>The user can configure the SLA to set response deadlines.</div>
-            </div>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Plain language</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use familiar words and short, direct sentences so readers understand it on the first read.</p>
+        </div>
+        <div class="rounded-lg border border-red-200 bg-red-50 mb-2 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+            <div>Utilize the application to initiate the process.</div>
           </div>
-          <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span
-                class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>You can configure the SLA to set response deadlines.</div>
-            </div>
-          </div>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use imperative mood for procedures.</p>
-          <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>You should click Save to store your changes.</div>
-            </div>
-          </div>
-          <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span
-                class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>Click Save to store your changes.</div>
-            </div>
-          </div>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Refer to the product in third person.</p>
-          <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>We create a new Case when you submit the form.</div>
-            </div>
-          </div>
-          <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span
-                class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>Pega Platform creates a new Case when you submit the form.</div>
-            </div>
+        </div>
+        <div class="rounded-lg border border-green-200 bg-green-50 mb-10 ml-4 p-1 space-y-1">
+          <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+            <div>Use the application to start the process.</div>
           </div>
         </div>      
 
-          <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Plain language</h2>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use familiar words and short, direct sentences so readers understand it on the first read.</p>
-          <div class="rounded-lg border border-red-200 bg-red-50 mt-4 mb-2 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-              <div>Utilize the application to initiate the process.</div>
-            </div>
-          </div>
-          <div class="rounded-lg border border-green-200 bg-green-50 mt-2 mb-8 ml-4 p-2 space-y-2">
-            <div class="flex items-start gap-3"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-              <div>Use the application to start the process.</div>
-            </div>
-          </div>        
-
-          <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Inclusive language</h2>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Use gender-neutral language (they/their as a singular pronoun).</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Avoid terms that assume a specific cultural background, physical ability, or level of English fluency.</p>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Inclusive language</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Use gender-neutral language (they/their as a singular pronoun).</p>
+          <p class="text-base text-gray-700">Avoid terms that assume a specific cultural background, physical ability, or level of English fluency.</p>
+        </div>
 
     </section>
 
@@ -1199,16 +1212,21 @@
         <div class="border-t-2 border-pega-ice w-full mb-6"></div>
       </div>
 
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Using AI for written content</h2>
-      <p class="text-base">Use these guidelines whenever you create, edit, or publish course curriculum, or any other user-facing material with help from generative AI tools.</p>
-      <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
-        <p><strong>Core principle</strong>: AI output is a starting point, not a finished product. Always review before including AI-generated content in any deliverable.</p>
-      </div>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Using AI for written content</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Treat AI as a collaborator, not the author. Use AI for drafts, options, and structure; not final copy.</p>
+          <p class="text-base text-gray-700">We are the author of record. We own accuracy, instructional quality, and style compliance for every deliverable.</p>
+        </div>
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">How to use AI</h2>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Treat AI as a collaborator, not the author. Use AI for drafts, options, and structure; not final copy.</p>
-        <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">You are the author of record. You own accuracy, instructional quality, and style compliance for every deliverable.</p>
+      <h2 class="text-2xl font-bold text-pega-pearl mt-8 mb-6">Responsible use</h2>
+        <div class="border-l-2 border-gray-200 pl-4 my-6 space-y-4">
+          <p class="text-base text-gray-700">Do not share sensitive or confidential information about Pega with a Gen AI technology unless you’re using a licensed, Pega-approved Gen AI solution.</p>
+          <p class="text-base text-gray-700">Facts and statistics should not come from generated resources due to the risk of hallucinations.</p>
+          <p class="text-base text-gray-700">Any facts derived from Gen AI will need to be rigorously researched and reviewed for accuracy.</p>
+        </div>
+
+        <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
+        <p><strong class="font-semibold">Remember</strong>: AI output is a starting point, always review before including AI-generated content in any deliverable.</p>
       </div>
 
           <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">What to review in AI output:</h2>
@@ -1229,11 +1247,6 @@
                 Confirm numbered steps orient the user first, then action.
               </li>
             </ul>
-
-          <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-4">Responsible use</h2>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Do not share sensitive or confidential information about Pega with a Gen AI technology unless you’re using a licensed, Pega-approved Gen AI solution.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Facts and statistics should not come from generated resources due to the risk of hallucinations.</p>
-          <p class="text-base leading-normal border-l-4 border-gray-200 mt-3 mb-3 pl-4">Any facts derived from Gen AI will need to be rigorously researched and reviewed for accuracy</p>
        
     </section>
 
@@ -1707,7 +1720,7 @@
 
         section.innerHTML = `
           <div class="p-4 border rounded-lg">
-            <h3 class="text-xl font-sans font-bold text-pega-pearl mb-4 mt-4">${cat.category}</h3>
+            <h3 class="font-sans font-bold text-pega-pearl mt-0 mb-4">${cat.category}</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
               ${cat.items.map((c) => `
                 <div class="group cursor-pointer" onclick="copyHex('${c.hex}')">
@@ -1886,4 +1899,5 @@
 </body>
 
 </html>
+
 
