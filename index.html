@@ -151,16 +151,6 @@
       white-space: nowrap;
     }
 
-    .shimmer {
-      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-    }
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
     @media (min-width: 768px) {
       #sidebar.sidebar-collapsed {
         width: 4.5rem !important;
@@ -258,12 +248,6 @@
           class="material-symbols-outlined text-lg">palette</span><span class="nav-label">Colors</span></button>
       <button class="nav-btn" onclick="navigate('resources')"><span
           class="material-symbols-outlined text-lg">menu_book</span><span class="nav-label">Resources</span></button>
-
-      <div class="nav-group-label">AI Assistant</div>
-      <button class="nav-btn" onclick="navigate('ai-tools')">
-        <span class="material-symbols-outlined text-lg text-pega-orange">auto_awesome</span>
-        <span class="nav-label">AI assistant tools</span>
-      </button>
 
       <div class="nav-group-label">Design standards</div>
       <button class="nav-btn" onclick="navigate('visual-design')"><span
@@ -611,106 +595,6 @@
               href="https://www.flaticon.com/animated-icons" target="_blank" rel="noopener noreferrer"
               class="text-pega-navy font-semibold hover:text-pega-berry transition-colors">Flaticon:</a> Animated icons</p>
     </section>
-
-    <!-- AI assistant tools -->
-    <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="ai-tools">
-      <div class="mb-4">
-        <p class="eyebrow text-pega-orange mb-1">AI Assistant</p>
-        <div class="border-t-2 border-pega-orange/20 w-full mb-6"></div>
-      </div>
-
-      <h2 class="text-2xl font-bold text-pega-pearl mt-6 mb-2">AI assistant tools</h2>
-      <p class="text-base text-gray-700 mb-8">
-        Use these tools to speed up drafting and QA. Always review outputs for accuracy and style compliance.
-      </p>
-
-      <div class="grid gap-8">
-        <!-- Tool 1: Style Auditor -->
-        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-          <div class="bg-pega-navy p-4 text-white flex items-center justify-between">
-            <h3 class="font-bold flex items-center gap-2">
-              <span class="material-symbols-outlined text-pega-yellow">fact_check</span>
-              Style Auditor
-            </h3>
-            <span class="text-[10px] bg-pega-sapphire px-2 py-1 rounded font-sans">RULES CHECK</span>
-          </div>
-
-          <div class="p-6">
-            <label class="block text-sm font-bold text-gray-700 mb-2">Paste content to audit:</label>
-            <textarea id="aiAuditInput"
-              class="w-full h-32 p-4 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-pega-violet focus:outline-none mb-4"
-              placeholder="Paste instructional text here..."></textarea>
-
-            <button onclick="runAiAudit()" id="aiAuditBtn"
-              class="bg-pega-navy text-white px-6 py-2 rounded-lg font-bold hover:bg-pega-pearl transition flex items-center gap-2">
-              <span class="material-symbols-outlined text-sm">bolt</span>
-              Run style audit
-            </button>
-
-            <div id="aiAuditResult" class="mt-6 hidden fade-in">
-              <div class="p-4 rounded-lg bg-gray-50 border border-gray-200 text-sm overflow-auto max-h-96" id="aiAuditContent"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tool 2: Headline Case Fixer -->
-        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-          <div class="bg-pega-teal p-4 text-white flex items-center justify-between">
-            <h3 class="font-bold flex items-center gap-2">
-              <span class="material-symbols-outlined text-white">text_fields</span>
-              Headline Case Fixer
-            </h3>
-            <span class="text-[10px] bg-pega-emerald px-2 py-1 rounded font-sans">PEGA TERMS</span>
-          </div>
-
-          <div class="p-6">
-            <label class="block text-sm font-bold text-gray-700 mb-2">Fix Pega terminology capitalization:</label>
-            <textarea id="aiHeadlineInput"
-              class="w-full h-32 p-4 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-pega-teal focus:outline-none mb-4"
-              placeholder="Enter text containing Pega terms..."></textarea>
-
-            <button onclick="runAiHeadlineFix()" id="aiHeadlineBtn"
-              class="bg-pega-teal text-white px-6 py-2 rounded-lg font-bold hover:opacity-90 transition flex items-center gap-2">
-              <span class="material-symbols-outlined text-sm">auto_fix_high</span>
-              Fix headline case
-            </button>
-
-            <div id="aiHeadlineResult" class="mt-6 hidden fade-in">
-              <div class="p-4 rounded-lg bg-pega-mint/10 border border-pega-mint text-sm overflow-auto max-h-96" id="aiHeadlineContent"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tool 3: Slide Optimizer -->
-        <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-          <div class="bg-pega-violet p-4 text-white flex items-center justify-between">
-            <h3 class="font-bold flex items-center gap-2">
-              <span class="material-symbols-outlined text-pega-mint">slideshow</span>
-              Slide Optimizer (6×6)
-            </h3>
-            <span class="text-[10px] bg-pega-navy/20 px-2 py-1 rounded font-sans">6×6 RULE</span>
-          </div>
-
-          <div class="p-6">
-            <label class="block text-sm font-bold text-gray-700 mb-2">Convert paragraph to slide bullets:</label>
-            <textarea id="aiSlideInput"
-              class="w-full h-32 p-4 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-pega-violet focus:outline-none mb-4"
-              placeholder="Paste a paragraph to convert..."></textarea>
-
-            <button onclick="runAiSlideOptimize()" id="aiSlideBtn"
-              class="bg-pega-violet text-white px-6 py-2 rounded-lg font-bold hover:opacity-90 transition flex items-center gap-2">
-              <span class="material-symbols-outlined text-sm">format_list_bulleted</span>
-              Optimize for slides
-            </button>
-
-            <div id="aiSlideResult" class="mt-6 hidden fade-in">
-              <div class="p-4 rounded-lg bg-pega-ice/10 border border-pega-ice text-sm overflow-auto max-h-96" id="aiSlideContent"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <!-- Visual design -->
     <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="visual-design">
@@ -1692,10 +1576,6 @@
       { avoid: "orchestrate", use: "organize, manage" },
       { avoid: "optimize", use: "improve (say what improves)" }
 
-
-
-
-
     ];
 
     const uiInteraction = [
@@ -1725,6 +1605,7 @@
       "Is active voice used throughout?",
       "Does each slide communicate only one idea?",
       "Are speaker notes included on every instructional slide?",
+      "Is active voice used?"
     ];
 
     const slideLayouts = [
@@ -1941,177 +1822,6 @@
         }
       });
     }
-
-      /***********************
-       * AI ASSISTANT TOOLS
-       ***********************/
-      const geminiApiKey = ""; // <-- add your key (or load from a safer place)
-
-      /** Reuse the existing toast UI (same element used by copyHex). */
-      function showToast(msg, type = "success") {
-        const toast = document.getElementById("toast");
-        const icon = document.getElementById("toast-icon");
-        const text = document.getElementById("toast-msg");
-
-        if (text) text.textContent = msg;
-        if (icon) icon.textContent = type === "success" ? "check_circle" : "error";
-
-        if (toast) {
-          toast.classList.remove("translate-y-40");
-          setTimeout(() => toast.classList.add("translate-y-40"), 2000);
-        }
-      }
-
-      function headlineTermsCsv() {
-        return (typeof headlineTerms !== "undefined" && Array.isArray(headlineTerms))
-          ? headlineTerms.join(", ")
-          : "";
-      }
-
-      async function callGemini(userText, systemInstruction) {
-        if (!geminiApiKey) throw new Error("Missing Gemini API key.");
-
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
-        const res = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: userText }] }],
-            systemInstruction: { parts: [{ text: systemInstruction }] }
-          })
-        });
-
-        if (!res.ok) throw new Error("Gemini request failed.");
-        const data = await res.json();
-        return data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response received.";
-      }
-
-      function setResult(containerId, text) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-        container.innerHTML = "";
-
-        const pre = document.createElement("pre");
-        pre.className = "whitespace-pre-wrap text-sm text-gray-700";
-        pre.textContent = text;
-        container.appendChild(pre);
-      }
-
-      async function runAiAudit() {
-        const input = document.getElementById("aiAuditInput")?.value?.trim() || "";
-        const btn = document.getElementById("aiAuditBtn");
-        const resultWrap = document.getElementById("aiAuditResult");
-        const content = document.getElementById("aiAuditContent");
-
-        if (!input) return showToast("Enter text to audit.", "error");
-
-        if (btn) {
-          btn.disabled = true;
-          btn.innerHTML = `<span class="material-symbols-outlined animate-spin">refresh</span> Analyzing...`;
-        }
-        if (content) content.innerHTML = `<div class="h-20 shimmer rounded"></div>`;
-        if (resultWrap) resultWrap.classList.remove("hidden");
-
-        const systemPrompt =
-          `You are the Pegasystems Curriculum Style Auditor.
-      Check the text against:
-      1) active voice, 2) present tense, 3) second person (you),
-      4) Oxford comma for lists of 3+, 5) spell out numbers zero–nine,
-      6) no ampersands (&),
-      7) Pega terms in Headline Case for: ${headlineTermsCsv()}.
-      Return:
-      - Style Score (0–100)
-      - Violations (bulleted)
-      - Corrected rewrite
-      Output as plain text with clear headings.`;
-
-        try {
-          const result = await callGemini(input, systemPrompt);
-          setResult("aiAuditContent", result);
-        } catch (e) {
-          setResult("aiAuditContent", "Error: " + (e?.message || "Unknown error."));
-          showToast("AI audit failed.", "error");
-        } finally {
-          if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = `<span class="material-symbols-outlined text-sm">bolt</span> Run style audit`;
-          }
-        }
-      }
-
-      async function runAiHeadlineFix() {
-        const input = document.getElementById("aiHeadlineInput")?.value?.trim() || "";
-        const btn = document.getElementById("aiHeadlineBtn");
-        const resultWrap = document.getElementById("aiHeadlineResult");
-        const content = document.getElementById("aiHeadlineContent");
-
-        if (!input) return showToast("Enter text to fix.", "error");
-
-        if (btn) {
-          btn.disabled = true;
-          btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-sm">refresh</span> Fixing...`;
-        }
-        if (content) content.innerHTML = `<div class="h-20 shimmer rounded"></div>`;
-        if (resultWrap) resultWrap.classList.remove("hidden");
-
-        const systemPrompt =
-          `You are an editor for Pega technical documentation.
-      Task: Capitalize ONLY the following Pega terms into Headline Case: ${headlineTermsCsv()}.
-      Do not change any other words or punctuation.
-      Output ONLY the fixed text.`;
-
-        try {
-          const result = await callGemini(input, systemPrompt);
-          setResult("aiHeadlineContent", result);
-        } catch (e) {
-          setResult("aiHeadlineContent", "Error: " + (e?.message || "Unknown error."));
-          showToast("Headline fix failed.", "error");
-        } finally {
-          if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = `<span class="material-symbols-outlined text-sm">auto_fix_high</span> Fix headline case`;
-          }
-        }
-      }
-
-      async function runAiSlideOptimize() {
-        const input = document.getElementById("aiSlideInput")?.value?.trim() || "";
-        const btn = document.getElementById("aiSlideBtn");
-        const resultWrap = document.getElementById("aiSlideResult");
-        const content = document.getElementById("aiSlideContent");
-
-        if (!input) return showToast("Enter text to optimize.", "error");
-
-        if (btn) {
-          btn.disabled = true;
-          btn.innerHTML = `<span class="material-symbols-outlined animate-spin text-sm">refresh</span> Optimizing...`;
-        }
-        if (content) content.innerHTML = `<div class="h-20 shimmer rounded"></div>`;
-        if (resultWrap) resultWrap.classList.remove("hidden");
-
-        const systemPrompt =
-          `You are a slide content editor.
-      Convert the text into bullets using the 6×6 rule:
-      - max 6 bullets
-      - max 6 words per bullet
-      - active voice
-      Output ONLY the bullets (one per line).`;
-
-        try {
-          const result = await callGemini(input, systemPrompt);
-          setResult("aiSlideContent", result);
-        } catch (e) {
-          setResult("aiSlideContent", "Error: " + (e?.message || "Unknown error."));
-          showToast("Slide optimization failed.", "error");
-        } finally {
-          if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = `<span class="material-symbols-outlined text-sm">format_list_bulleted</span> Optimize for slides`;
-          }
-        }
-      }
-
-
 
     /***********************
      * SEARCH
