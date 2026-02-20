@@ -211,24 +211,21 @@
 <body class="bg-gray-50 text-pega-extradark h-screen flex flex-col md:flex-row overflow-hidden">
 
     <!-- Mobile Header -->
-    <div class="md:hidden bg-pega-navy text-white p-4 flex justify-between items-center z-50 shadow-md">
-        <div class="font-bold text-xl tracking-tight flex items-center gap-2">
-            <span class="font-serif">Pega ILT</span>
-            <span class="text-pega-mint text-sm font-sans uppercase">Style Guide</span>
-        </div>
-        <button class="text-white focus:outline-none" id="mobile-menu-btn">
+        <div class="md:hidden bg-white border-b border-gray-200 p-4 flex justify-between items-center z-50 shadow-sm">
+        <img src="https://i.imgur.com/gZ3DmRH.png" alt="Pega" class="h-8 w-auto" />
+        <button class="text-gray-700 focus:outline-none" id="mobile-menu-btn" aria-label="Open menu">
             <span class="material-symbols-outlined">menu</span>
         </button>
-    </div>
+        </div>
 
     <!-- Sidebar Navigation -->
-    <aside class="bg-white border-r border-gray-200 w-full md:w-72 flex-shrink-0 flex flex-col h-full absolute md:relative transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-xl" id="sidebar">
-        <div class="p-[22px_20px_18px] border-b border-white/10 flex items-center justify-between flex-shrink-0 center-on-collapse transition-all">
+    <aside class="bg-white border-r border-gray-200 w-full md:w-72 flex-shrink-0 flex flex-col absolute md:relative top-16 md:top-0 h-[calc(100%-4rem)] md:h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-xl" id="sidebar">
+        <div class="hidden md:flex p-[22px_20px_18px] border-b border-white/10 items-center justify-between flex-shrink-0 center-on-collapse transition-all">
             <div class="overflow-hidden whitespace-nowrap hide-on-collapse brand-container">
                 <img src="https://i.imgur.com/gZ3DmRH.png" alt="Pega" class="h-10 w-auto block" />
             </div>
 
-            <button id="sidebar-collapse-btn" type="button" class="p-2 rounded-md hover:bg-gray-100 text-gray-600" aria-label="Collapse sidebar">
+            <button id="sidebar-collapse-btn" type="button" class="hidden md:inline-flex p-2 rounded-md hover:bg-gray-100 text-gray-600" aria-label="Collapse sidebar">
                 <span class="material-symbols-outlined" id="sidebar-collapse-icon">chevron_left</span>
             </button>
         </div>
