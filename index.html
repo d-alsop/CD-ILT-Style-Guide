@@ -250,6 +250,7 @@
             <div class="nav-group-label">Design standards</div>
             <button class="nav-btn" onclick="navigate('visual-design')"><span class="material-symbols-outlined text-lg">grid_view</span><span class="nav-label">Visual design</span></button>
             <button class="nav-btn" onclick="navigate('presentations')"><span class="material-symbols-outlined text-lg">slideshow</span><span class="nav-label">Presentations</span></button>
+            <button class="nav-btn" onclick="navigate('screenshots')"><span class="material-symbols-outlined text-lg">screenshot_monitor</span><span class="nav-label">Screenshots</span></button>
 
             <div class="nav-group-label">Writing standards</div>
             <button class="nav-btn" onclick="navigate('procedures-and-instructions')"><span class="material-symbols-outlined text-lg">format_list_numbered</span><span class="nav-label">Procedures and instructions</span></button>
@@ -746,7 +747,7 @@
                         <div class="flex items-start gap-3 mt-4 mb-2"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                             <p class="text-sm text-gray-700">Consistent alignment of text and images creates an organized, easy-to-read layout.</p>
                         </div>
-                        <img class="rounded shadow-sm w-full" src="https://i.imgur.com/VCOTAap.png" alt="Example of proper alignment – text and images are aligned neatly, improving readability." />
+                        <img class="rounded shadow-sm w-full" src="https://i.imgur.com/VCOTAap.png">
                     </div>
                 </div>
             </div>
@@ -891,6 +892,65 @@
             </div>
 
         </section>
+
+        <!-- Screenshots -->
+        <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="screenshots">
+            <div class="mb-8">
+                <p class="eyebrow font-bold text-gray-400 mb-1">Screenshots</p>
+                <div class="border-t-2 border-gray-300 w-full mb-6"></div>
+            </div>
+
+            <h2 class="font-serif font-bold text-2xl text-black mt-12 mb-6">Focus and cropping</h2>
+            <div class="border-t-2 pt-6 pb-6 border-gray-200 pl-4 space-y-4 pb-6">
+                <div class="text-base text-pega-pearl mb-6">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- New item -->
+                    <!-- Not recommended -->
+                    <div class="bg-red-50 ml-4 p-4 rounded-lg border border-red-100">
+                        <div class="flex items-start gap-3 mt-4 mb-2 pb-4"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+                            <p class="text-sm text-gray-700">Extra browser UI and whitespace distract from the area learners need to focus on.</p>
+                        </div>
+                        <img class="rounded shadow-md" src="https://i.imgur.com/XyxvJ0B.png"/>
+                    </div>
+                    <!-- Recommended -->
+                    <div class="bg-green-50 ml-4 p-4 rounded-lg border border-green-100">
+                        <div class="flex items-start gap-3 mt-4 mb-2 pb-4"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+                            <p class="text-sm text-gray-700">Tight cropping keeps attention on the relevant area while preserving enough context to orient learners.</p>
+                        </div>
+                        <img class="rounded shadow-md" src="https://i.imgur.com/1Ybv4US.png">
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="font-serif font-bold text-2xl text-black mt-12 mb-6">Sensitive data</h2>
+            <div class="border-t-2 pt-6 pb-6 border-gray-200 pl-4 space-y-4 pb-6">
+                <div class="text-base text-pega-pearl mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- New item -->
+                    <!-- Not recommended -->
+                    <div class="bg-red-50 ml-4 p-4 rounded-lg border border-red-100">
+                        <div class="flex items-start gap-3 mt-4 mb-2 pb-4"><span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+                            <p class="text-sm text-gray-700">Sensitive information is visible, which creates privacy and compliance risks.</p>
+                        </div>
+                        <img class="rounded shadow-md" src="https://i.imgur.com/vkh8HdB.png" alt="Example of misaligned elements – text and images are not aligned, creating a messy layout." />
+                    </div>
+                    <!-- Recommended -->
+                    <div class="bg-green-50 ml-4 p-4 rounded-lg border border-green-100">
+                        <div class="flex items-start gap-3 mt-4 mb-2 pb-4"><span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+                            <p class="text-sm text-gray-700">Mock data or redaction protects sensitive information while keeping the screenshot instructionally useful.</p>
+                        </div>
+                        <img class="rounded shadow-md" src="https://i.imgur.com/sMmBJWU.png">
+                    </div>
+                </div>
+            </div>
+
+
+            <h2 class="font-serif font-bold text-2xl text-black mt-12 mb-6">Callouts</h2>
+            <div class="border-t-2 pt-6 pb-6 border-gray-200 pl-4 space-y-4">
+                <div class="text-base text-pega-pearl mb-6">Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy) with a transparent fill. Avoid messy hand-drawn circles or arrows.</div>
+
+        </section>
+
 
         <!-- Procedures -->
         <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="procedures-and-instructions">
