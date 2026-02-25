@@ -227,8 +227,8 @@
 
       .guideline-item {
         border-top: 2px solid #e5e7eb;
-        padding-top: 1.65rem;
-        padding-bottom: 1.65rem;
+        padding-top: 1.55rem;
+        padding-bottom: 1.55rem;
       }
 
       .guideline-text {
@@ -282,22 +282,6 @@
         margin-bottom: 1.5rem;
       }
 
-      /* ── Style Checker ── */
-      .sc-type-btn { background:#f9fafb; color:#6b7280; border-color:#e5e7eb; }
-      .sc-type-btn.active { background:#0C1935; color:#ffffff; border-color:#0C1935; }
-      .sc-type-btn:hover:not(.active) { border-color:#c0c7d8; color:#374151; }
-      .sc-issue { background:#fff; border:1px solid #e5e7eb; border-radius:0.75rem; padding:0.85rem 1rem; display:flex; gap:0.75rem; align-items:flex-start; }
-      .sc-issue-icon { width:1.5rem; height:1.5rem; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.7rem; font-weight:800; margin-top:0.1rem; }
-      .sc-issue.sc-error .sc-issue-icon   { background:#fee2e2; color:#b91c1c; }
-      .sc-issue.sc-warning .sc-issue-icon { background:#fef3c7; color:#92400e; }
-      .sc-issue.sc-info .sc-issue-icon    { background:#dbeafe; color:#1d4ed8; }
-      .sc-issue-rule { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af; margin-bottom:0.2rem; }
-      .sc-issue-msg  { font-size:0.82rem; color:#374151; line-height:1.45; }
-      .sc-issue-fix  { font-size:0.78rem; color:#5F67B9; margin-top:0.35rem; }
-      .sc-ann-error   { background:#fee2e2; border-bottom:2px solid #f87171; border-radius:2px; cursor:help; padding:0 1px; }
-      .sc-ann-warning { background:#fef3c7; border-bottom:2px solid #fbbf24; border-radius:2px; cursor:help; padding:0 1px; }
-      .sc-ann-info    { background:#dbeafe; border-bottom:2px solid #60a5fa; border-radius:2px; cursor:help; padding:0 1px; }
-      .sc-flag-chip { font-size:0.68rem; font-weight:700; padding:0.2rem 0.55rem; border-radius:999px; border:1px solid; white-space:nowrap; }
     </style>
   </head>
 
@@ -383,9 +367,6 @@
           <span class="material-symbols-outlined text-lg">photo_library</span><span class="nav-label">Examples library</span>
         </button>
 
-        <div class="mt-4 px-4 sidebar-footer">
-          <button class="w-full bg-pega-violet text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-navy transition" onclick="navigate('style-checker')">✦ STYLE CHECKER</button>
-        </div>
         <div class="mt-2 px-4 sidebar-footer">
           <button class="w-full bg-pega-navy text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-pearl transition" onclick="navigate('checklist')">QUALITY CHECKLIST</button>
         </div>
@@ -1632,33 +1613,6 @@
         </div>
       </section>
 
-<!--════════════════════════ Style Checker ════════════════════════-->
-      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="style-checker">
-        <div class="mb-4">
-          <p class="eyebrow font-bold text-gray-400 mb-1">Style Checker</p>
-          <div class="border-t-2 border-gray-300 w-full mb-2"></div>
-          <p class="text-sm text-gray-500 mb-6">Paste any slide heading or body copy to check it against CD ILT style guide rules.</p>
-        </div>
-
-        <!-- Input card -->
-        <div class="bg-white border border-gray-200 rounded-xl shadow-sm p-6 mb-6">
-          <div style="display:flex;gap:0.75rem;margin-bottom:0.75rem">
-            <button id="sc-btn-heading" onclick="scSetType('heading')" style="font-size:0.75rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:999px;border:1px solid #0C1935;background:#0C1935;color:#fff;cursor:pointer">Heading / slide title</button>
-            <button id="sc-btn-body" onclick="scSetType('body')" style="font-size:0.75rem;font-weight:700;padding:0.25rem 0.75rem;border-radius:999px;border:1px solid #e5e7eb;background:#f9fafb;color:#6b7280;cursor:pointer">Body copy</button>
-          </div>
-          <textarea id="sc-input" rows="5" placeholder="Paste text here to check…" style="width:100%;font-family:'Open Sans',sans-serif;font-size:0.875rem;color:#374151;border:1px solid #e5e7eb;border-radius:0.5rem;padding:0.75rem;resize:vertical;box-sizing:border-box;outline:none"></textarea>
-          <div style="display:flex;align-items:center;gap:0.75rem;margin-top:0.75rem">
-            <button onclick="scRun()" style="background:#5F67B9;color:#fff;font-size:0.875rem;font-weight:700;padding:0.5rem 1.25rem;border-radius:0.5rem;border:none;cursor:pointer">Check text</button>
-            <button onclick="scClear()" style="background:#fff;color:#6b7280;font-size:0.875rem;border:1px solid #e5e7eb;padding:0.5rem 1rem;border-radius:0.5rem;cursor:pointer">Clear</button>
-            <span id="sc-char" style="font-size:0.75rem;color:#9ca3af;margin-left:auto;font-family:monospace"></span>
-          </div>
-        </div>
-
-        <!-- Output area — written by scRun() -->
-        <div id="sc-out"></div>
-
-      </section>
-
     <div class="fixed bottom-8 right-8 bg-pega-pearl text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-40 transition-transform duration-300 flex items-center gap-3 z-50" id="toast">
       <span class="material-symbols-outlined text-pega-mint" id="toast-icon">check_circle</span>
       <span id="toast-msg">Copied!</span>
@@ -2677,126 +2631,7 @@
             if (sidebar) sidebar.classList.toggle("-translate-x-full");
           });
         }
-
-        // Style checker char counter
-        const scInputEl = document.getElementById('sc-input');
-        if (scInputEl) {
-          scInputEl.addEventListener('input', () => {
-            const n = scInputEl.value.length;
-            const cc = document.getElementById('sc-char-count');
-            if (cc) cc.textContent = n ? `${n} char${n!==1?'s':''}` : '';
-          });
-        }
       });
-
-      // ════════════════════════════════════════════════════
-      //  STYLE CHECKER
-      // ════════════════════════════════════════════════════
-
-      var scCurrentType = 'heading';
-
-      function scSetType(type) {
-        scCurrentType = type;
-        var hBtn = document.getElementById('sc-btn-heading');
-        var bBtn = document.getElementById('sc-btn-body');
-        if (!hBtn || !bBtn) return;
-        if (type === 'heading') {
-          hBtn.style.background = '#0C1935'; hBtn.style.color = '#fff'; hBtn.style.borderColor = '#0C1935';
-          bBtn.style.background = '#f9fafb'; bBtn.style.color = '#6b7280'; bBtn.style.borderColor = '#e5e7eb';
-        } else {
-          bBtn.style.background = '#0C1935'; bBtn.style.color = '#fff'; bBtn.style.borderColor = '#0C1935';
-          hBtn.style.background = '#f9fafb'; hBtn.style.color = '#6b7280'; hBtn.style.borderColor = '#e5e7eb';
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var inp = document.getElementById('sc-input');
-        if (inp) {
-          inp.addEventListener('input', function() {
-            var cc = document.getElementById('sc-char');
-            if (cc) cc.textContent = inp.value.length ? inp.value.length + ' chars' : '';
-          });
-        }
-      });
-
-async function scRun() {
-  const out = document.getElementById('sc-out');
-  const inp = document.getElementById('sc-input');
-  if (!out || !inp) return;
-  
-  const rawText = inp.value.trim();
-
-  if (!rawText) {
-    out.innerHTML = '<div style="background:#fef3c7;border:1px solid #fde68a;border-radius:0.75rem;padding:1rem;font-size:0.85rem;color:#92400e">Please paste some text above before checking.</div>';
-    return;
-  }
-
-  // Show a loading message
-  out.innerHTML = '<div style="padding:1rem;color:#6b7280;font-size:0.875rem;">Consulting the style guide AI...</div>';
-
-  try {
-    // Send text AND the current toggle state (heading vs body) to Vercel
-    const response = await fetch('/api/check-text', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        text: rawText,
-        type: typeof scCurrentType !== 'undefined' ? scCurrentType : 'body'
-      })
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error || 'Something went wrong');
-    }
-
-    const correctedText = data.correctedText || rawText;
-    const issues = data.issuesFound || [];
-
-    // Build the Suggested Revision block
-    let htmlOutput = `
-      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:0.75rem;padding:1.25rem;margin-bottom:1rem;">
-        <div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#9ca3af;margin-bottom:0.75rem">Suggested Revision</div>
-        <div id="sc-suggestion-text" style="font-size:0.875rem;color:#0C1935;line-height:1.6;background:#f9fafb;border-radius:0.5rem;padding:0.75rem;border:1px solid #f3f4f6;">
-          ${correctedText.replace(/\n/g, '<br>')}
-        </div>
-        <button onclick="scCopySuggestion()" style="margin-top:0.75rem;font-size:0.75rem;font-weight:600;color:#5F67B9;border:1px solid #c7caec;background:#fff;padding:0.3rem 0.75rem;border-radius:0.5rem;cursor:pointer">Copy suggestion</button>
-      </div>
-    `;
-
-    // Build the Issue Cards 
-    if (issues.length === 0) {
-      htmlOutput += '<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:0.75rem;padding:1rem;font-size:0.875rem;color:#15803d;font-weight:600">✓ No issues found. This text aligns with CD ILT standards!</div>';
-    } else {
-      let issueRows = '<div style="font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#9ca3af;margin-bottom:0.75rem;margin-top:1.5rem;">Issues Identified</div>';
-      
-      issues.forEach(iss => {
-        let iconClass = 'sc-info';
-        let iconSymbol = 'i';
-        if (iss.severity === 'error') { iconClass = 'sc-error'; iconSymbol = '!'; }
-        if (iss.severity === 'warning') { iconClass = 'sc-warning'; iconSymbol = '~'; }
-
-        issueRows += `
-          <div class="sc-issue ${iconClass}" style="margin-bottom:0.5rem;">
-            <div class="sc-issue-icon">${iconSymbol}</div>
-            <div>
-              <div class="sc-issue-rule">${iss.ruleBroken}</div>
-              <div class="sc-issue-msg">${iss.explanation}</div>
-            </div>
-          </div>
-        `;
-      });
-      htmlOutput += issueRows;
-    }
-
-    out.innerHTML = htmlOutput;
-
-  } catch (error) {
-    console.error("Error:", error);
-    out.innerHTML = `<div style="background:#fee2e2;border:1px solid #f87171;border-radius:0.75rem;padding:1rem;font-size:0.85rem;color:#b91c1c">Error connecting to the AI checker. Please try again later.</div>`;
-  }
-}
 
     </script>
   </body>
