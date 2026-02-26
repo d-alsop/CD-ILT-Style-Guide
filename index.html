@@ -328,6 +328,10 @@
         opacity: 1;
       }
 
+      .tooltip:focus-within::after,
+      .tooltip:focus-within::before {
+        opacity: 1;
+      }
 
     </style>
   </head>
@@ -415,7 +419,7 @@
         </button>
 
         <div class="mt-2 px-4 sidebar-footer">
-          <button class="w-full bg-pega-navy text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-pearl transition" onclick="navigate('checklist')">QUALITY CHECKLIST</button>
+          <button class="w-full bg-pega-navy text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-berry transition" onclick="navigate('checklist')">QUALITY CHECKLIST</button>
         </div>
       </nav>
 
@@ -1931,20 +1935,55 @@
       ];
 
       const checklistItems = [
-        "Are you using the latest approved template and theme?",
-        "Are default slide layouts used?",
-        "Does each slide communicate one main idea?",
-        "Is content density appropriate (6x6)?",
-        "Are slide titles and body text in sentence case?",
-        "Are acronyms spelled out on first use?",
-        "Is terminology consistent across slides?",
-        "Is active voice used, with clear “who does what” phrasing?",
-        "Are procedures written in imperative steps, parallel structure, and learner-focused?",
-        "Are images sharp, cropped cleanly, and not stretched or distorted?",
-        "Is alignment and spacing consistent?",
-        "Are speaker notes included on every instructional slide and do they add value?",
-        "Have you run a spelling check and confirmed any links or references used?",
-      ];
+        { type: "heading", text: "Template and design" },
+          { type: "item",
+              text: `Have you reviewed and followed the <a href="https://d-alsop.github.io/CD-ILT-Style-Guide/" target="_blank" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">CD Style Guide</a>?`},
+          { type: "item",
+              text: `Are you using the appropriate <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">template</a>?`},
+          { type: "item",
+              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
+          { type: "item",
+              text: `Are the correct <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">fonts</a>, font sizes, and font colors used throughout?`},
+
+        { type: "heading", text: "Titles and headings" },
+          { type: "item",
+              text: `Are the presentation title, slide titles, and subtitles in sentence case?`},
+          { type: "item",
+              text: `Is sentence case used consistently, with exceptions only for proper nouns and <a href='#' onclick="navigate('appendix-headline-case'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">Pega-specific terms</a>?`},
+          { type: "item",
+              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
+          { type: "item",
+              text: `Are <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">trademark symbols (™)</a> included only on the first occurrence of the product name in body text, and exluded from titles and headings?`},
+
+        { type: "heading", text: "Writing" },
+          { type: "item",
+              text: `Are bullet points limited to seven words or fewer?`},
+          { type: "item",
+              text: `Are acronyms spelled out on first use?`},
+          { type: "item",
+              text: `Is active voice used, with clear “who does what” phrasing?`},
+          { type: "item",
+              text: `Is content written in second person ("you" rather than "we" or "us")?`},
+          { type: "item",
+              text: `Is present tense used consistently?`},
+
+        { type: "heading", text: "Visuals" },
+          { type: "item",
+              text: `Are all images, screenshots, and graphics high quality?`},
+          { type: "item",
+              text: `Have blurry or pixelated visuals been removed?`},
+          { type: "item",
+              text: `Are slides free from overcrowding, with adequate whitespace?`},
+          { type: "item",
+              text: `Are all visuals relevant to the slide content?`},
+
+        { type: "heading", text: "Final check" },
+          { type: "item",
+              text: `Have you reviewed grammar, spelling, and capitalization of Pega terms?`},
+          { type: "item",
+              text: `Have you viewed the presentation in Slide Show mode from beginning to end?`},
+     
+        ];
 
       const slideLayouts = [
         { col1: "Title", col2: "Opening slide that introduces the course, module, or lesson." },
@@ -2144,8 +2183,8 @@
         styleandvoice7: {
           title: "Term consistency",
           why: "Consistent terms reduce confusion and help learners connect concepts across materials.",
-          bad: ["Using assignment, task, and work item interchangeably.", "Choose one term and use it consistently throughout the course.",],
-          good: ["Click <strong>Next</strong>.", "Select <strong>Save</strong>."],
+          bad: ["Using assignment, task, and work item interchangeably."],
+          good: ["Choose one term and use it consistently throughout the course."],
         },
         naming1: {
           title: "Leading zero",
@@ -2302,44 +2341,25 @@
 
       
  // ════════════════════════ Navigation ════════════════════════ //
-      function navigate(id) {
-        if (typeof clearDeliverableFilter === "function") {
-          clearDeliverableFilter(true);
-        }
-
-        const highlights = document.querySelectorAll(".search-highlight");
-        highlights.forEach((span) => {
-          const parent = span.parentNode;
-          if (parent) {
-            parent.replaceChild(document.createTextNode(span.textContent), span);
-            parent.normalize();
-          }
+      function navigate(sectionId) {
+        // 1) Hide all sections
+        document.querySelectorAll(".view-section").forEach((section) => {
+          section.classList.add("hidden");
         });
 
-        document.querySelectorAll(".view-section").forEach((s) => s.classList.add("hidden"));
-        const noResults = document.getElementById("no-results");
-        if (noResults) noResults.classList.add("hidden");
+        // 2) Show the requested section
+        const target = document.getElementById(sectionId);
+        if (!target) return;
+        target.classList.remove("hidden");
 
-        const searchInput = document.getElementById("search-input");
-        if (searchInput) searchInput.value = "";
+        // 3) Update active nav button styling
+        document.querySelectorAll(".nav-btn").forEach((btn) => btn.classList.remove("active"));
+        const activeBtn = document.querySelector(`.nav-btn[onclick="navigate('${sectionId}')"]`);
+        if (activeBtn) activeBtn.classList.add("active");
 
-        const target = document.getElementById(id);
-        if (target) {
-          target.classList.remove("hidden");
-          target.classList.add("fade-in");
-          window.scrollTo(0, 0);
-        }
-
-        document.querySelectorAll(".nav-btn").forEach((b) => {
-          b.classList.remove("active");
-          const onclick = b.getAttribute("onclick") || "";
-          if (onclick.includes(`'${id}'`)) b.classList.add("active");
-        });
-
-        if (window.innerWidth < 768) {
-          const sidebar = document.getElementById("sidebar");
-          if (sidebar) sidebar.classList.add("-translate-x-full");
-        }
+        // 4) Scroll the main content area to the top
+        const main = document.getElementById("main-content");
+        if (main) main.scrollTop = 0;
       }
 
       function setSidebarCollapsed(collapsed) {
@@ -2530,19 +2550,35 @@
         if (!container) return;
         container.innerHTML = "";
 
-        checklistItems.forEach((item, i) => {
+        let itemIndex = 0; 
+
+        checklistItems.forEach((entry) => {
+          if (entry.type === "heading") {
+            const heading = document.createElement("div");
+            heading.className = "px-4 py-2 bg-gray-50 text-xs font-bold uppercase tracking-wider text-gray-500";
+            heading.textContent = entry.text;
+            container.appendChild(heading);
+            return;
+          }
+
           const row = document.createElement("div");
-          row.className = "p-4 flex items-center gap-3";
+          row.className = "p-4 flex items-start gap-3";
+
           row.innerHTML = `
-          <input type="checkbox" id="c${i}" class="w-4 h-4 accent-pega-berry cursor-pointer" onchange="checkAudit()">
-          <label for="c${i}" class="text-sm cursor-pointer text-gray-700">${item}</label>
-        `;
+            <input type="checkbox" id="c${itemIndex}" class="w-4 h-4 accent-pega-berry cursor-pointer mt-1" onchange="checkAudit()">
+            <label for="c${itemIndex}" class="cursor-pointer flex-1">
+              <div class="text-sm text-pega=pearl">${entry.text}</div>
+              ${entry.example ? `<div class="mt-1 text-xs text-gray-500">${entry.example}</div>` : ""}
+            </label>
+          `;
+
           container.appendChild(row);
+          itemIndex += 1;
         });
       }
 
       function checkAudit() {
-        const total = checklistItems.length;
+        const total = checklistItems.filter((x) => x.type === "item").length;
         const checked = document.querySelectorAll('#checklist-container input[type="checkbox"]:checked').length;
         const success = document.getElementById("audit-success");
         if (!success) return;
