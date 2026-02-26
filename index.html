@@ -227,8 +227,8 @@
 
       .guideline-item {
         border-top: 2px solid #e5e7eb;
-        padding-top: 1.55rem;
-        padding-bottom: 1.55rem;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
       }
 
       .guideline-text {
@@ -281,6 +281,53 @@
         margin-top: 3rem;
         margin-bottom: 1.5rem;
       }
+
+      .tooltip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .tooltip::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 50%;
+        top: 130%;
+        transform: translateX(-50%);
+        width: max-content;
+        max-width: 350px;
+        padding: 0.6rem 0.75rem;
+        border-radius: 0.5rem;
+        background: #0c1935; 
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.85rem;
+        line-height: 1.2;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.15s ease-in-out;
+        z-index: 50;
+      }
+
+      .tooltip::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 118%;
+        transform: translateX(-50%);
+        border: 6px solid transparent;
+        border-bottom-color: #0c1935;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        z-index: 50;
+      }
+
+      .tooltip:hover::after,
+      .tooltip:hover::before {
+        opacity: 1;
+      }
+
 
     </style>
   </head>
@@ -446,7 +493,7 @@
 
           <div class="mt-4 flex flex-wrap gap-2" id="deliverable-pills">
             <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="presentations">Presentation</button>
-            <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sms font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="solution-guide">Solution guide</button>
+            <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="solution-guide">Solution guide</button>
             <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="naming-files">Naming and files</button>
           </div>
 
@@ -580,9 +627,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-              href="https://pega.widen.net/s/rczmvq7gxn"
-              target="_blank">Download Lora</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/rczmvq7gxn" target="_blank">Download Lora</a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -603,9 +648,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-              href="https://pega.widen.net/s/6lpgprcgcb"
-              target="_blank">Download Open Sans</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/6lpgprcgcb" target="_blank">Download Open Sans</a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -626,9 +669,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-              href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a"
-              target="_blank">Download Chakra Petch</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a" target="_blank">Download Chakra Petch</a>
           </div>
         </div>
       </section>
@@ -787,21 +828,35 @@
           <div class="border-t-2 border-gray-300 w-full mb-6"></div>
         </div>
 
-        <h2 class="section-heading">Whitespace</h2>
+        <h2 class="section-heading flex items-center gap-2">Whitespace
+          <span class="tooltip" data-tooltip="Whitespace is intentional empty space that improves scanability and reduces cognitive load." aria-label="Whitespace definition">
+            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Prefer spacing over lines or borders for separation.</div>
+        </div>        
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="guideline-text">Whitespace is the empty space between elements.</div>
+          <div class="guideline-text">Use whitespace to separate distinct ideas and group related items.</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('visual1')">
-              <span class="icon-sm">visibility</span>
+              <span class="icon-sm">info</span>
               <span>View examples</span>
             </button>
           </div>
         </div>
 
-        <h2 class="section-heading">Alignment</h2>
+        <h2 class="section-heading flex items-center gap-2">Alignment
+          <span class="tooltip" data-tooltip="Alignment creates structure and makes slides easier to follow." aria-label="Alignment definition">
+            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Align to a grid (left, right, or center) and keep it consistent within each slide region.</div>
+        </div>        
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Alignment is arranging elements along a common edge or center to create visual order and enhance readability.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="guideline-text">Alignment creates structure and makes slides easier to follow.</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -820,10 +875,20 @@
           </div>
         </div>
 
-        <h2 class="section-heading">Visual hierarchy</h2>
+        <h2 class="section-heading flex items-center gap-2">Visual hierarchy
+          <span class="tooltip" data-tooltip="Visual hierarchy guides the viewer to what matters most, without extra explanation." aria-label="Alignment definition">
+            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Use size, weight, and placement for emphasis before color.</div>
+        </div>       
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Limit emphasis styles; avoid combining bold, underline, and color on the same element.</div>
+        </div>       
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Visual hierarchy organizes design elements to guide viewer attention in a clear, prioritized order.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -845,10 +910,23 @@
           </div>
         </div>
 
-        <h2 class="section-heading">Image quality</h2>
+        <h2 class="section-heading flex items-center gap-2">Image quality
+          <span class="tooltip" data-tooltip="Images must be clear and readable at presentation size." aria-label="Alignment definition">
+            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Use original source images whenever possible; avoid “screenshots of screenshots.”</div>
+        </div>       
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Ensure any text inside images is readable from the back of the room.</div>
+        </div>       
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Images should be sharp and clear to ensure all elements are easily distinguishable.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="guideline-text">Crop to enlarge key detail rather than shrinking the whole image to fit.</div>
+        </div>       
+          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+          <div class="guideline-text">Keep image styles consistent; don’t mix crisp vectors with heavily compressed screenshots on the same slide.</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -870,10 +948,24 @@
           </div>
         </div>
 
-        <h2 class="section-heading">Image scale</h2>
+        <h2 class="section-heading flex items-center gap-2">Image scale
+          <span class="tooltip" data-tooltip="Scale images to fit the layout without distortion and maintain readability." aria-label="Alignment definition">
+            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Maintain aspect ratio; resize from corner handles.</div>
+        </div>       
+        <div class="guideline-item" data-deliverables="presentations">
+          <div class="guideline-text">Size visuals by importance; primary visuals should be easy to interpret quickly.</div>
+        </div>       
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Images should fit the design without losing clarity or proportion.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="guideline-text">If space is tight, crop instead of shrinking below readability.</div>
+        </div>       
+
+          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+          <div class="guideline-text">Keep similar visuals (especially UI screenshots) at a consistent scale across the deck.</div>
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -977,7 +1069,7 @@
         <h2 class="section-heading">Focus and cropping</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="text-base text-pega-pearl mb-6">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -996,7 +1088,7 @@
         <h2 class="section-heading">Sensitive data</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="text-base text-pega-pearl mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
@@ -1437,8 +1529,7 @@
           <div class="border-t-2 border-gray-300 w-full mb-6"></div>
         </div>
         <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-          <ul class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-2 text-sm text-gray-700"
-            id="headline-terms-list"></ul>
+          <ul class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-2 text-sm text-gray-700" id="headline-terms-list"></ul>
         </div>
       </section>
 
@@ -2086,6 +2177,14 @@
           bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
           good: "Benefits: Faster routing and fewer handoffs.",
         },
+
+        visual1: {
+          title: "Whitespace",
+          why: "Reduces cognitive load, allowing the audience to focus on the key message without being overwhelmed by visual clutter.",
+          bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
+          good: "Benefits: Faster routing and fewer handoffs.",
+        },
+
       };
 
 // ════════════════════════ Examples library data ════════════════════════ //
