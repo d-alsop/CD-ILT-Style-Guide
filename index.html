@@ -1,11 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Pegasystems CD ILT | Style Guide</title>
 
-    <link rel="icon" href="https://www.pega.com/themes/custom/pega_bolt_theme/images/favicons/favicon.ico" type="image/png"/>
+    <link
+      rel="icon"
+      href="https://www.pega.com/themes/custom/pega_bolt_theme/images/favicons/favicon.ico"
+      type="image/png"
+    />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -58,16 +62,26 @@
 
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Open+Sans:wght@400;600;700&family=Chakra+Petch:wght@500;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&amp;family=Open+Sans:wght@400;600;700&amp;family=Chakra+Petch:wght@500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&amp;display=swap" rel="stylesheet" />
 
     <style>
       body {
         font-family: "Open Sans", sans-serif;
       }
 
-      h1, h2, h3, h4, h5 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
         font-family: "Lora", serif;
       }
 
@@ -171,7 +185,9 @@
 
       .inline-code {
         display: inline-block;
-        font-family: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-family:
+          "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+          monospace;
         line-height: 1.1;
         padding: 0.125rem 0.4rem;
         border-radius: 0.375rem;
@@ -234,7 +250,7 @@
 
       .guideline-text {
         font-size: 1rem;
-        color: #2E2E33;
+        color: #2e2e33;
         padding-left: 0.77rem;
       }
 
@@ -299,15 +315,15 @@
         max-width: 400px;
         padding: 0.75rem 0.75rem;
         border-radius: 0.5rem;
-        background: #0c1935; 
+        background: #0c1935;
         color: #fff;
         font-family: "Open Sans", sans-serif;
         font-size: 0.95rem;
         line-height: 1.2;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.30s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
         z-index: 50;
       }
 
@@ -385,99 +401,130 @@
       .filter-active h2.section-heading {
         display: none !important;
       }
-
     </style>
   </head>
 
   <body class="bg-gray-50 text-pega-extradark h-screen flex flex-col md:flex-row overflow-hidden">
     <div class="md:hidden bg-white border-b border-gray-200 p-4 flex justify-between items-center z-50 shadow-sm">
       <img src="https://i.imgur.com/gZ3DmRH.png" alt="Pega" class="h-8 w-auto" />
-      <button class="text-gray-700 focus:outline-none" id="mobile-menu-btn" aria-label="Open menu">
+      <button 
+        class="text-gray-700 focus:outline-none" 
+        id="mobile-menu-btn" 
+        aria-label="Open menu">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
 
-    <aside class="bg-white border-r border-gray-200 w-full md:w-72 flex-shrink-0 flex flex-col absolute md:relative top-16 md:top-0 h-[calc(100%-4rem)] md:h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-xl" id="sidebar">
+    <aside
+      class="bg-white border-r border-gray-200 w-full md:w-72 flex-shrink-0 flex flex-col absolute md:relative top-16 md:top-0 h-[calc(100%-4rem)] md:h-full transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-40 shadow-xl" id="sidebar">
       <div class="hidden md:flex p-[22px_20px_18px] border-b border-white/10 items-center justify-between flex-shrink-0 center-on-collapse transition-all">
         <div class="overflow-hidden whitespace-nowrap hide-on-collapse brand-container">
-          <img src="https://i.imgur.com/gZ3DmRH.png" alt="Pega" class="h-10 w-auto block" />
+          <img src="https://i.imgur.com/gZ3DmRH.png" alt="Pega" class="h-10 w-auto block"/>
         </div>
-        <button id="sidebar-collapse-btn" type="button" class="hidden md:inline-flex p-2 rounded-md hover:bg-gray-100 text-gray-600" aria-label="Collapse sidebar">
+        <button
+          id="sidebar-collapse-btn"
+          type="button"
+          class="hidden md:inline-flex p-2 rounded-md hover:bg-gray-100 text-gray-600"
+          aria-label="Collapse sidebar">
           <span class="material-symbols-outlined" id="sidebar-collapse-icon">chevron_left</span>
         </button>
       </div>
 
-<!--════════════════════════ Navigation ════════════════════════-->
+      <!--════════════════════════ Navigation ════════════════════════-->
       <nav class="flex-1 overflow-y-auto px-2 pb-8" id="nav-container">
         <div class="nav-group-label">Foundations</div>
         <button class="nav-btn active" onclick="navigate('home')">
-          <span class="material-symbols-outlined text-lg">home</span><span class="nav-label">Home</span>
+          <span class="material-symbols-outlined text-lg">home</span>
+          <span class="nav-label">Home</span>
         </button>
         <button class="nav-btn" onclick="navigate('naming')">
-          <span class="material-symbols-outlined text-lg">folder</span><span class="nav-label">Naming conventions</span>
+          <span class="material-symbols-outlined text-lg">folder</span>
+          <span class="nav-label">Naming conventions</span>
         </button>
         <button class="nav-btn" onclick="navigate('fonts')">
-          <span class="material-symbols-outlined text-lg">text_fields</span><span class="nav-label">Fonts</span>
+          <span class="material-symbols-outlined text-lg">text_fields</span>
+          <span class="nav-label">Fonts</span>
         </button>
         <button class="nav-btn" onclick="navigate('colors')">
-          <span class="material-symbols-outlined text-lg">palette</span><span class="nav-label">Colors</span>
+          <span class="material-symbols-outlined text-lg">palette</span>
+          <span class="nav-label">Colors</span>
         </button>
         <button class="nav-btn" onclick="navigate('resources')">
-          <span class="material-symbols-outlined text-lg">menu_book</span><span class="nav-label">Resources</span>
+          <span class="material-symbols-outlined text-lg">menu_book</span>
+          <span class="nav-label">Resources</span>
         </button>
 
         <div class="nav-group-label">Design standards</div>
         <button class="nav-btn" onclick="navigate('visual-design')">
-          <span class="material-symbols-outlined text-lg">grid_view</span><span class="nav-label">Visual design</span>
+          <span class="material-symbols-outlined text-lg">grid_view</span>
+          <span class="nav-label">Visual design</span>
         </button>
         <button class="nav-btn" onclick="navigate('presentations')">
-          <span class="material-symbols-outlined text-lg">slideshow</span><span class="nav-label">Presentations</span>
+          <span class="material-symbols-outlined text-lg">slideshow</span>
+          <span class="nav-label">Presentations</span>
         </button>
         <button class="nav-btn" onclick="navigate('screenshots')">
-          <span class="material-symbols-outlined text-lg">screenshot_monitor</span><span class="nav-label">Screenshots</span>
+          <span class="material-symbols-outlined text-lg">screenshot_monitor</span>
+          <span class="nav-label">Screenshots</span>
         </button>
 
         <div class="nav-group-label">Writing standards</div>
         <button class="nav-btn" onclick="navigate('procedures-and-instructions')">
-          <span class="material-symbols-outlined text-lg">format_list_numbered</span><span class="nav-label">Procedures and instructions</span>
+          <span class="material-symbols-outlined text-lg">format_list_numbered</span>
+          <span class="nav-label">Procedures and instructions</span>
         </button>
         <button class="nav-btn" onclick="navigate('grammar-and-usage')">
-          <span class="material-symbols-outlined text-lg">spellcheck</span><span class="nav-label">Grammar and usage</span>
+          <span class="material-symbols-outlined text-lg">spellcheck</span>
+          <span class="nav-label">Grammar and usage</span>
         </button>
         <button class="nav-btn" onclick="navigate('punctuation')">
-          <span class="material-symbols-outlined text-lg">priority_high</span><span class="nav-label">Punctuation</span>
+          <span class="material-symbols-outlined text-lg">priority_high</span>
+          <span class="nav-label">Punctuation</span>
         </button>
         <button class="nav-btn" onclick="navigate('style-and-voice')">
-          <span class="material-symbols-outlined text-lg">record_voice_over</span><span class="nav-label">Style and voice</span>
+          <span class="material-symbols-outlined text-lg">record_voice_over</span>
+          <span class="nav-label">Style and voice</span>
         </button>
         <button class="nav-btn" onclick="navigate('generative-ai')">
-          <span class="material-symbols-outlined text-lg">smart_toy</span><span class="nav-label">Generative AI</span>
+          <span class="material-symbols-outlined text-lg">smart_toy</span>
+          <span class="nav-label">Generative AI</span>
         </button>
 
         <div class="nav-group-label">References</div>
         <button class="nav-btn" onclick="navigate('appendix-headline-case')">
-          <span class="material-symbols-outlined text-lg">format_size</span><span class="nav-label">Headline case terms</span>
+          <span class="material-symbols-outlined text-lg">format_size</span>
+          <span class="nav-label">Headline case terms</span>
         </button>
         <button class="nav-btn" onclick="navigate('appendix-terms-to-avoid')">
-          <span class="material-symbols-outlined text-lg">block</span><span class="nav-label">Terms to avoid</span>
+          <span class="material-symbols-outlined text-lg">block</span>
+          <span class="nav-label">Terms to avoid</span>
         </button>
         <button class="nav-btn" onclick="navigate('appendix-ui-elements')">
-          <span class="material-symbols-outlined text-lg">mouse</span><span class="nav-label">Interacting with UI elements</span>
+          <span class="material-symbols-outlined text-lg">mouse</span>
+          <span class="nav-label">Interacting with UI elements</span>
         </button>
         <button class="nav-btn" onclick="navigate('appendix-icons')">
-          <span class="material-symbols-outlined text-lg">image</span><span class="nav-label">Icons reference</span>
+          <span class="material-symbols-outlined text-lg">image</span>
+          <span class="nav-label">Icons reference</span>
         </button>
         <button class="nav-btn" onclick="navigate('examples-library')">
-          <span class="material-symbols-outlined text-lg">photo_library</span><span class="nav-label">Examples library</span>
+          <span class="material-symbols-outlined text-lg">photo_library</span>
+          <span class="nav-label">Examples library</span>
         </button>
 
         <div class="mt-2 px-4 sidebar-footer">
-          <button class="w-full bg-pega-navy text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-berry transition" onclick="navigate('checklist')">QUALITY CHECKLIST</button>
+          <button class="w-full bg-pega-navy text-white text-xs font-bold py-2 rounded shadow-md hover:bg-pega-berry transition" onclick="navigate('checklist')">QUALITY CHECKLIST
+          </button>
         </div>
       </nav>
 
       <div class="sidebar-footer px-6 py-4 border-t border-gray-100">
-        <a href="https://pega.widen.net/s/n7kzc29vkv" target="_blank" class="flex items-center gap-2 text-sm text-pega-violet font-semibold hover:underline" title="Brand Guidelines" aria-label="Brand Guidelines">
+        <a
+          href="https://pega.widen.net/s/n7kzc29vkv"
+          target="_blank"
+          class="flex items-center gap-2 text-sm text-pega-violet font-semibold hover:underline"
+          title="Brand Guidelines"
+          aria-label="Brand Guidelines">
           <span class="material-symbols-outlined text-lg">open_in_new</span>
           <span class="nav-label">Brand Guidelines</span>
         </a>
@@ -495,39 +542,54 @@
           </div>
         </div>
 
-<!--════════════════════════ Home ════════════════════════-->
+        <!--════════════════════════ Home ════════════════════════-->
         <h2 class="section-heading">Introduction</h2>
         <div class="prose text-gray-700 max-w-none">
-          <p class="text-base text-gray-700 mt-3 mb-6">Welcome to the Style Guide of the ILT Curriculum Development Team. Here, you’ll find the standards and best practices that keep our work cohesive, professional, and learner-centered. Whether you’re developing new, editing existing, or collaborating on instructor-led content, this guide is your central resource for ensuring clarity, consistency, and quality across all our learning materials.</p>
+          <p class="text-base text-gray-700 mt-3 mb-6">Welcome to the Style Guide of the ILT Curriculum Development Team. Here, you’ll find the standards and best practices that keep our work cohesive, professional, and learner-centered. Whether you’re developing new,  editing existing, or collaborating on instructor-led content, this guide is your central resource for ensuring clarity, consistency, and quality across all our learning materials.</p>
           <p class="text-base text-gray-700 mt-3 mb-6">Our team maintains the following SharePoints:</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 not-prose mt-6 mb-6">
-          <a href="https://pe.ga/3ZIJpVQ" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
+          <a href="https://pe.ga/3ZIJpVQ" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-bold text-pearl group-hover:text-pega-sharepoint transition mb-1">Team SharePoint</div>
               <div class="text-xs text-gray-500">Internal workspace and repository.</div>
             </div>
           </a>
-          <a href="https://pe.ga/40l7EcQ" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
+          <a href="https://pe.ga/40l7EcQ"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">Instructor SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for instructors.</div>
             </div>
           </a>
-          <a href="https://pe.ga/4tKXoYT" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
+          <a href="https://pe.ga/4tKXoYT"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">Student SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for students.</div>
             </div>
           </a>
-          <a href="https://pe.ga/4b1gcvC" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
+          <a href="https://pe.ga/4b1gcvC"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">ATP SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for Authorized Training Partners.</div>
             </div>
           </a>
-          <a href="https://pe.ga/4cohJgD" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
+          <a href="https://pe.ga/4cohJgD"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">UAP SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for the University Academic Program.</div>
@@ -538,7 +600,8 @@
         <div class="mt-12 rounded-xl border border-gray-200 bg-pega-lightgray p-6 shadow-sm" id="deliverable-hub">
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
-              <h3 class="font-serif font-bold text-xl text-pega-extradark mb-1">Find guidance by deliverable <span class="text-sm font-normal inline-code">Beta</span></h3>
+              <h3 class="font-serif font-bold text-xl text-pega-extradark mb-1">Find guidance by deliverable
+              <span class="text-sm font-normal inline-code">Beta</span></h3>
               <p class="text-sm text-gray-600">Select a deliverable to show only the most relevant guidelines.</p>
             </div>
 
@@ -549,19 +612,35 @@
           </div>
 
           <div class="mt-4 flex flex-wrap gap-2" id="deliverable-pills">
-            <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="presentations">Presentation</button>
-            <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="solution-guide">Solution guide</button>
-            <button type="button" class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition" data-deliverable="naming-files">Naming and files</button>
+            <button
+              type="button"
+              class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition"
+              data-deliverable="presentations">Presentation
+            </button>
+            <button
+              type="button"
+              class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition"
+              data-deliverable="solution-guide">Solution guide
+            </button>
+            <button
+              type="button"
+              class="deliverable-pill px-3 py-1.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:text-pega-berry hover:border-pega-berry hover:shadow-md transition"
+              data-deliverable="naming-files">Naming and files
+            </button>
           </div>
 
           <div class="mt-3 hidden items-center gap-2 text-sm" id="deliverable-filter-actions">
             <span class="text-gray-600">Showing filtered guidance.</span>
-            <button type="button" id="clear-deliverable-filter" class="px-2.5 py-1 rounded-md border border-gray-300 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition">Clear filter</button>
+            <button
+              type="button"
+              id="clear-deliverable-filter"
+              class="px-2.5 py-1 rounded-md border border-gray-300 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition">Clear filter
+            </button>
           </div>
         </div>
       </section>
 
-<!--════════════════════════ Naming conventions ════════════════════════-->
+      <!--════════════════════════ Naming conventions ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="naming">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Naming conventions</p>
@@ -633,8 +712,9 @@
 
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-3 mt-12 mb-6">
           <h3 class="font-sans font-bold text-sm text-pega-extradark mt-0 mb-10">Example course folder and file structure</h3>
-          <pre class="text-sm font-mono text-gray-700">
-  <strong class="font-semibold">SSA 25</strong>
+          <pre class="text-sm font-mono text-gray-700">  
+
+<strong class="font-semibold">SSA 25</strong>
   │ 
   ├─<strong class="font-semibold"> 00 Course information</strong>
   │  ├─ Course outline.xlsx
@@ -653,11 +733,11 @@
   └─<strong class="font-semibold"> 02 Learner resources</strong>
       ├─ Learners guide.pdf                 
       └─ Solution guide.pdf
-        </pre>
+          </pre>
         </div>
       </section>
 
-<!--════════════════════════ Fonts ════════════════════════-->
+      <!--════════════════════════ Fonts ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="fonts">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Fonts</p>
@@ -684,7 +764,10 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/rczmvq7gxn" target="_blank">Download Lora</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pega.widen.net/s/rczmvq7gxn"
+               target="_blank">Download Lora
+            </a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -705,7 +788,10 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/6lpgprcgcb" target="_blank">Download Open Sans</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pega.widen.net/s/6lpgprcgcb"
+               target="_blank">Download Open Sans
+            </a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -726,12 +812,15 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a" target="_blank">Download Chakra Petch</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a"
+               target="_blank">Download Chakra Petch
+            </a>
           </div>
         </div>
       </section>
 
-<!--════════════════════════ Colors ════════════════════════-->
+      <!--════════════════════════ Colors ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="colors">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Colors</p>
@@ -741,7 +830,7 @@
         <div id="color-grids"></div>
       </section>
 
-<!--════════════════════════ Resources ════════════════════════-->
+      <!--════════════════════════ Resources ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="resources">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Resources</p>
@@ -750,7 +839,11 @@
 
         <h2 class="section-heading">Authoring</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 not-prose">
-          <a href="https://pega.widen.net/s/n7kzc29vkv" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+
+          <a href="https://pega.widen.net/s/n7kzc29vkv"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">verified</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Brand Guide</div>
@@ -758,7 +851,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/4qEGYyy" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/4qEGYyy"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">menu_book</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Technical Documentation Guidebook</div>
@@ -766,7 +862,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/46bYT8t" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/46bYT8t"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">sort_by_alpha</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">A–Z words and terms</div>
@@ -774,7 +873,10 @@
             </div>
           </a>
 
-          <a href="https://learn.microsoft.com/en-us/style-guide/welcome/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://learn.microsoft.com/en-us/style-guide/welcome/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">spellcheck</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Microsoft Style Guide</div>
@@ -782,7 +884,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/3OgrcfP" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/3OgrcfP"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">school</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Academy Guide</div>
@@ -790,7 +895,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/3OfDwNq" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/3OfDwNq"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">screenshot_region</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Using Snagit</div>
@@ -798,7 +906,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/4kGuLIg" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/4kGuLIg"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">movie</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Using Camtasia</div>
@@ -809,7 +920,10 @@
 
         <h2 class="section-heading">Design</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 not-prose">
-          <a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">palette</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Brand Hub</div>
@@ -817,7 +931,10 @@
             </div>
           </a>
 
-          <a href="https://pe.ga/44GMKb8" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://pe.ga/44GMKb8"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">inventory_2</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Internal team assets</div>
@@ -828,7 +945,10 @@
 
         <h3 class="font-sans font-bold text-pega-extradark mt-6 mb-6">Alternatives</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 not-prose mt-6 mb-6">
-          <a href="https://storyset.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://storyset.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">draw</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Storyset</div>
@@ -836,7 +956,10 @@
             </div>
           </a>
 
-          <a href="https://icones.js.org/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://icones.js.org/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">grid_view</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Icônes</div>
@@ -844,7 +967,10 @@
             </div>
           </a>
 
-          <a href="https://worldvectorlogo.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://worldvectorlogo.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">badge</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Worldvectorlogo</div>
@@ -852,7 +978,10 @@
             </div>
           </a>
 
-          <a href="https://undraw.co/search" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://undraw.co/search"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">brush</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">unDraw</div>
@@ -860,7 +989,10 @@
             </div>
           </a>
 
-          <a href="https://uxwing.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://uxwing.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">category</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">UXWing</div>
@@ -868,7 +1000,10 @@
             </div>
           </a>
 
-          <a href="https://www.flaticon.com/animated-icons" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
+          <a href="https://www.flaticon.com/animated-icons"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
             <span class="material-symbols-outlined text-pega-extradark mt-0.5">animation</span>
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Flaticon</div>
@@ -878,7 +1013,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Visual design ════════════════════════-->
+      <!--════════════════════════ Visual design ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="visual-design">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Visual design</p>
@@ -888,11 +1023,11 @@
         <h2 class="section-heading flex items-center gap-2">Whitespace
           <span class="tooltip" data-tooltip="Whitespace is intentional empty space that improves scanability and reduces cognitive load." aria-label="Whitespace definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
+          </span>
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Prefer spacing over lines or borders for separation.</div>
-        </div>        
+        </div>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="guideline-text">Use whitespace to separate distinct ideas and group related items.</div>
           <div class="guideline-actions">
@@ -906,11 +1041,11 @@
         <h2 class="section-heading flex items-center gap-2">Alignment
           <span class="tooltip" data-tooltip="Alignment creates structure and makes slides easier to follow." aria-label="Alignment definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
+          </span>
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Align to a grid (left, right, or center) and keep it consistent within each slide region.</div>
-        </div>        
+          <div class="guideline-text">Alignment creates structure and makes slides easier to follow.</div>
+        </div>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="guideline-text">Alignment creates structure and makes slides easier to follow.</div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
@@ -918,19 +1053,19 @@
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Misaligned elements result in a disorganized, hard-to-follow design.</p></div>
-                    <img src="https://i.imgur.com/AJePm5F.png"
-                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/AJePm5F.png"/>
+              <img src="https://i.imgur.com/AJePm5F.png"
+                   alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                   class="zoomable"
+                   data-full="https://i.imgur.com/AJePm5F.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Consistent alignment of text and images creates an organized, easy-to-read layout.</p></div>
-                    <img src="https://i.imgur.com/VCOTAap.png"
-                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/VCOTAap.png"/>
+              <img src="https://i.imgur.com/VCOTAap.png"
+                   alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                   class="zoomable"
+                   data-full="https://i.imgur.com/VCOTAap.png"/>
             </div>
           </div>
         </div>
@@ -938,117 +1073,117 @@
         <h2 class="section-heading flex items-center gap-2">Visual hierarchy
           <span class="tooltip" data-tooltip="Visual hierarchy guides the viewer to what matters most, without extra explanation." aria-label="Visual hierarchy definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
+          </span>
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Use size, weight, and placement for emphasis before color.</div>
-        </div>       
+        </div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Limit emphasis styles; avoid combining bold, underline, and color on the same element.</div>
-        </div>       
-        <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
-            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-                <p class="text-sm text-gray-700">Disrupted element order breaks the natural reading flow, causing confusion.</p></div>
-                    <img src="https://i.imgur.com/5DDps1p.png"
-                      alt="Example of poor visual hierarchy – elements are out of order, confusing the viewer."
+          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+            <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
+                <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                  <div class="flex items-start gap-3 mt-2 mb-2">
+                    <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+                    <p class="text-sm text-gray-700">Disrupted element order breaks the natural reading flow, causing confusion.</p></div>
+                  <img src="https://i.imgur.com/5DDps1p.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
                       class="zoomable"
                       data-full="https://i.imgur.com/5DDps1p.png"/>
-            </div>
-            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-                <p class="text-sm text-gray-700">Elements follow a logical flow, directing focus naturally from text to image.</p></div>
-                    <img src="https://i.imgur.com/11uERyH.png"
-                      alt="Example of good visual hierarchy – elements are arranged logically, guiding the viewer's eye./>"
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                  <div class="flex items-start gap-3 mt-2 mb-2">
+                    <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+                    <p class="text-sm text-gray-700">Elements follow a logical flow, directing focus naturally from text to image.</p></div>
+                  <img src="https://i.imgur.com/11uERyH.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
                       class="zoomable"
                       data-full="https://i.imgur.com/11uERyH.png"/>
-            </div>
+                </div>
           </div>
         </div>
 
         <h2 class="section-heading flex items-center gap-2">Image quality
           <span class="tooltip" data-tooltip="Images must be clear and readable at presentation size." aria-label="Image quality definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
+          </span>
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Use original source images whenever possible; avoid “screenshots of screenshots.”</div>
-        </div>       
+        </div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Ensure any text inside images is readable from the back of the room.</div>
-        </div>       
-        <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+        </div>
+         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Crop to enlarge key detail rather than shrinking the whole image to fit.</div>
         </div>       
-          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+        <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Keep image styles consistent; don’t mix crisp vectors with heavily compressed screenshots on the same slide.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
-            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-                <p class="text-sm text-gray-700">Blurry visuals reduce clarity, making details hard to read and understand.</p></div>
-                    <img src="https://i.imgur.com/IeRmbU2.png"
-                      alt="Example of a blurry image – details are unclear and hard to read."
+          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+            <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
+                <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                  <div class="flex items-start gap-3 mt-2 mb-2">
+                    <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+                    <p class="text-sm text-gray-700">Blurry visuals reduce clarity, making details hard to read and understand.</p></div>
+                  <img src="https://i.imgur.com/IeRmbU2.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
                       class="zoomable"
                       data-full="https://i.imgur.com/IeRmbU2.png"/>
-            </div>
-            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-                <p class="text-sm text-gray-700">Clear visuals enhance user understanding by making details easy to read.</p></div>
-                    <img src="https://i.imgur.com/DW9IO0v.png"
-                      alt="Example of a sharp image – details are crisp and easy to distinguish."
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                  <div class="flex items-start gap-3 mt-2 mb-2">
+                    <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+                    <p class="text-sm text-gray-700">Clear visuals enhance user understanding by making details easy to read.</p></div>
+                  <img src="https://i.imgur.com/DW9IO0v.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
                       class="zoomable"
                       data-full="https://i.imgur.com/DW9IO0v.png"/>
-            </div>
+                </div>
+              </div>
           </div>
-        </div>
 
         <h2 class="section-heading flex items-center gap-2">Image scale
           <span class="tooltip" data-tooltip="Scale images to fit the layout without distortion and maintain readability." aria-label="Image scale definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
+          </span>
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Maintain aspect ratio; resize from corner handles.</div>
-        </div>       
+        </div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Size visuals by importance; primary visuals should be easy to interpret quickly.</div>
-        </div>       
+        </div>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="guideline-text">If space is tight, crop instead of shrinking below readability.</div>
-        </div>       
-
-          <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+        </div>
+        <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
           <div class="guideline-text">Keep similar visuals (especially UI screenshots) at a consistent scale across the deck.</div>
-          <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
-            <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
-                <p class="text-sm text-gray-700">Stretched or compressed images cause distortion, reducing professionalism.</p></div>
-                    <img src="https://i.imgur.com/qsVXCRm.png"
-                      alt="Example of a distorted image – it is stretched horizontally, making it look unprofessional."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/qsVXCRm.png"/>
+            <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
+              <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+                <div class="flex items-start gap-3 mt-2 mb-2">
+                  <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
+                  <p class="text-sm text-gray-700">Stretched or compressed images cause distortion, reducing professionalism.</p></div>
+               <img src="https://i.imgur.com/qsVXCRm.png"
+                    alt="Example of a distorted image – it is stretched horizontally, making it look unprofessional."
+                    class="zoomable"
+                    data-full="https://i.imgur.com/qsVXCRm.png"/>
+              </div>
+              <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+                <div class="flex items-start gap-3 mt-2 mb-2">
+                  <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
+                  <p class="text-sm text-gray-700">Properly scaled images maintain clarity and proportion, avoiding distortion.</p></div>
+                <img src="https://i.imgur.com/9NWBvzy.png"
+                     alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                     class="zoomable"
+                     data-full="https://i.imgur.com/9NWBvzy.png"/>
+              </div>
             </div>
-            <div class="bg-green-50 p-4 rounded-lg border border-green-100">
-              <div class="flex items-start gap-3 mt-2 mb-2">
-                <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-                <p class="text-sm text-gray-700">Properly scaled images maintain clarity and proportion, avoiding distortion.</p></div>
-                    <img src="https://i.imgur.com/9NWBvzy.png"
-                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/9NWBvzy.png"/>
-            </div>
-          </div>
         </div>
       </section>
 
-<!--════════════════════════ Presentations ════════════════════════-->
+      <!--════════════════════════ Presentations ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="presentations">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Presentations</p>
@@ -1119,7 +1254,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Screenshots ════════════════════════-->
+      <!--════════════════════════ Screenshots ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="screenshots">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Screenshots</p>
@@ -1129,65 +1264,69 @@
         <h2 class="section-heading flex items-center gap-2">Focus and cropping
           <span class="tooltip" data-tooltip="" aria-label="Focus and cropping definition">
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
-          </span>          
-        </h2>    
+          </span>
+        </h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="guideline-text">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.</div>
+          <div class="guideline-text">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Extra browser UI and whitespace distract from the area learners need to focus on.</p></div>
-                    <img src="https://i.imgur.com/XyxvJ0B.png"
-                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/XyxvJ0B.png"/>
+              <img src="https://i.imgur.com/XyxvJ0B.png"
+                alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                class="zoomable"
+                data-full="https://i.imgur.com/XyxvJ0B.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Tight cropping keeps attention on the relevant area while preserving enough context to orient learners.</p></div>
-                    <img src="https://i.imgur.com/1Ybv4US.png"
-                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/1Ybv4US.png"/>
+              <img src="https://i.imgur.com/1Ybv4US.png"
+                alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                class="zoomable"
+                data-full="https://i.imgur.com/1Ybv4US.png"/>
             </div>
           </div>
         </div>
 
-
         <h2 class="section-heading">Sensitive data</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-extradark mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.</div>
+          <div class="text-base text-pega-extradark mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Sensitive information is visible, which creates privacy and compliance risks.</p></div>
-                    <img src="https://i.imgur.com/vkh8HdB.png"
-                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/vkh8HdB.png"/>
+              <img src="https://i.imgur.com/vkh8HdB.png"
+                alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                class="zoomable"
+                data-full="https://i.imgur.com/vkh8HdB.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-                <p class="text-sm text-gray-700">Mock data or redaction protects sensitive information while keeping the screenshot instructionally useful.</p></div>
-                    <img src="https://i.imgur.com/sMmBJWU.png"
-                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
-                      class="zoomable"
-                      data-full="https://i.imgur.com/sMmBJWU.png"/>
+                <p class="text-sm text-gray-700"> Mock data or redaction protects sensitive information while keeping the screenshot instructionally useful.</p></div>
+              <img src="https://i.imgur.com/sMmBJWU.png"
+                alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                class="zoomable"
+                data-full="https://i.imgur.com/sMmBJWU.png"/>
             </div>
           </div>
         </div>
 
         <h2 class="section-heading">Callouts</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-extradark mb-6">Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy) with a transparent fill. Avoid messy hand-drawn circles or arrows.</div>
+          <div class="text-base text-pega-extradark mb-6">
+            Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy)
+            with a transparent fill. Avoid messy hand-drawn circles or arrows.
+          </div>
         </div>
       </section>
 
-<!--════════════════════════ Procedures and instructions ════════════════════════-->
+      <!--════════════════════════ Procedures and instructions ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="procedures-and-instructions">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Procedures and instructions</p>
@@ -1268,7 +1407,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Grammar and usage ════════════════════════-->
+      <!--════════════════════════ Grammar and usage ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="grammar-and-usage">
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Grammar and usage</p>
@@ -1387,10 +1526,10 @@
               <span>View details</span>
             </button>
           </div>
-        </div>        
+        </div>  
       </section>
 
-<!--════════════════════════ Punctuation ════════════════════════-->
+      <!--════════════════════════ Punctuation ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="punctuation">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Punctuation</p>
@@ -1462,7 +1601,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Style and voice ════════════════════════-->
+      <!--════════════════════════ Style and voice ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="style-and-voice">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Style and voice</p>
@@ -1560,7 +1699,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Generative AI ════════════════════════-->
+      <!--════════════════════════ Generative AI ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="generative-ai">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Generative AI</p>
@@ -1596,21 +1735,23 @@
         </div>        
         <div class="guideline-item" data-deliverables="general-content">
           <div class="guideline-text">Edit AI output for passive voice, jargon, and overly formal phrasing before use.</div>
-        </div>     
+        </div>  
       </section>
 
-<!--════════════════════════ Terms that take headline case ════════════════════════-->
+      <!--════════════════════════ Terms that take headline case ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="appendix-headline-case">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Terms that take headline case</p>
           <div class="border-t-2 border-gray-300 w-full mb-6"></div>
         </div>
         <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-          <ul class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-2 text-sm text-gray-700" id="headline-terms-list"></ul>
+          <ul
+            class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-2 text-sm text-gray-700"
+            id="headline-terms-list"></ul>
         </div>
       </section>
 
-<!--════════════════════════ Terms to avoid ════════════════════════-->
+      <!--════════════════════════ Terms to avoid ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="appendix-terms-to-avoid">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Terms to avoid</p>
@@ -1629,7 +1770,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Interacting with UI elements ════════════════════════-->
+      <!--════════════════════════ Interacting with UI elements ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="appendix-ui-elements">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Interacting with UI elements</p>
@@ -1649,7 +1790,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Icons reference ════════════════════════-->
+      <!--════════════════════════ Icons reference ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="appendix-icons">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Icons reference</p>
@@ -1739,7 +1880,7 @@
         </div>
       </section>
 
-<!--════════════════════════ Examples library ════════════════════════-->
+      <!--════════════════════════ Examples library ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="examples-library">
         <div class="mb-4">
           <p class="eyebrow font-bold text-gray-400 mb-1">Examples library</p>
@@ -1749,9 +1890,15 @@
         <div class="flex flex-col md:flex-row gap-4 mb-6">
           <div class="flex-1 relative">
             <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-            <input type="text" id="gallery-search" placeholder="Search examples..." class="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-pega-navy"/>
+            <input
+              type="text"
+              id="gallery-search"
+              placeholder="Search examples..."
+              class="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-pega-navy"/>
           </div>
-          <select id="gallery-filter" class="px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-pega-navy">
+          <select
+            id="gallery-filter"
+            class="px-4 py-2 border rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-pega-navy">
             <option value="all">All categories</option>
             <option value="punctuation">Punctuation</option>
             <option value="grammar">Grammar</option>
@@ -1777,604 +1924,595 @@
         </div>
         <div id="checklist-container" class="bg-white rounded-lg border divide-y shadow-sm"></div>
         <div class="mt-6 p-4 bg-green-50 text-green-700 rounded-lg hidden" id="audit-success">
-          <strong>Great job!</strong> This content is ready for review.
+          <strong>Great job!</strong>
+          This content is ready for review.
         </div>
       </section>
 
-    <div class="fixed bottom-8 right-8 bg-pega-pearl text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-40 transition-transform duration-300 flex items-center gap-3 z-50" id="toast">
-      <span class="material-symbols-outlined text-pega-mint" id="toast-icon">check_circle</span>
-      <span id="toast-msg">Copied!</span>
-    </div>
+      <div
+        class="fixed bottom-8 right-8 bg-pega-pearl text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-40 transition-transform duration-300 flex items-center gap-3 z-50"
+        id="toast"
+      >
+        <span class="material-symbols-outlined text-pega-mint" id="toast-icon">check_circle</span>
+        <span id="toast-msg">Copied!</span>
+      </div>
 
-    <div id="example-modal" class="fixed inset-0 hidden z-50">
-      <div class="absolute inset-0 bg-black/40" onclick="closeExample()"></div>
-      <div class="absolute inset-0 flex items-center justify-center p-4">
-        <div class="relative w-full max-w-4xl rounded-xl bg-white shadow-xl border border-gray-200">
-          <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-            <div class="font-serif text-lg font-bold text-pega-extradark" id="example-title">Example</div>
-            <button type="button" class="p-2 rounded-md hover:bg-gray-100 text-gray-600" onclick="closeExample()" aria-label="Close">
-              <span class="material-symbols-outlined leading-none text-lg">close</span>
-            </button>
-          </div>
-          <div class="p-5">
-            <div id="example-body" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      <div id="example-modal" class="fixed inset-0 hidden z-50">
+        <div class="absolute inset-0 bg-black/40" onclick="closeExample()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+          <div class="relative w-full max-w-4xl rounded-xl bg-white shadow-xl border border-gray-200">
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+              <div class="font-serif text-lg font-bold text-pega-extradark" id="example-title">Example</div>
+              <button
+                type="button"
+                class="p-2 rounded-md hover:bg-gray-100 text-gray-600"
+                onclick="closeExample()"
+                aria-label="Close"
+              >
+                <span class="material-symbols-outlined leading-none text-lg">close</span>
+              </button>
+            </div>
+            <div class="p-5">
+              <div id="example-body" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-          <!-- Global lightbox (ONLY ONE IN FILE) -->
-          <div class="lightbox" id="lightbox" aria-hidden="true">
-            <button class="lightbox__close" type="button" aria-label="Close image">&times;</button>
-            <img class="lightbox__img" alt="" />
-          </div>
-    <script>
 
-// ════════════════════════ Data ════════════════════════ //
-      const colors = [
-        {
-          category: "Primary",
-          items: [
-            { name: "Navy", hex: "#001F5F", text: "text-white" },
-            { name: "Violet", hex: "#5F67B9", text: "text-white" },
-            { name: "Ice Blue", hex: "#D7E2F2", text: "text-pega-extradark" },
-            { name: "Mint", hex: "#82CEC7", text: "text-pega-extradark" },
-            { name: "Teal", hex: "#10A5AC", text: "text-white" },
-          ],
-        },
-        {
-          category: "Secondary",
-          items: [
-            { name: "Sapphire", hex: "#344A9B", text: "text-white" },
-            { name: "Orange", hex: "#F76923", text: "text-white" },
-            { name: "Yellow", hex: "#FFC836", text: "text-pega-extradark" },
-            { name: "Pink", hex: "#EB3987", text: "text-white" },
-          ],
-        },
-        {
-          category: "Tertiary",
-          items: [
-            { name: "Black Pearl", hex: "#0C1935", text: "text-white" },
-            { name: "Bright Purple", hex: "#828CFF", text: "text-white" },
-            { name: "Emerald", hex: "#005154", text: "text-white" },
-            { name: "Berry", hex: "#AC1361", text: "text-white" },
-            { name: "Wine", hex: "#661D34", text: "text-white" },
-            { name: "Extra Light Gray", hex: "#F6F6F9", text: "text-pega-extradark" },
-            { name: "Dark Gray", hex: "#63666F", text: "text-white" },
-            { name: "Extra Dark Gray", hex: "#2E2E33", text: "text-white" },
-          ],
-        },
-        {
-          category: "Expansion",
-          items: [
-            { name: "Lavender", hex: "#99ADFF", text: "text-pega-extradark" },
-            { name: "Periwinkle", hex: "#C9D6FF", text: "text-pega-extradark" },
-            { name: "Mustard", hex: "#E7A832", text: "text-pega-extradark" },
-            { name: "Pale Yellow", hex: "#FFDF8E", text: "text-pega-extradark" },
-            { name: "Burnt Orange", hex: "#B63800", text: "text-white" },
-            { name: "Sunset", hex: "#FF931E", text: "text-white" },
-          ],
-        },
-        {
-          category: "Grays",
-          items: [
-            { name: "Gray F3", hex: "#F3F3F3", text: "text-pega-extradark" },
-            { name: "Gray E6", hex: "#E6E6E6", text: "text-pega-extradark" },
-            { name: "Gray CC", hex: "#CCCCCC", text: "text-pega-extradark" },
-            { name: "Gray B3", hex: "#B3B3B3", text: "text-pega-extradark" },
-            { name: "Gray 99", hex: "#999999", text: "text-white" },
-            { name: "Gray 81", hex: "#818181", text: "text-white" },
-            { name: "Gray 66", hex: "#666666", text: "text-white" },
-            { name: "Gray 4E", hex: "#4E4E4E", text: "text-white" },
-            { name: "Gray 33", hex: "#333333", text: "text-white" },
-          ],
-        },
-      ];
-
-      const headlineTerms = [
-        "Access Control Policy",
-        "Access Group",
-        "Access Role",
-        "Action",
-        "Adaptive Model",
-        "Agent",
-        "Agile Workbench",
-        "Alternate Stage",
-        "App Logic",
-        "Application Definition",
-        "Application Layer",
-        "Assignment",
-        "Authentication Profile",
-        "Automation",
-        "Branch",
-        "Calculation Builder",
-        "Case",
-        "Case Designer",
-        "Case ID",
-        "Case Lifecycle",
-        "Case Management",
-        "Case Page",
-        "Case Status",
-        "Case Type",
-        "Case View",
-        "Channel",
-        "Clipboard Page",
-        "Clipboard",
-        "Condition",
-        "Condition Builder",
-        "Configuration Set",
-        "Configuration",
-        "Correspondence",
-        "Custom Function",
-        "Data Flow",
-        "Data Model",
-        "Data Object",
-        "Data Page",
-        "Data Record",
-        "Data Set",
-        "Data Transform",
-        "Data Type",
-        "Decision",
-        "Developer Assistant",
-        "Embedded Data",
-        "Expression",
-        "Expression Builder",
-        "Field Type",
-        "Flow Action",
-        "Insight",
-        "Interaction Case",
-        "JSON Transform",
-        "Multi-step Form",
-        "Notification",
-        "Object Type",
-        "Optional Action",
-        "Optional Process",
-        "Outcome",
-        "Persona",
-        "Portal",
-        "Prediction",
-        "Predictive Model",
-        "Preview",
-        "Primary Field",
-        "Primary Page",
-        "Primary Stage",
-        "Private Rule",
-        "Process",
-        "Process Modeler",
-        "Public - Overridable",
-        "Public - Reusable",
-        "Publish",
-        "Remote Case Type",
-        "Repeating Dynamic Layout",
-        "Resolution Stage",
-        "Reusability",
-        "Reuse Library",
-        "Rule Type",
-        "Rule",
-        "Rules Library",
-        "Ruleset",
-        "Scope",
-        "Service Case",
-        "Screen Flow",
-        "Section",
-        "Self-service Portal",
-        "Service-Level Agreement",
-        "Stage",
-        "Step",
-        "Subprocess",
-        "Task",
-        "Text Analyzer",
-        "Text Prediction",
-        "Urgency",
-        "User",
-        "Validation",
-        "View",
-        "Visibility",
-        "When",
-        "When Rule",
-        "Work Group",
-        "Work Queue",
-        "Worklist",
-      ];
-
-      const avoidTerms = [
-        { avoid: "i.e.", use: "that is, in other words" },
-        { avoid: "e.g.", use: "for example" },
-        { avoid: "etc.", use: "and so on, and others, or list the last item" },
-        { avoid: "in order to", use: "to" },
-        { avoid: "due to the fact that", use: "because" },
-        { avoid: "prior to", use: "before" },
-        { avoid: "utilize", use: "use" },
-        { avoid: "leverage.", use: "use, apply" },
-        { avoid: "critical", use: "crucial (unless referring to a severity level)" },
-        { avoid: "streamline", use: "simplify" },
-        { avoid: "stakeholders", use: "people" },
-        { avoid: "orchestrate", use: "organize, manage" },
-        { avoid: "optimize", use: "improve (say what improves)" },
-      ];
-
-      const uiInteraction = [
-        { el: "Area", prep: "In", verb: "N/A" },
-        { el: "Button", prep: "N/A", verb: "Click" },
-        { el: "Checkbox", prep: "In", verb: "Select, Clear" },
-        { el: "Dialog box", prep: "In", verb: "N/A" },
-        { el: "List", prep: "In", verb: "Select" },
-        { el: "Field", prep: "In", verb: "Enter" },
-        { el: "Home page", prep: "On", verb: "N/A" },
-        { el: "Icon", prep: "N/A", verb: "Click" },
-        { el: "Menu", prep: "On", verb: "Click" },
-        { el: "Pane", prep: "In", verb: "Click" },
-        { el: "Radio button", prep: "N/A", verb: "Click" },
-        { el: "Section", prep: "In", verb: "N/A" },
-        { el: "Slider", prep: "N/A", verb: "Move" },
-        { el: "Switch", prep: "N/A", verb: "Turn on, Turn off" },
-        { el: "Tab", prep: "On", verb: "Click" },
-        { el: "Window", prep: "In", verb: "Open" },
-      ];
-
-      const checklistItems = [
-        { type: "heading", text: "Template and design" },
-          { type: "item",
-              text: `Have you reviewed and followed the <a href="https://d-alsop.github.io/CD-ILT-Style-Guide/" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">CD Style Guide</a>?`},
-          { type: "item",
-              text: `Are you using the appropriate <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">template</a>?`},
-          { type: "item",
-              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
-          { type: "item",
-              text: `Are the correct <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">fonts</a>, font sizes, and font colors used throughout?`},
-
-        { type: "heading", text: "Titles and headings" },
-          { type: "item",
-              text: `Are the presentation title, slide titles, and subtitles in sentence case?`},
-          { type: "item",
-              text: `Is sentence case used consistently, with exceptions only for proper nouns and <a href='#' onclick="navigate('appendix-headline-case'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">Pega-specific terms</a>?`},
-          { type: "item",
-              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
-          { type: "item",
-              text: `Are <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">trademark symbols (™)</a> included only on the first occurrence of the product name in body text, and exluded from titles and headings?`},
-
-        { type: "heading", text: "Writing" },
-          { type: "item",
-              text: `Are bullet points limited to seven words or fewer?`},
-          { type: "item",
-              text: `Are acronyms spelled out on first use?`},
-          { type: "item",
-              text: `Is active voice used, with clear “who does what” phrasing?`},
-          { type: "item",
-              text: `Is content written in second person ("you" rather than "we" or "us")?`},
-          { type: "item",
-              text: `Is present tense used consistently?`},
-
-        { type: "heading", text: "Visuals" },
-          { type: "item",
-              text: `Are all images, screenshots, and graphics high quality?`},
-          { type: "item",
-              text: `Have blurry or pixelated visuals been removed?`},
-          { type: "item",
-              text: `Are slides free from overcrowding, with adequate whitespace?`},
-          { type: "item",
-              text: `Are all visuals relevant to the slide content?`},
-
-        { type: "heading", text: "Final check" },
-          { type: "item",
-              text: `Have you reviewed grammar, spelling, and capitalization of Pega terms?`},
-          { type: "item",
-              text: `Have you viewed the presentation in Slide Show mode from beginning to end?`},
-     
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" type="button" aria-label="Close image">×</button>
+        <img class="lightbox__img" alt="" />
+      </div>
+      <script>
+        
+        // ════════════════════════ Data ════════════════════════ //
+        const colors = [
+          {
+            category: "Primary",
+            items: [
+              { name: "Navy", hex: "#001F5F", text: "text-white" },
+              { name: "Violet", hex: "#5F67B9", text: "text-white" },
+              { name: "Ice Blue", hex: "#D7E2F2", text: "text-pega-extradark" },
+              { name: "Mint", hex: "#82CEC7", text: "text-pega-extradark" },
+              { name: "Teal", hex: "#10A5AC", text: "text-white" },
+            ],
+          },
+          {
+            category: "Secondary",
+            items: [
+              { name: "Sapphire", hex: "#344A9B", text: "text-white" },
+              { name: "Orange", hex: "#F76923", text: "text-white" },
+              { name: "Yellow", hex: "#FFC836", text: "text-pega-extradark" },
+              { name: "Pink", hex: "#EB3987", text: "text-white" },
+            ],
+          },
+          {
+            category: "Tertiary",
+            items: [
+              { name: "Black Pearl", hex: "#0C1935", text: "text-white" },
+              { name: "Bright Purple", hex: "#828CFF", text: "text-white" },
+              { name: "Emerald", hex: "#005154", text: "text-white" },
+              { name: "Berry", hex: "#AC1361", text: "text-white" },
+              { name: "Wine", hex: "#661D34", text: "text-white" },
+              { name: "Extra Light Gray", hex: "#F6F6F9", text: "text-pega-extradark" },
+              { name: "Dark Gray", hex: "#63666F", text: "text-white" },
+              { name: "Extra Dark Gray", hex: "#2E2E33", text: "text-white" },
+            ],
+          },
+          {
+            category: "Expansion",
+            items: [
+              { name: "Lavender", hex: "#99ADFF", text: "text-pega-extradark" },
+              { name: "Periwinkle", hex: "#C9D6FF", text: "text-pega-extradark" },
+              { name: "Mustard", hex: "#E7A832", text: "text-pega-extradark" },
+              { name: "Pale Yellow", hex: "#FFDF8E", text: "text-pega-extradark" },
+              { name: "Burnt Orange", hex: "#B63800", text: "text-white" },
+              { name: "Sunset", hex: "#FF931E", text: "text-white" },
+            ],
+          },
+          {
+            category: "Grays",
+            items: [
+              { name: "Gray F3", hex: "#F3F3F3", text: "text-pega-extradark" },
+              { name: "Gray E6", hex: "#E6E6E6", text: "text-pega-extradark" },
+              { name: "Gray CC", hex: "#CCCCCC", text: "text-pega-extradark" },
+              { name: "Gray B3", hex: "#B3B3B3", text: "text-pega-extradark" },
+              { name: "Gray 99", hex: "#999999", text: "text-white" },
+              { name: "Gray 81", hex: "#818181", text: "text-white" },
+              { name: "Gray 66", hex: "#666666", text: "text-white" },
+              { name: "Gray 4E", hex: "#4E4E4E", text: "text-white" },
+              { name: "Gray 33", hex: "#333333", text: "text-white" },
+            ],
+          },
         ];
 
-      const slideLayouts = [
-        { col1: "Title", col2: "Opening slide that introduces the course, module, or lesson." },
-        { col1: "Section title", col2: "Starts a new section and separates major topics." },
-        { col1: "Overview", col2: "Gives a high-level preview of what the presentation will cover." },
-        { col1: "Agenda", col2: "Shows the presentation plan (topics in sequence)." },
-        { col1: "Summary", col2: "Recaps key points and reinforces takeaways at the end of the presentation." },
-        { col1: "End", col2: "Final slide that closes the presentation." },
-        { col1: "Content (default)", col2: "Standard layout for instructional content." },
-        { col1: "Exercise", col2: "Introduces an activity and provides instructions." },
-        { col1: "Demo", col2: "Introduces or guides a demonstration or walkthrough." },
-        { col1: "Quiz", col2: "Provides the link to external quizzes." },
-        { col1: "Knowledge check", col2: "Used for a quick comprehension check during or after a topic." },
-        { col1: "Content slides", col2: "Main body slides for presenting topic content." },
-      ];
+        const headlineTerms = [
+          "Access Control Policy",
+          "Access Group",
+          "Access Role",
+          "Action",
+          "Adaptive Model",
+          "Agent",
+          "Agile Workbench",
+          "Alternate Stage",
+          "App Logic",
+          "Application Definition",
+          "Application Layer",
+          "Assignment",
+          "Authentication Profile",
+          "Automation",
+          "Branch",
+          "Calculation Builder",
+          "Case",
+          "Case Designer",
+          "Case ID",
+          "Case Lifecycle",
+          "Case Management",
+          "Case Page",
+          "Case Status",
+          "Case Type",
+          "Case View",
+          "Channel",
+          "Clipboard Page",
+          "Clipboard",
+          "Condition",
+          "Condition Builder",
+          "Configuration Set",
+          "Configuration",
+          "Correspondence",
+          "Custom Function",
+          "Data Flow",
+          "Data Model",
+          "Data Object",
+          "Data Page",
+          "Data Record",
+          "Data Set",
+          "Data Transform",
+          "Data Type",
+          "Decision",
+          "Developer Assistant",
+          "Embedded Data",
+          "Expression",
+          "Expression Builder",
+          "Field Type",
+          "Flow Action",
+          "Insight",
+          "Interaction Case",
+          "JSON Transform",
+          "Multi-step Form",
+          "Notification",
+          "Object Type",
+          "Optional Action",
+          "Optional Process",
+          "Outcome",
+          "Persona",
+          "Portal",
+          "Prediction",
+          "Predictive Model",
+          "Preview",
+          "Primary Field",
+          "Primary Page",
+          "Primary Stage",
+          "Private Rule",
+          "Process",
+          "Process Modeler",
+          "Public - Overridable",
+          "Public - Reusable",
+          "Publish",
+          "Remote Case Type",
+          "Repeating Dynamic Layout",
+          "Resolution Stage",
+          "Reusability",
+          "Reuse Library",
+          "Rule Type",
+          "Rule",
+          "Rules Library",
+          "Ruleset",
+          "Scope",
+          "Service Case",
+          "Screen Flow",
+          "Section",
+          "Self-service Portal",
+          "Service-Level Agreement",
+          "Stage",
+          "Step",
+          "Subprocess",
+          "Task",
+          "Text Analyzer",
+          "Text Prediction",
+          "Urgency",
+          "User",
+          "Validation",
+          "View",
+          "Visibility",
+          "When",
+          "When Rule",
+          "Work Group",
+          "Work Queue",
+          "Worklist",
+        ];
 
+        const avoidTerms = [
+          { avoid: "i.e.", use: "that is, in other words" },
+          { avoid: "e.g.", use: "for example" },
+          { avoid: "etc.", use: "and so on, and others, or list the last item" },
+          { avoid: "in order to", use: "to" },
+          { avoid: "due to the fact that", use: "because" },
+          { avoid: "prior to", use: "before" },
+          { avoid: "utilize", use: "use" },
+          { avoid: "leverage.", use: "use, apply" },
+          { avoid: "critical", use: "crucial (unless referring to a severity level)" },
+          { avoid: "streamline", use: "simplify" },
+          { avoid: "stakeholders", use: "people" },
+          { avoid: "orchestrate", use: "organize, manage" },
+          { avoid: "optimize", use: "improve (say what improves)" },
+        ];
 
-// ════════════════════════ Examples modal data ════════════════════════ //
-      const examples = {
-        punctuation1: {
-          title: "General rule",
-          why: "Ampersands are informal and easy to overlook; spelling out 'and' keeps the text clear and consistent.",
-          bad: "Review the requirements & confirm access.",
-          good: "Review the requirements and confirm access.",
-        },
-        punctuation2: {
-          title: "Oxford comma",
-          why: "The Oxford comma removes ambiguity in lists and prevents misreading the last two items as a pair.",
-          bad: "You can edit, add or delete a Case Type.",
-          good: "You can edit, add, or delete a Case Type.",
-        },
-        punctuation3: {
-          title: "en dashes",
-          why: "En dashes signal a range more precisely than a hyphen and are the standard for spans of numbers or dates.",
-          good: ["2020–2022", "Repeat steps 3–5"],
-        },
-        punctuation4: {
-          title: "em dashes",
-          why: "Em dashes add emphasis or set off a clause without the formality of parentheses or the ambiguity of commas.",
-          good: "To indicate a break in the flow of a sentence—or an interruption—use an em dash.",
-        },
-        punctuation5: {
-          title: "Hyphens",
-          why: "Hyphens connect compound modifiers and separate number sequences, making relationships between words immediately clear.",
-          good: ["interface-specific", "-2", "555-555-5555"],
-        },
-        punctuation6: {
-          title: "Slashes",
-          why: "And/or is vague and harder to parse; spelling out the options makes the meaning unambiguous.",
-          bad: "The system sends notifications to admins and/or managers.",
-          good: "The system sends notifications to admins, managers, or both.",
-        },
-        grammar1: {
-          title: "General rule",
-          why: "Spelling out the full term first ensures all learners understand the acronym before it appears on its own.",
-          bad: "Sign up for an ILT (instructor-led training) course today.",
-          good: "Sign up for an instructor-led training (ILT) course today.",
-        },
-        grammar2: {
-          title: "Plural acronyms",
-          why: "Adding an apostrophe before the 's' suggests possession, not plurality, which is grammatically incorrect.",
-          bad: "MLP's",
-          good: "MLPs",
-        },
-        grammar3: {
-          title: "Common acronyms",
-          why: "Widely recognized acronyms are clearer and more natural than their spelled-out equivalents, which can feel awkward or unfamiliar.",
-          bad: "Wireless fidelity",
-          good: "Wi-Fi",
-        },
-        grammar4: {
-          title: "General rule",
-          why: "Sentence case is easier to read and signals that text is descriptive content, not a formal title or UI label.",
-          bad: "This is Headline Case.",
-          good: "This is sentence case.",
-        },
-        grammar5: {
-          title: "Camel case",
-          why: "Matching Pega's current UI and documentation standards avoids confusion when learners encounter the term in the product.",
-          bad: "RuleSet",
-          good: "Ruleset",
-        },
-        grammar6: {
-          title: "Placeholder and UI text",
-          why: "Sentence case in UI text feels conversational and reduces the visual weight of labels and prompts.",
-          bad: ["Phone Number", "Enter Your Email Address."],
-          good: ["Phone number", "Enter your email address."],
-        },
-        grammar7: {
-          title: "Time format",
-          why: "A consistent time format with a space and uppercase AM/PM reduces misreading and aligns with standard editorial style.",
-          bad: "2:15am",
-          good: "2:15 AM",
-        },
-        grammar8: {
-          title: "Date format",
-          why: "Spelled-out months removes ambiguity for different regions who may interpret numeric dates differently.",
-          bad: ["3/03/2020", "04/05/09."],
-          good: ["March 3, 2020", "2009-04-05."],
-        },
-        grammar9: {
-          title: "Spell out low numbers",
-          why: "Spelling out numbers below 10 follows standard editorial style and prevents single digits from getting lost in running text.",
-          bad: ["3", "forty"],
-          good: ["three", "40"],
-        },
-        grammar10: {
-          title: "Ordinal numbers",
-          why: "Spelled-out ordinals read more naturally in prose and avoid the visual clutter of superscript abbreviations.",
-          bad: "1st, 3rd, 12th",
-          good: "first, third, twelfth",
-        },
-        grammar11: {
-          title: "Trademarks",
-          why: "Trademark protection depends on consistent, accurate usage.",
-          bad: ["GenAI™", "center-out®","Pega customer decision hub"],
-          good: ["Pega GenAI™", "Center-out®","Pega Customer Decision Hub™"],
-        },
-        writingsteps1: {
-          title: "UI formatting",
-          why: "Consistent formatting helps learners distinguish UI labels from instructional text.",
-          bad: ["Click submit.", "Select NEXT."],
-          good: ["Click <strong>Submit</strong>.", "Select <strong>Next</strong>."],
-        },
-        writingsteps2: {
-          title: "Entered text",
-          why: "Exact text prevents errors and reduces confusion during practice and delivery.",
-          bad: ["Enter the email subject.", "Type the Case status."],
-          good: ['In the <strong>Subject</strong> field, enter <span class="inline-code text-sm">Follow-up: Loan application</span>.', 'In the <strong>Status</strong> field, enter <span class="inline-code text-sm">Pending review</span>.',],
-        },
-        writingsteps3: {
-          title: "Monospace text",
-          why: "Monospace text makes user input easier to spot and copy accurately.",
-          bad: ["Enter Case-001 in the <strong>Case ID</strong> field."],
-          good: ['In the <strong>Case ID</strong> field, enter <span class="inline-code text-sm">Case-001</span>.'],
-        },
-        writingsteps4: {
-          title: "Parallel steps",
-          why: "Parallel steps are easier to scan and help learners follow the sequence without reinterpreting each line.",
-          bad: [ "Click <strong>Create</strong>.", "Selecting <strong>Details</strong>.", "The user enters a description.",],
-          good: ["Click <strong>Create</strong>.", "Select <strong>Details</strong>.", "Enter a description."],
-        },
-        writingsteps5: {
-          title: "Orient first",
-          why: "Location-first phrasing helps learners find the right area before performing the action.",
-          bad: [ "Click <strong>Submit</strong> in the Case form on the right side of the page.", "Click <strong>Case Type</strong> in the navigation pane.",],
-          good: ["In the Case form, click <strong>Submit</strong>.", "In the navigation pane, click <strong>Case Type</strong>.",],
-        },
-        writingsteps6: {
-          title: "Expected results",
-          why: "Expected results help learners confirm progress and recover quickly if something looks wrong.",
-          bad: ["Click <strong>Save</strong>."],
-          good: ["Click <strong>Save</strong> to update the Case status."],
-        },
-        writingsteps7: {
-          title: "Navigation paths",
-          why: "The <strong>></strong> symbol clearly shows the order of navigation and helps learners follow multi-level menu paths.",
-          bad: ["Go to <strong>App Studio, Case Types, Service Request</strong>.", "Click <strong>Configure, then Org & Security, and then Access Manager</strong>.",],
-          good: ["Go to <strong>App Studio > Case Types > Service Request</strong>.", "Click <strong>Configure > Org & Security > Access Manager</strong>."],
-        },
-        styleandvoice1: {
-          title: "Strong verbs",
-          why: "Strong verbs make instructions shorter, clearer, and easier to follow.",
-          bad: ["Perform a review of the Case details.", "Make a selection of the appropriate option."],
-          good: ["Review the Case details.", "Select the appropriate option."],
-        },
-        styleandvoice2: {
-          title: "Active voice",
-          why: "Active voice clearly shows who performs the action, which reduces ambiguity.",
-          bad: ["The updated materials are published by the curriculum development team.", "Customer service is improved by doing this.",],
-          good: ["The curriculum development team publishes the updated materials.", "This improves customer service."],
-        },
-        styleandvoice3: {
-          title: "Imperative mood",
-          why: "Imperative verbs make steps concise and easier to scan.",
-          bad: ["You should click <strong>Next</strong>.", "The user must select <strong>Save</strong>."],
-          good: ["Click <strong>Next</strong>.", "Select <strong>Save</strong>."],
-        },
-        styleandvoice4: {
-          title: "Plain language",
-          why: "Plain language reduces cognitive load and helps learners understand the content on the first read.",
-          bad: ["Utilize the search functionality to locate the relevant record.", "Prior to proceeding, ensure that all required fields have been populated.",],
-          good: ["Use search to find the correct record.", "Before you continue, complete all required fields."],
-        },
-        styleandvoice5: {
-          title: "Filler words",
-          why: "Removing filler makes instructions faster to read and easier to scan.",
-          bad: ["Simply click <strong>Submit</strong> to continue.", "It is important to note that you must save your changes.",],
-          good: ["Click <strong>Submit</strong> to continue.", "Save your changes."],
-        },
-        styleandvoice6: {
-          title: "Jargon and idioms",
-          why: "Unexplained jargon and idioms can confuse learners and make content harder to translate.",
-          bad: ["Kick off the Case flow.", "This is a quick win."],
-          good: ["Start the Case workflow.", "This is a simple improvement."],
-        },
-        styleandvoice7: {
-          title: "Term consistency",
-          why: "Consistent terms reduce confusion and help learners connect concepts across materials.",
-          bad: ["Using assignment, task, and work item interchangeably."],
-          good: ["Choose one term and use it consistently throughout the course."],
-        },
-        naming1: {
-          title: "Leading zero",
-          why: "Leading zeros ensure files sort in the correct order when the total count exceeds nine items.",
-          bad: "",
-          good: '<span class="inline-code text-sm">00, 01, 02, 03</span>',
-        },
-        naming2: {
-          title: "Parent folder",
-          why: "A short, role-based label at the parent level makes it easy to identify the course track at a glance.",
-          bad: "",
-          good: '<span class="inline-code text-sm">SSA 25</span>',
-        },
-        naming3: {
-          title: "Child folder",
-          why: "Including a number prefix keeps modules in sequence and makes the folder structure predictable across all courses.",
-          bad: "",
-          good: '<span class="inline-code text-sm">01 Foundations of Pega Platform</span>',
-        },
-        naming4: {
-          title: "Nested folder",
-          why: "Four-digit prefixes preserve sort order at the lesson level and reflect both the module and lesson position in a single value.",
-          bad: "",
-          good: '<span class="inline-code text-sm">0101 Introduction to Center-out architecture</span>',
-        },
-        presentations1: {
-          title: "Fragments",
-          why: "Slides should be scannable; the narration belongs in delivery support.",
-          bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
-          good: "Benefits: Faster routing and fewer handoffs.",
-        },
+        const uiInteraction = [
+          { el: "Area", prep: "In", verb: "N/A" },
+          { el: "Button", prep: "N/A", verb: "Click" },
+          { el: "Checkbox", prep: "In", verb: "Select, Clear" },
+          { el: "Dialog box", prep: "In", verb: "N/A" },
+          { el: "List", prep: "In", verb: "Select" },
+          { el: "Field", prep: "In", verb: "Enter" },
+          { el: "Home page", prep: "On", verb: "N/A" },
+          { el: "Icon", prep: "N/A", verb: "Click" },
+          { el: "Menu", prep: "On", verb: "Click" },
+          { el: "Pane", prep: "In", verb: "Click" },
+          { el: "Radio button", prep: "N/A", verb: "Click" },
+          { el: "Section", prep: "In", verb: "N/A" },
+          { el: "Slider", prep: "N/A", verb: "Move" },
+          { el: "Switch", prep: "N/A", verb: "Turn on, Turn off" },
+          { el: "Tab", prep: "On", verb: "Click" },
+          { el: "Window", prep: "In", verb: "Open" },
+        ];
 
-        visual1: {
-          title: "Whitespace",
-          why: "Reduces cognitive load, allowing the audience to focus on the key message without being overwhelmed by visual clutter.",
-          bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
-          good: "Benefits: Faster routing and fewer handoffs.",
-        },
+        const checklistItems = [
+          { type: "heading", text: "Template and design" },
+          { type: "item", text: `Have you reviewed and followed the <a href="https://d-alsop.github.io/CD-ILT-Style-Guide/" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">CD Style Guide</a>?` },
+          { type: "item", text: `Are you using the appropriate <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">template</a>?`, },
+          { type: "item", text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`, },
+          { type: "item", text: `Are the correct <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">fonts</a>, font sizes, and font colors used throughout?`, },
 
-      };
+          { type: "heading", text: "Titles and headings" },
+          { type: "item", text: `Are the presentation title, slide titles, and subtitles in sentence case?` },
+          { type: "item", text: `Is sentence case used consistently, with exceptions only for proper nouns and <a href='#' onclick="navigate('appendix-headline-case'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">Pega-specific terms</a>?`, },
+          { type: "item", text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`, },
+          { type: "item", text: `Are <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">trademark symbols (™)</a> included only on the first occurrence of the product name in body text, and exluded from titles and headings?`, },
 
-// ════════════════════════ Examples library data ════════════════════════ //
-      const galleryExamples = [
-        { key: "punctuation1", category: "punctuation", title: "Ampersands" },
-        { key: "punctuation2", category: "punctuation", title: "Oxford comma" },
-        { key: "punctuation3", category: "punctuation", title: "En dashes" },
-        { key: "punctuation4", category: "punctuation", title: "Em dashes" },
-        { key: "punctuation5", category: "punctuation", title: "Hyphens" },
-        { key: "punctuation6", category: "punctuation", title: "Slashes" },
-        { key: "grammar1", category: "grammar", title: "Acronyms" },
-        { key: "grammar2", category: "grammar", title: "Plural acronyms" },
-        { key: "grammar3", category: "grammar", title: "Common acronyms" },
-        { key: "grammar4", category: "grammar", title: "Sentence case" },
-        { key: "grammar5", category: "grammar", title: "Camel case" },
-        { key: "grammar6", category: "grammar", title: "Placeholder text" },
-        { key: "grammar7", category: "grammar", title: "Time format" },
-        { key: "grammar8", category: "grammar", title: "Date format" },
-        { key: "grammar9", category: "grammar", title: "Spell out low numbers" },
-        { key: "grammar10", category: "grammar", title: "Ordinal numbers" },
-        { key: "grammar11", category: "grammar", title: "Trademarks" },
-        { key: "writingsteps1", category: "procedures", title: "UI formatting" },
-        { key: "writingsteps2", category: "procedures", title: "Entered text" },
-        { key: "writingsteps3", category: "procedures", title: "Monospace text" },
-        { key: "writingsteps4", category: "procedures", title: "Parallel structure" },
-        { key: "writingsteps5", category: "procedures", title: "Orient first" },
-        { key: "writingsteps6", category: "procedures", title: "Expected results" },
-        { key: "writingsteps7", category: "procedures", title: "Navigation paths" },
-        { key: "styleandvoice1", category: "style", title: "Strong verbs" },
-        { key: "styleandvoice2", category: "style", title: "Active voice" },
-        { key: "styleandvoice3", category: "style", title: "Imperative mood" },
-        { key: "styleandvoice4", category: "style", title: "Plain language" },
-        { key: "styleandvoice5", category: "style", title: "Filler words" },
-        { key: "styleandvoice6", category: "style", title: "Jargon and idioms" },
-        { key: "styleandvoice7", category: "style", title: "Term consistency" },
-        { key: "naming1", category: "naming", title: "Leading zero" },
-        { key: "naming2", category: "naming", title: "Parent folder" },
-        { key: "naming3", category: "naming", title: "Child folder" },
-        { key: "naming4", category: "naming", title: "Nested folder" },
-        { key: "presentations1", category: "presentations", title: "Fragments" },
-      ];
+          { type: "heading", text: "Writing" },
+          { type: "item", text: `Are bullet points limited to seven words or fewer?` },
+          { type: "item", text: `Are acronyms spelled out on first use?` },
+          { type: "item", text: `Is active voice used, with clear “who does what” phrasing?` },
+          { type: "item", text: `Is content written in second person ("you" rather than "we" or "us")?` },
+          { type: "item", text: `Is present tense used consistently?` },
 
-// ════════════════════════ Example modal function ════════════════════════ //
-      function openExample(key) {
-        const modal = document.getElementById("example-modal");
-        const title = document.getElementById("example-title");
-        const body = document.getElementById("example-body");
+          { type: "heading", text: "Visuals" },
+          { type: "item", text: `Are all images, screenshots, and graphics high quality?` },
+          { type: "item", text: `Have blurry or pixelated visuals been removed?` },
+          { type: "item", text: `Are slides free from overcrowding, with adequate whitespace?` },
+          { type: "item", text: `Are all visuals relevant to the slide content?` },
 
-        const ex = examples[key];
-        if (!modal || !title || !body || !ex) return;
+          { type: "heading", text: "Final check" },
+          { type: "item", text: `Have you reviewed grammar, spelling, and capitalization of Pega terms?` },
+          { type: "item", text: `Have you viewed the presentation in Slide Show mode from beginning to end?` },
+        ];
 
-        title.textContent = ex.title || "Example";
+        const slideLayouts = [
+          { col1: "Title", col2: "Opening slide that introduces the course, module, or lesson." },
+          { col1: "Section title", col2: "Starts a new section and separates major topics." },
+          { col1: "Overview", col2: "Gives a high-level preview of what the presentation will cover." },
+          { col1: "Agenda", col2: "Shows the presentation plan (topics in sequence)." },
+          { col1: "Summary", col2: "Recaps key points and reinforces takeaways at the end of the presentation." },
+          { col1: "End", col2: "Final slide that closes the presentation." },
+          { col1: "Content (default)", col2: "Standard layout for instructional content." },
+          { col1: "Exercise", col2: "Introduces an activity and provides instructions." },
+          { col1: "Demo", col2: "Introduces or guides a demonstration or walkthrough." },
+          { col1: "Quiz", col2: "Provides the link to external quizzes." },
+          { col1: "Knowledge check", col2: "Used for a quick comprehension check during or after a topic." },
+          { col1: "Content slides", col2: "Main body slides for presenting topic content." },
+        ];
 
-        const goodItems = Array.isArray(ex.good) ? ex.good : ex.good ? [ex.good] : [];
-        const badItems = Array.isArray(ex.bad) ? ex.bad : ex.bad ? [ex.bad] : [];
+        // ════════════════════════ Examples modal data ════════════════════════ //
+        const examples = {
+          punctuation1: {
+            title: "General rule",
+            why: "Ampersands are informal and easy to overlook; spelling out 'and' keeps the text clear and consistent.",
+            bad: "Review the requirements & confirm access.",
+            good: "Review the requirements and confirm access.",
+          },
+          punctuation2: {
+            title: "Oxford comma",
+            why: "The Oxford comma removes ambiguity in lists and prevents misreading the last two items as a pair.",
+            bad: "You can edit, add or delete a Case Type.",
+            good: "You can edit, add, or delete a Case Type.",
+          },
+          punctuation3: {
+            title: "en dashes",
+            why: "En dashes signal a range more precisely than a hyphen and are the standard for spans of numbers or dates.",
+            good: ["2020–2022", "Repeat steps 3–5"],
+          },
+          punctuation4: {
+            title: "em dashes",
+            why: "Em dashes add emphasis or set off a clause without the formality of parentheses or the ambiguity of commas.",
+            good: "To indicate a break in the flow of a sentence—or an interruption—use an em dash.",
+          },
+          punctuation5: {
+            title: "Hyphens",
+            why: "Hyphens connect compound modifiers and separate number sequences, making relationships between words immediately clear.",
+            good: ["interface-specific", "-2", "555-555-5555"],
+          },
+          punctuation6: {
+            title: "Slashes",
+            why: "And/or is vague and harder to parse; spelling out the options makes the meaning unambiguous.",
+            bad: "The system sends notifications to admins and/or managers.",
+            good: "The system sends notifications to admins, managers, or both.",
+          },
+          grammar1: {
+            title: "General rule",
+            why: "Spelling out the full term first ensures all learners understand the acronym before it appears on its own.",
+            bad: "Sign up for an ILT (instructor-led training) course today.",
+            good: "Sign up for an instructor-led training (ILT) course today.",
+          },
+          grammar2: {
+            title: "Plural acronyms",
+            why: "Adding an apostrophe before the 's' suggests possession, not plurality, which is grammatically incorrect.",
+            bad: "MLP's",
+            good: "MLPs",
+          },
+          grammar3: {
+            title: "Common acronyms",
+            why: "Widely recognized acronyms are clearer and more natural than their spelled-out equivalents, which can feel awkward or unfamiliar.",
+            bad: "Wireless fidelity",
+            good: "Wi-Fi",
+          },
+          grammar4: {
+            title: "General rule",
+            why: "Sentence case is easier to read and signals that text is descriptive content, not a formal title or UI label.",
+            bad: "This is Headline Case.",
+            good: "This is sentence case.",
+          },
+          grammar5: {
+            title: "Camel case",
+            why: "Matching Pega's current UI and documentation standards avoids confusion when learners encounter the term in the product.",
+            bad: "RuleSet",
+            good: "Ruleset",
+          },
+          grammar6: {
+            title: "Placeholder and UI text",
+            why: "Sentence case in UI text feels conversational and reduces the visual weight of labels and prompts.",
+            bad: ["Phone Number", "Enter Your Email Address."],
+            good: ["Phone number", "Enter your email address."],
+          },
+          grammar7: {
+            title: "Time format",
+            why: "A consistent time format with a space and uppercase AM/PM reduces misreading and aligns with standard editorial style.",
+            bad: "2:15am",
+            good: "2:15 AM",
+          },
+          grammar8: {
+            title: "Date format",
+            why: "Spelled-out months removes ambiguity for different regions who may interpret numeric dates differently.",
+            bad: ["3/03/2020", "04/05/09."],
+            good: ["March 3, 2020", "2009-04-05."],
+          },
+          grammar9: {
+            title: "Spell out low numbers",
+            why: "Spelling out numbers below 10 follows standard editorial style and prevents single digits from getting lost in running text.",
+            bad: ["3", "forty"],
+            good: ["three", "40"],
+          },
+          grammar10: {
+            title: "Ordinal numbers",
+            why: "Spelled-out ordinals read more naturally in prose and avoid the visual clutter of superscript abbreviations.",
+            bad: "1st, 3rd, 12th",
+            good: "first, third, twelfth",
+          },
+          grammar11: {
+            title: "Trademarks",
+            why: "Trademark protection depends on consistent, accurate usage.",
+            bad: ["GenAI™", "center-out®", "Pega customer decision hub"],
+            good: ["Pega GenAI™", "Center-out®", "Pega Customer Decision Hub™"],
+          },
+          writingsteps1: {
+            title: "UI formatting",
+            why: "Consistent formatting helps learners distinguish UI labels from instructional text.",
+            bad: ["Click submit.", "Select NEXT."],
+            good: ["Click <strong>Submit</strong>.", "Select <strong>Next</strong>."],
+          },
+          writingsteps2: {
+            title: "Entered text",
+            why: "Exact text prevents errors and reduces confusion during practice and delivery.",
+            bad: ["Enter the email subject.", "Type the Case status."],
+            good: ['In the <strong>Subject</strong> field, enter <span class="inline-code text-sm">Follow-up: Loan application</span>.','In the <strong>Status</strong> field, enter <span class="inline-code text-sm">Pending review</span>.',],
+          },
+          writingsteps3: {
+            title: "Monospace text",
+            why: "Monospace text makes user input easier to spot and copy accurately.",
+            bad: ["Enter Case-001 in the <strong>Case ID</strong> field."],
+            good: ['In the <strong>Case ID</strong> field, enter <span class="inline-code text-sm">Case-001</span>.'],
+          },
+          writingsteps4: {
+            title: "Parallel steps",
+            why: "Parallel steps are easier to scan and help learners follow the sequence without reinterpreting each line.",
+            bad: ["Click <strong>Create</strong>.", "Selecting <strong>Details</strong>.", "The user enters a description.",],
+            good: ["Click <strong>Create</strong>.", "Select <strong>Details</strong>.", "Enter a description."],
+          },
+          writingsteps5: {
+            title: "Orient first",
+            why: "Location-first phrasing helps learners find the right area before performing the action.",
+            bad: ["Click <strong>Submit</strong> in the Case form on the right side of the page.", "Click <strong>Case Type</strong> in the navigation pane.",],
+            good: ["In the Case form, click <strong>Submit</strong>.","In the navigation pane, click <strong>Case Type</strong>.",],
+          },
+          writingsteps6: {
+            title: "Expected results",
+            why: "Expected results help learners confirm progress and recover quickly if something looks wrong.",
+            bad: ["Click <strong>Save</strong>."],
+            good: ["Click <strong>Save</strong> to update the Case status."],
+          },
+          writingsteps7: {
+            title: "Navigation paths",
+            why: "The <strong>></strong> symbol clearly shows the order of navigation and helps learners follow multi-level menu paths.",
+            bad: ["Go to <strong>App Studio, Case Types, Service Request</strong>.", "Click <strong>Configure, then Org & Security, and then Access Manager</strong>.",],
+            good: ["Go to <strong>App Studio > Case Types > Service Request</strong>.", "Click <strong>Configure > Org & Security > Access Manager</strong>.",],
+          },
+          styleandvoice1: {
+            title: "Strong verbs",
+            why: "Strong verbs make instructions shorter, clearer, and easier to follow.",
+            bad: ["Perform a review of the Case details.", "Make a selection of the appropriate option."],
+            good: ["Review the Case details.", "Select the appropriate option."],
+          },
+          styleandvoice2: {
+            title: "Active voice",
+            why: "Active voice clearly shows who performs the action, which reduces ambiguity.",
+            bad: ["The updated materials are published by the curriculum development team.", "Customer service is improved by doing this.",],
+            good: ["The curriculum development team publishes the updated materials.", "This improves customer service.",],
+          },
+          styleandvoice3: {
+            title: "Imperative mood",
+            why: "Imperative verbs make steps concise and easier to scan.",
+            bad: ["You should click <strong>Next</strong>.", "The user must select <strong>Save</strong>."],
+            good: ["Click <strong>Next</strong>.", "Select <strong>Save</strong>."],
+          },
+          styleandvoice4: {
+            title: "Plain language",
+            why: "Plain language reduces cognitive load and helps learners understand the content on the first read.",
+            bad: ["Utilize the search functionality to locate the relevant record.", "Prior to proceeding, ensure that all required fields have been populated.",],
+            good: ["Use search to find the correct record.", "Before you continue, complete all required fields."],
+          },
+          styleandvoice5: {
+            title: "Filler words",
+            why: "Removing filler makes instructions faster to read and easier to scan.",
+            bad: ["Simply click <strong>Submit</strong> to continue.", "It is important to note that you must save your changes.",],
+            good: ["Click <strong>Submit</strong> to continue.", "Save your changes."],
+          },
+          styleandvoice6: {
+            title: "Jargon and idioms",
+            why: "Unexplained jargon and idioms can confuse learners and make content harder to translate.",
+            bad: ["Kick off the Case flow.", "This is a quick win."],
+            good: ["Start the Case workflow.", "This is a simple improvement."],
+          },
+          styleandvoice7: {
+            title: "Term consistency",
+            why: "Consistent terms reduce confusion and help learners connect concepts across materials.",
+            bad: ["Using assignment, task, and work item interchangeably."],
+            good: ["Choose one term and use it consistently throughout the course."],
+          },
+          naming1: {
+            title: "Leading zero",
+            why: "Leading zeros ensure files sort in the correct order when the total count exceeds nine items.",
+            bad: "",
+            good: '<span class="inline-code text-sm">00, 01, 02, 03</span>',
+          },
+          naming2: {
+            title: "Parent folder",
+            why: "A short, role-based label at the parent level makes it easy to identify the course track at a glance.",
+            bad: "",
+            good: '<span class="inline-code text-sm">SSA 25</span>',
+          },
+          naming3: {
+            title: "Child folder",
+            why: "Including a number prefix keeps modules in sequence and makes the folder structure predictable across all courses.",
+            bad: "",
+            good: '<span class="inline-code text-sm">01 Foundations of Pega Platform</span>',
+          },
+          naming4: {
+            title: "Nested folder",
+            why: "Four-digit prefixes preserve sort order at the lesson level and reflect both the module and lesson position in a single value.",
+            bad: "",
+            good: '<span class="inline-code text-sm">0101 Introduction to Center-out architecture</span>',
+          },
+          presentations1: {
+            title: "Fragments",
+            why: "Slides should be scannable; the narration belongs in delivery support.",
+            bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
+            good: "Benefits: Faster routing and fewer handoffs.",
+          },
 
-        const onlyBad = badItems.length && !goodItems.length;
-        const onlyGood = goodItems.length && !badItems.length;
+          visual1: {
+            title: "Whitespace",
+            why: "Reduces cognitive load, allowing the audience to focus on the key message without being overwhelmed by visual clutter.",
+            bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
+            good: "Benefits: Faster routing and fewer handoffs.",
+          },
+        };
 
-        body.innerHTML = `
+        // ════════════════════════ Examples library data ════════════════════════ //
+        const galleryExamples = [
+          { key: "punctuation1", category: "punctuation", title: "Ampersands" },
+          { key: "punctuation2", category: "punctuation", title: "Oxford comma" },
+          { key: "punctuation3", category: "punctuation", title: "En dashes" },
+          { key: "punctuation4", category: "punctuation", title: "Em dashes" },
+          { key: "punctuation5", category: "punctuation", title: "Hyphens" },
+          { key: "punctuation6", category: "punctuation", title: "Slashes" },
+          { key: "grammar1", category: "grammar", title: "Acronyms" },
+          { key: "grammar2", category: "grammar", title: "Plural acronyms" },
+          { key: "grammar3", category: "grammar", title: "Common acronyms" },
+          { key: "grammar4", category: "grammar", title: "Sentence case" },
+          { key: "grammar5", category: "grammar", title: "Camel case" },
+          { key: "grammar6", category: "grammar", title: "Placeholder text" },
+          { key: "grammar7", category: "grammar", title: "Time format" },
+          { key: "grammar8", category: "grammar", title: "Date format" },
+          { key: "grammar9", category: "grammar", title: "Spell out low numbers" },
+          { key: "grammar10", category: "grammar", title: "Ordinal numbers" },
+          { key: "grammar11", category: "grammar", title: "Trademarks" },
+          { key: "writingsteps1", category: "procedures", title: "UI formatting" },
+          { key: "writingsteps2", category: "procedures", title: "Entered text" },
+          { key: "writingsteps3", category: "procedures", title: "Monospace text" },
+          { key: "writingsteps4", category: "procedures", title: "Parallel structure" },
+          { key: "writingsteps5", category: "procedures", title: "Orient first" },
+          { key: "writingsteps6", category: "procedures", title: "Expected results" },
+          { key: "writingsteps7", category: "procedures", title: "Navigation paths" },
+          { key: "styleandvoice1", category: "style", title: "Strong verbs" },
+          { key: "styleandvoice2", category: "style", title: "Active voice" },
+          { key: "styleandvoice3", category: "style", title: "Imperative mood" },
+          { key: "styleandvoice4", category: "style", title: "Plain language" },
+          { key: "styleandvoice5", category: "style", title: "Filler words" },
+          { key: "styleandvoice6", category: "style", title: "Jargon and idioms" },
+          { key: "styleandvoice7", category: "style", title: "Term consistency" },
+          { key: "naming1", category: "naming", title: "Leading zero" },
+          { key: "naming2", category: "naming", title: "Parent folder" },
+          { key: "naming3", category: "naming", title: "Child folder" },
+          { key: "naming4", category: "naming", title: "Nested folder" },
+          { key: "presentations1", category: "presentations", title: "Fragments" },
+        ];
 
-        ${ex.why ? `
+        // ════════════════════════ Example modal function ════════════════════════ //
+        function openExample(key) {
+          const modal = document.getElementById("example-modal");
+          const title = document.getElementById("example-title");
+          const body = document.getElementById("example-body");
+
+          const ex = examples[key];
+          if (!modal || !title || !body || !ex) return;
+
+          title.textContent = ex.title || "Example";
+
+          const goodItems = Array.isArray(ex.good) ? ex.good : ex.good ? [ex.good] : [];
+          const badItems = Array.isArray(ex.bad) ? ex.bad : ex.bad ? [ex.bad] : [];
+
+          const onlyBad = badItems.length && !goodItems.length;
+          const onlyGood = goodItems.length && !badItems.length;
+
+          body.innerHTML = `
+
+        ${
+          ex.why
+            ? `
           <div class="md:col-span-2 rounded-lg border border-gray-200 bg-gray-50 p-3">
             <div class="flex items-start gap-2">
               <div>
                 <div class="text-md text-gray-700">${ex.why}</div>
-              </div>
+              </div>s
             </div>
           </div>
         `
             : ``
         }
       
-        ${badItems.length ? `
+        ${
+          badItems.length
+            ? `
           <div class="${onlyBad ? "md:col-span-2" : ""} rounded-lg border border-red-200 bg-red-50 p-3">
             <div class="flex items-start gap-2 text-pearl text-base">
               <span class="material-symbols-outlined text-red-700 leading-none">cancel</span>
@@ -2386,7 +2524,9 @@
             : ``
         }
       
-        ${goodItems.length ? `
+        ${
+          goodItems.length
+            ? `
           <div class="${onlyGood ? "md:col-span-2" : ""} rounded-lg border border-green-200 bg-green-50 p-3">
             <div class="flex items-start gap-2 text-pearl text-base">
               <span class="material-symbols-outlined text-green-700 leading-none">check_circle</span>
@@ -2399,93 +2539,92 @@
         }
       `;
 
-        modal.classList.remove("hidden");
-        document.body.classList.add("overflow-hidden");
-      }
+          modal.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+        }
 
-      function closeExample() {
-        const modal = document.getElementById("example-modal");
-        if (!modal) return;
-        modal.classList.add("hidden");
-        document.body.classList.remove("overflow-hidden");
-      }
+        function closeExample() {
+          const modal = document.getElementById("example-modal");
+          if (!modal) return;
+          modal.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        }
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeExample();
-      });
-
-      
- // ════════════════════════ Navigation ════════════════════════ //
-      function navigate(sectionId) {
-        // 1) Hide all sections
-        document.querySelectorAll(".view-section").forEach((section) => {
-          section.classList.add("hidden");
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeExample();
         });
 
-        // 2) Show the requested section
-        const target = document.getElementById(sectionId);
-        if (!target) return;
-        target.classList.remove("hidden");
-
-        // 3) Update active nav button styling
-        document.querySelectorAll(".nav-btn").forEach((btn) => btn.classList.remove("active"));
-        const activeBtn = document.querySelector(`.nav-btn[onclick="navigate('${sectionId}')"]`);
-        if (activeBtn) activeBtn.classList.add("active");
-
-        // 4) Scroll the main content area to the top
-        const main = document.getElementById("main-content");
-        if (main) main.scrollTop = 0;
-      }
-
-      function setSidebarCollapsed(collapsed) {
-        const sidebar = document.getElementById("sidebar");
-        if (!sidebar) return;
-        sidebar.classList.toggle("sidebar-collapsed", collapsed);
-
-        const icon = document.getElementById("sidebar-collapse-icon");
-        if (icon) icon.textContent = collapsed ? "chevron_right" : "chevron_left";
-
-        const btn = document.getElementById("sidebar-collapse-btn");
-        if (btn) btn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
-
-        localStorage.setItem("sidebarCollapsed", collapsed ? "1" : "0");
-      }
-
-      function initSidebarCollapse() {
-        document.querySelectorAll(".nav-btn").forEach((b) => {
-          const labelEl = b.querySelector(".nav-label");
-          if (!labelEl) return;
-          const label = labelEl.textContent.trim();
-          b.setAttribute("title", label);
-          b.setAttribute("aria-label", label);
-        });
-
-        const btn = document.getElementById("sidebar-collapse-btn");
-        if (btn) {
-          btn.addEventListener("click", () => {
-            const sidebar = document.getElementById("sidebar");
-            const collapsed = sidebar?.classList.contains("sidebar-collapsed");
-            setSidebarCollapsed(!collapsed);
+        // ════════════════════════ Navigation ════════════════════════ //
+        function navigate(sectionId) {
+          // 1) Hide all sections
+          document.querySelectorAll(".view-section").forEach((section) => {
+            section.classList.add("hidden");
           });
+
+          // 2) Show the requested section
+          const target = document.getElementById(sectionId);
+          if (!target) return;
+          target.classList.remove("hidden");
+
+          // 3) Update active nav button styling
+          document.querySelectorAll(".nav-btn").forEach((btn) => btn.classList.remove("active"));
+          const activeBtn = document.querySelector(`.nav-btn[onclick="navigate('${sectionId}')"]`);
+          if (activeBtn) activeBtn.classList.add("active");
+
+          // 4) Scroll the main content area to the top
+          const main = document.getElementById("main-content");
+          if (main) main.scrollTop = 0;
         }
 
-        if (window.innerWidth >= 768) {
-          setSidebarCollapsed(localStorage.getItem("sidebarCollapsed") === "1");
+        function setSidebarCollapsed(collapsed) {
+          const sidebar = document.getElementById("sidebar");
+          if (!sidebar) return;
+          sidebar.classList.toggle("sidebar-collapsed", collapsed);
+
+          const icon = document.getElementById("sidebar-collapse-icon");
+          if (icon) icon.textContent = collapsed ? "chevron_right" : "chevron_left";
+
+          const btn = document.getElementById("sidebar-collapse-btn");
+          if (btn) btn.setAttribute("aria-label", collapsed ? "Expand sidebar" : "Collapse sidebar");
+
+          localStorage.setItem("sidebarCollapsed", collapsed ? "1" : "0");
         }
-      }
 
-// ════════════════════════ Colors ════════════════════════ //
-      function renderColors() {
-        const container = document.getElementById("color-grids");
-        if (!container) return;
+        function initSidebarCollapse() {
+          document.querySelectorAll(".nav-btn").forEach((b) => {
+            const labelEl = b.querySelector(".nav-label");
+            if (!labelEl) return;
+            const label = labelEl.textContent.trim();
+            b.setAttribute("title", label);
+            b.setAttribute("aria-label", label);
+          });
 
-        container.innerHTML = "";
+          const btn = document.getElementById("sidebar-collapse-btn");
+          if (btn) {
+            btn.addEventListener("click", () => {
+              const sidebar = document.getElementById("sidebar");
+              const collapsed = sidebar?.classList.contains("sidebar-collapsed");
+              setSidebarCollapsed(!collapsed);
+            });
+          }
 
-        colors.forEach((cat) => {
-          const section = document.createElement("div");
-          section.className = "mb-12";
+          if (window.innerWidth >= 768) {
+            setSidebarCollapsed(localStorage.getItem("sidebarCollapsed") === "1");
+          }
+        }
 
-          section.innerHTML = `
+        // ════════════════════════ Colors ════════════════════════ //
+        function renderColors() {
+          const container = document.getElementById("color-grids");
+          if (!container) return;
+
+          container.innerHTML = "";
+
+          colors.forEach((cat) => {
+            const section = document.createElement("div");
+            section.className = "mb-12";
+
+            section.innerHTML = `
           <div class="p-4 border rounded-lg">
             <h3 class="font-sans font-semibold text-pega-extradark mt-0 mb-4">${cat.category}</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -2502,110 +2641,110 @@
                     <p class="text-xs text-gray-700 font-mono">${c.hex}</p>
                   </div>
                 </div>
-              `
+              `,
                 )
                 .join("")}
             </div>
           </div>
         `;
 
-          container.appendChild(section);
-        });
-      }
-
-// ════════════════════════ Lists references ════════════════════════ //
-      function renderLists() {
-        const headList = document.getElementById("headline-terms-list");
-        if (headList) {
-          headList.innerHTML = "";
-          headlineTerms.forEach((t) => {
-            const li = document.createElement("li");
-            li.textContent = t;
-            headList.appendChild(li);
+            container.appendChild(section);
           });
         }
 
-        const avoidList = document.getElementById("avoid-terms-list");
-        if (avoidList) {
-          avoidList.innerHTML = "";
-          avoidTerms.forEach((i) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
+        // ════════════════════════ Lists references ════════════════════════ //
+        function renderLists() {
+          const headList = document.getElementById("headline-terms-list");
+          if (headList) {
+            headList.innerHTML = "";
+            headlineTerms.forEach((t) => {
+              const li = document.createElement("li");
+              li.textContent = t;
+              headList.appendChild(li);
+            });
+          }
+
+          const avoidList = document.getElementById("avoid-terms-list");
+          if (avoidList) {
+            avoidList.innerHTML = "";
+            avoidTerms.forEach((i) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
             <td class="p-2 border-b border-gray-50 text-gray-600">${i.avoid}</td>
             <td class="p-2 border-b border-gray-50 text-gray-600">${i.use}</td>
           `;
-            avoidList.appendChild(tr);
-          });
-        }
+              avoidList.appendChild(tr);
+            });
+          }
 
-        const uiList = document.getElementById("ui-terms-list");
-        if (uiList) {
-          uiList.innerHTML = "";
-          uiInteraction.forEach((i) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
+          const uiList = document.getElementById("ui-terms-list");
+          if (uiList) {
+            uiList.innerHTML = "";
+            uiInteraction.forEach((i) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
             <td class="p-2 border-b border-gray-50 text-gray-600">${i.el}</td>
             <td class="p-2 border-b border-gray-50 text-gray-600">${i.prep}</td>
             <td class="p-2 border-b border-gray-50 text-gray-600">${i.verb}</td>
           `;
-            uiList.appendChild(tr);
-          });
-        }
+              uiList.appendChild(tr);
+            });
+          }
 
-        const slideLayoutsBody = document.getElementById("slide-layouts");
-        if (slideLayoutsBody) {
-          slideLayoutsBody.innerHTML = "";
-          slideLayouts.forEach((row) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
+          const slideLayoutsBody = document.getElementById("slide-layouts");
+          if (slideLayoutsBody) {
+            slideLayoutsBody.innerHTML = "";
+            slideLayouts.forEach((row) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
             <td class="p-2 border-b border-gray-50 text-gray-600">${row.col1}</td>
             <td class="p-2 border-b border-gray-50 text-gray-600">${row.col2}</td>
           `;
-            slideLayoutsBody.appendChild(tr);
+              slideLayoutsBody.appendChild(tr);
+            });
+          }
+        }
+
+        // ════════════════════════ Examples gallery ════════════════════════ //
+        function renderGallery() {
+          const container = document.getElementById("examples-gallery");
+          if (!container) return;
+
+          const filter = document.getElementById("gallery-filter")?.value || "all";
+          const search = document.getElementById("gallery-search")?.value.toLowerCase() || "";
+
+          const filtered = galleryExamples.filter((ex) => {
+            const matchesCategory = filter === "all" || ex.category === filter;
+            const matchesSearch =
+              ex.title.toLowerCase().includes(search) ||
+              (examples[ex.key]?.good || []).toString().toLowerCase().includes(search) ||
+              (examples[ex.key]?.bad || []).toString().toLowerCase().includes(search);
+            return matchesCategory && matchesSearch;
           });
-        }
-      }
 
-// ════════════════════════ Examples gallery ════════════════════════ //
-      function renderGallery() {
-        const container = document.getElementById("examples-gallery");
-        if (!container) return;
+          if (filtered.length === 0) {
+            container.innerHTML = "";
+            document.getElementById("gallery-no-results").classList.remove("hidden");
+            return;
+          }
 
-        const filter = document.getElementById("gallery-filter")?.value || "all";
-        const search = document.getElementById("gallery-search")?.value.toLowerCase() || "";
+          document.getElementById("gallery-no-results").classList.add("hidden");
 
-        const filtered = galleryExamples.filter((ex) => {
-          const matchesCategory = filter === "all" || ex.category === filter;
-          const matchesSearch =
-            ex.title.toLowerCase().includes(search) ||
-            (examples[ex.key]?.good || []).toString().toLowerCase().includes(search) ||
-            (examples[ex.key]?.bad || []).toString().toLowerCase().includes(search);
-          return matchesCategory && matchesSearch;
-        });
+          container.innerHTML = filtered
+            .map((ex) => {
+              const example = examples[ex.key];
+              const preview = example?.good
+                ? Array.isArray(example.good)
+                  ? example.good[0]
+                  : example.good
+                : example?.bad
+                  ? Array.isArray(example.bad)
+                    ? example.bad[0]
+                    : example.bad
+                  : "";
+              const plainPreview = preview.replace(/<[^>]*>/g, "").substring(0, 80) + (preview.length > 80 ? "…" : "");
 
-        if (filtered.length === 0) {
-          container.innerHTML = "";
-          document.getElementById("gallery-no-results").classList.remove("hidden");
-          return;
-        }
-
-        document.getElementById("gallery-no-results").classList.add("hidden");
-
-        container.innerHTML = filtered
-          .map((ex) => {
-            const example = examples[ex.key];
-            const preview = example?.good
-              ? Array.isArray(example.good)
-                ? example.good[0]
-                : example.good
-              : example?.bad
-                ? Array.isArray(example.bad)
-                  ? example.bad[0]
-                  : example.bad
-                : "";
-            const plainPreview = preview.replace(/<[^>]*>/g, "").substring(0, 80) + (preview.length > 80 ? "…" : "");
-
-            return `
+              return `
           <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md cursor-pointer transition bg-white"
                onclick="openExample('${ex.key}')">
             <div class="flex items-center gap-2 mb-2">
@@ -2615,31 +2754,31 @@
             <p class="text-sm text-gray-600 line-clamp-1 pl-2">${plainPreview}</p>
           </div>
         `;
-          })
-          .join("");
-      }
+            })
+            .join("");
+        }
 
-// ════════════════════════ Checklist ════════════════════════ //
-      function renderChecklist() {
-        const container = document.getElementById("checklist-container");
-        if (!container) return;
-        container.innerHTML = "";
+        // ════════════════════════ Checklist ════════════════════════ //
+        function renderChecklist() {
+          const container = document.getElementById("checklist-container");
+          if (!container) return;
+          container.innerHTML = "";
 
-        let itemIndex = 0; 
+          let itemIndex = 0;
 
-        checklistItems.forEach((entry) => {
-          if (entry.type === "heading") {
-            const heading = document.createElement("div");
-            heading.className = "px-4 py-2 bg-gray-50 text-xs font-bold uppercase tracking-wider text-gray-500";
-            heading.textContent = entry.text;
-            container.appendChild(heading);
-            return;
-          }
+          checklistItems.forEach((entry) => {
+            if (entry.type === "heading") {
+              const heading = document.createElement("div");
+              heading.className = "px-4 py-2 bg-gray-50 text-xs font-bold uppercase tracking-wider text-gray-500";
+              heading.textContent = entry.text;
+              container.appendChild(heading);
+              return;
+            }
 
-          const row = document.createElement("div");
-          row.className = "p-4 flex items-start gap-3";
+            const row = document.createElement("div");
+            row.className = "p-4 flex items-start gap-3";
 
-          row.innerHTML = `
+            row.innerHTML = `
             <input type="checkbox" id="c${itemIndex}" class="w-4 h-4 accent-pega-berry cursor-pointer mt-1" onchange="checkAudit()">
             <label for="c${itemIndex}" class="cursor-pointer flex-1">
               <div class="text-sm text-pega=pearl">${entry.text}</div>
@@ -2647,231 +2786,128 @@
             </label>
           `;
 
-          container.appendChild(row);
-          itemIndex += 1;
-        });
-      }
+            container.appendChild(row);
+            itemIndex += 1;
+          });
+        }
 
-      function checkAudit() {
-        const total = checklistItems.filter((x) => x.type === "item").length;
-        const checked = document.querySelectorAll('#checklist-container input[type="checkbox"]:checked').length;
-        const success = document.getElementById("audit-success");
-        if (!success) return;
-        success.classList.toggle("hidden", checked !== total);
-      }
+        function checkAudit() {
+          const total = checklistItems.filter((x) => x.type === "item").length;
+          const checked = document.querySelectorAll('#checklist-container input[type="checkbox"]:checked').length;
+          const success = document.getElementById("audit-success");
+          if (!success) return;
+          success.classList.toggle("hidden", checked !== total);
+        }
 
-// ════════════════════════ Toast + Copy ════════════════════════ //
-      function copyHex(hex) {
-        navigator.clipboard.writeText(hex).then(() => {
-          const toast = document.getElementById("toast");
-          const msg = document.getElementById("toast-msg");
-          if (msg) msg.textContent = `Copied ${hex}`;
-          if (toast) {
-            toast.classList.remove("translate-y-40");
-            setTimeout(() => toast.classList.add("translate-y-40"), 2000);
-          }
-        });
-      }
-
-
-  (function () {
-    const lightbox = document.getElementById("lightbox");
-    if (!lightbox) return; // ✅ prevents errors if lightbox isn't in DOM
-
-    const lightboxImg = lightbox.querySelector(".lightbox__img");
-    const closeBtn = lightbox.querySelector(".lightbox__close");
-    if (!lightboxImg || !closeBtn) return;
-
-    function openLightbox(src, alt) {
-      lightboxImg.src = src;
-      lightboxImg.alt = alt || "";
-      lightbox.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-      closeBtn.focus();
-    }
-
-    function closeLightbox() {
-      lightbox.setAttribute("aria-hidden", "true");
-      lightboxImg.src = "";
-      lightboxImg.alt = "";
-      document.body.style.overflow = "";
-    }
-
-    document.addEventListener("click", (e) => {
-      const img = e.target.closest("img.zoomable");
-      if (!img) return;
-
-      const fullSrc = img.getAttribute("data-full") || img.src;
-      openLightbox(fullSrc, img.alt);
-    });
-
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    lightboxImg.addEventListener("click", closeLightbox);
-    closeBtn.addEventListener("click", closeLightbox);
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.getAttribute("aria-hidden") === "false") {
-        closeLightbox();
-      }
-    });
-  })();
-
-
-      // ════════════════════════ Filters ════════════════════════ //
-      function initDeliverableFilter() {
-        const homeSection = document.getElementById("home");
-        const pills = document.querySelectorAll(".deliverable-pill");
-        const statusWrap = document.getElementById("deliverable-filter-status");
-        const statusLabel = document.getElementById("deliverable-filter-label");
-        const actionsWrap = document.getElementById("deliverable-filter-actions");
-        const clearBtn = document.getElementById("clear-deliverable-filter");
-        const sections = document.querySelectorAll(".view-section");
-
-        if (!pills.length || !homeSection) return;
-
-        function setActivePill(deliverable) {
-          pills.forEach((pill) => {
-            const isActive = pill.getAttribute("data-deliverable") === deliverable;
-            pill.setAttribute("aria-pressed", isActive ? "true" : "false");
-            pill.classList.remove(
-              "border-pega-ice",
-              "bg-pega-ice",
-              "text-pega-extradark",
-              "border-gray-300",
-              "bg-white",
-              "text-gray-700"
-            );
-            if (isActive) {
-              pill.classList.add("border-pega-ice", "bg-pega-ice", "text-pega-extradark");
-            } else {
-              pill.classList.add("border-gray-300", "bg-white", "text-gray-700");
+        // ════════════════════════ Toast + Copy ════════════════════════ //
+        function copyHex(hex) {
+          navigator.clipboard.writeText(hex).then(() => {
+            const toast = document.getElementById("toast");
+            const msg = document.getElementById("toast-msg");
+            if (msg) msg.textContent = `Copied ${hex}`;
+            if (toast) {
+              toast.classList.remove("translate-y-40");
+              setTimeout(() => toast.classList.add("translate-y-40"), 2000);
             }
           });
         }
 
-        function resetToDefaultView(skipScroll = false) {
-          sections.forEach((section) => {
-            section.classList.add("hidden");
+        (function () {
+          const lightbox = document.getElementById("lightbox");
+          if (!lightbox) return; // ✅ prevents errors if lightbox isn't in DOM
+
+          const lightboxImg = lightbox.querySelector(".lightbox__img");
+          const closeBtn = lightbox.querySelector(".lightbox__close");
+          if (!lightboxImg || !closeBtn) return;
+
+          function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || "";
+            lightbox.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            closeBtn.focus();
+          }
+
+          function closeLightbox() {
+            lightbox.setAttribute("aria-hidden", "true");
+            lightboxImg.src = "";
+            lightboxImg.alt = "";
+            document.body.style.overflow = "";
+          }
+
+          document.addEventListener("click", (e) => {
+            const img = e.target.closest("img.zoomable");
+            if (!img) return;
+
+            const fullSrc = img.getAttribute("data-full") || img.src;
+            openLightbox(fullSrc, img.alt);
           });
-          homeSection.classList.remove("hidden");
 
-          document.querySelectorAll(".guideline-item").forEach((item) => {
-            item.style.display = "block";
+          lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) closeLightbox();
           });
 
-          document.querySelectorAll(".nav-btn").forEach((b) => b.classList.remove("active"));
-          document.querySelector('.nav-btn[onclick*="home"]')?.classList.add("active");
+          lightboxImg.addEventListener("click", closeLightbox);
+          closeBtn.addEventListener("click", closeLightbox);
 
-          if (!skipScroll) window.scrollTo(0, 0);
-        }
-
-        function clearDeliverableFilter(skipScroll = false) {
-          setActivePill(null);
- 
-          document.body.classList.remove("filter-active");  
-
-          if (statusWrap) statusWrap.classList.add("hidden");
-          if (statusLabel) statusLabel.textContent = "All guidelines";
-          if (actionsWrap) {
-            actionsWrap.classList.add("hidden");
-            actionsWrap.classList.remove("flex");
-          }
-          resetToDefaultView(skipScroll);
-        }
-
-        function applyFilter(deliverable, labelText) {
-          setActivePill(deliverable);
-
-          document.body.classList.add("filter-active");
-
-          if (statusWrap && statusLabel) {
-            statusWrap.classList.remove("hidden");
-            statusLabel.textContent = labelText;
-          }
-
-          if (actionsWrap) {
-            actionsWrap.classList.remove("hidden");
-            actionsWrap.classList.add("flex");
-          }
-
-          sections.forEach((section) => section.classList.add("hidden"));
-          homeSection.classList.remove("hidden");
-
-          let firstMatchSection = null;
-          let totalMatches = 0;
-
-          sections.forEach((section) => {
-            if (section.id === "home") return;
-
-            const sectionGuidelines = section.querySelectorAll(".guideline-item");
-            if (!sectionGuidelines.length) {
-              section.classList.add("hidden");
-              return;
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && lightbox.getAttribute("aria-hidden") === "false") {
+              closeLightbox();
             }
+          });
+        })();
 
-            let hasMatchInSection = false;
+        // ════════════════════════ Filters ════════════════════════ //
+        function initDeliverableFilter() {
+          const homeSection = document.getElementById("home");
+          const pills = document.querySelectorAll(".deliverable-pill");
+          const statusWrap = document.getElementById("deliverable-filter-status");
+          const statusLabel = document.getElementById("deliverable-filter-label");
+          const actionsWrap = document.getElementById("deliverable-filter-actions");
+          const clearBtn = document.getElementById("clear-deliverable-filter");
+          const sections = document.querySelectorAll(".view-section");
 
-            sectionGuidelines.forEach((item) => {
-              const raw = (item.getAttribute("data-deliverables") || "").trim();
-              const tags = raw ? raw.split(/\s+/) : [];
-              const matches = tags.includes(deliverable);
+          if (!pills.length || !homeSection) return;
 
-              if (matches) {
-                item.style.display = "block";
-                hasMatchInSection = true;
-                totalMatches++;
+          function setActivePill(deliverable) {
+            pills.forEach((pill) => {
+              const isActive = pill.getAttribute("data-deliverable") === deliverable;
+              pill.setAttribute("aria-pressed", isActive ? "true" : "false");
+              pill.classList.remove(
+                "border-pega-ice",
+                "bg-pega-ice",
+                "text-pega-extradark",
+                "border-gray-300",
+                "bg-white",
+                "text-gray-700",
+              );
+              if (isActive) {
+                pill.classList.add("border-pega-ice", "bg-pega-ice", "text-pega-extradark");
               } else {
-                item.style.display = "none";
+                pill.classList.add("border-gray-300", "bg-white", "text-gray-700");
               }
             });
+          }
 
-            if (hasMatchInSection) {
-              section.classList.remove("hidden");
-              if (!firstMatchSection) firstMatchSection = section;
-            } else {
+          function resetToDefaultView(skipScroll = false) {
+            sections.forEach((section) => {
               section.classList.add("hidden");
-            }
-          });
+            });
+            homeSection.classList.remove("hidden");
 
-          document.querySelectorAll(".nav-btn").forEach((b) => b.classList.remove("active"));
+            document.querySelectorAll(".guideline-item").forEach((item) => {
+              item.style.display = "block";
+            });
 
-          const toast = document.getElementById("toast");
-          const msg = document.getElementById("toast-msg");
-          const icon = document.getElementById("toast-icon");
-          if (msg && icon && toast) {
-            icon.textContent = "filter_list";
-            icon.className = "material-symbols-outlined text-pega-mint";
-            msg.textContent = `Showing ${totalMatches} guidelines for ${labelText}`;
-            toast.classList.remove("translate-y-40");
-            setTimeout(() => toast.classList.add("translate-y-40"), 2500);
+            document.querySelectorAll(".nav-btn").forEach((b) => b.classList.remove("active"));
+            document.querySelector('.nav-btn[onclick*="home"]')?.classList.add("active");
+
+            if (!skipScroll) window.scrollTo(0, 0);
           }
 
-          if (firstMatchSection) {
-            firstMatchSection.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }
-
-        pills.forEach((pill) => {
-          pill.addEventListener("click", function (e) {
-            e.preventDefault();
-            const deliverable = this.getAttribute("data-deliverable");
-            if (!deliverable) return;
-            applyFilter(deliverable, this.textContent.trim());
-          });
-        });
-
-        if (clearBtn) {
-          clearBtn.addEventListener("click", () => clearDeliverableFilter());
-        }
-
-        document.querySelectorAll(".nav-btn").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            if (!document.body.classList.contains("filter-active")) return;
-
+          function clearDeliverableFilter(skipScroll = false) {
             setActivePill(null);
+
             document.body.classList.remove("filter-active");
 
             if (statusWrap) statusWrap.classList.add("hidden");
@@ -2880,41 +2916,142 @@
               actionsWrap.classList.add("hidden");
               actionsWrap.classList.remove("flex");
             }
+            resetToDefaultView(skipScroll);
+          }
 
-            document.querySelectorAll(".guideline-item").forEach((item) => {
-              item.style.display = "block";
+          function applyFilter(deliverable, labelText) {
+            setActivePill(deliverable);
+
+            document.body.classList.add("filter-active");
+
+            if (statusWrap && statusLabel) {
+              statusWrap.classList.remove("hidden");
+              statusLabel.textContent = labelText;
+            }
+
+            if (actionsWrap) {
+              actionsWrap.classList.remove("hidden");
+              actionsWrap.classList.add("flex");
+            }
+
+            sections.forEach((section) => section.classList.add("hidden"));
+            homeSection.classList.remove("hidden");
+
+            let firstMatchSection = null;
+            let totalMatches = 0;
+
+            sections.forEach((section) => {
+              if (section.id === "home") return;
+
+              const sectionGuidelines = section.querySelectorAll(".guideline-item");
+              if (!sectionGuidelines.length) {
+                section.classList.add("hidden");
+                return;
+              }
+
+              let hasMatchInSection = false;
+
+              sectionGuidelines.forEach((item) => {
+                const raw = (item.getAttribute("data-deliverables") || "").trim();
+                const tags = raw ? raw.split(/\s+/) : [];
+                const matches = tags.includes(deliverable);
+
+                if (matches) {
+                  item.style.display = "block";
+                  hasMatchInSection = true;
+                  totalMatches++;
+                } else {
+                  item.style.display = "none";
+                }
+              });
+
+              if (hasMatchInSection) {
+                section.classList.remove("hidden");
+                if (!firstMatchSection) firstMatchSection = section;
+              } else {
+                section.classList.add("hidden");
+              }
+            });
+
+            document.querySelectorAll(".nav-btn").forEach((b) => b.classList.remove("active"));
+
+            const toast = document.getElementById("toast");
+            const msg = document.getElementById("toast-msg");
+            const icon = document.getElementById("toast-icon");
+            if (msg && icon && toast) {
+              icon.textContent = "filter_list";
+              icon.className = "material-symbols-outlined text-pega-mint";
+              msg.textContent = `Showing ${totalMatches} guidelines for ${labelText}`;
+              toast.classList.remove("translate-y-40");
+              setTimeout(() => toast.classList.add("translate-y-40"), 2500);
+            }
+
+            if (firstMatchSection) {
+              firstMatchSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+
+          pills.forEach((pill) => {
+            pill.addEventListener("click", function (e) {
+              e.preventDefault();
+              const deliverable = this.getAttribute("data-deliverable");
+              if (!deliverable) return;
+              applyFilter(deliverable, this.textContent.trim());
             });
           });
-        });
 
-        window.clearDeliverableFilter = clearDeliverableFilter;
-        clearDeliverableFilter(true);
-        }
+          if (clearBtn) {
+            clearBtn.addEventListener("click", () => clearDeliverableFilter());
+          }
 
-      document.addEventListener("DOMContentLoaded", () => {
-        renderColors();
-        renderLists();
-        renderChecklist();
-        initSidebarCollapse();
-        initDeliverableFilter();
+          document.querySelectorAll(".nav-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              if (!document.body.classList.contains("filter-active")) return;
 
-        const galleryFilter = document.getElementById("gallery-filter");
-        const gallerySearch = document.getElementById("gallery-search");
-        if (galleryFilter && gallerySearch) {
-          galleryFilter.addEventListener("change", renderGallery);
-          gallerySearch.addEventListener("input", renderGallery);
-        }
-        renderGallery();
+              setActivePill(null);
+              document.body.classList.remove("filter-active");
 
-        const mobileBtn = document.getElementById("mobile-menu-btn");
-        if (mobileBtn) {
-          mobileBtn.addEventListener("click", () => {
-            const sidebar = document.getElementById("sidebar");
-            if (sidebar) sidebar.classList.toggle("-translate-x-full");
+              if (statusWrap) statusWrap.classList.add("hidden");
+              if (statusLabel) statusLabel.textContent = "All guidelines";
+              if (actionsWrap) {
+                actionsWrap.classList.add("hidden");
+                actionsWrap.classList.remove("flex");
+              }
+
+              document.querySelectorAll(".guideline-item").forEach((item) => {
+                item.style.display = "block";
+              });
+            });
           });
-        }
-      });
 
-    </script>
+          window.clearDeliverableFilter = clearDeliverableFilter;
+          clearDeliverableFilter(true);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          renderColors();
+          renderLists();
+          renderChecklist();
+          initSidebarCollapse();
+          initDeliverableFilter();
+
+          const galleryFilter = document.getElementById("gallery-filter");
+          const gallerySearch = document.getElementById("gallery-search");
+          if (galleryFilter && gallerySearch) {
+            galleryFilter.addEventListener("change", renderGallery);
+            gallerySearch.addEventListener("input", renderGallery);
+          }
+          renderGallery();
+
+          const mobileBtn = document.getElementById("mobile-menu-btn");
+          if (mobileBtn) {
+            mobileBtn.addEventListener("click", () => {
+              const sidebar = document.getElementById("sidebar");
+              if (sidebar) sidebar.classList.toggle("-translate-x-full");
+            });
+          }
+        });
+      </script>
+    </main>
   </body>
 </html>
