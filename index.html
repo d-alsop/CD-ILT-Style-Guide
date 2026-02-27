@@ -377,6 +377,15 @@
         cursor: pointer;
       }
 
+      .filter-active .section-heading,
+      .filter-active .guideline-group-heading {
+        display: none !important;
+      }
+
+      .filter-active h2.section-heading {
+        display: none !important;
+      }
+
     </style>
   </head>
 
@@ -2761,6 +2770,9 @@
 
         function clearDeliverableFilter(skipScroll = false) {
           setActivePill(null);
+ 
+          document.body.classList.remove("filter-active");  
+
           if (statusWrap) statusWrap.classList.add("hidden");
           if (statusLabel) statusLabel.textContent = "All guidelines";
           if (actionsWrap) {
@@ -2772,6 +2784,8 @@
 
         function applyFilter(deliverable, labelText) {
           setActivePill(deliverable);
+
+          document.body.classList.add("filter-active");
 
           if (statusWrap && statusLabel) {
             statusWrap.classList.remove("hidden");
@@ -2853,9 +2867,29 @@
           clearBtn.addEventListener("click", () => clearDeliverableFilter());
         }
 
+        document.querySelectorAll(".nav-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            if (!document.body.classList.contains("filter-active")) return;
+
+            setActivePill(null);
+            document.body.classList.remove("filter-active");
+
+            if (statusWrap) statusWrap.classList.add("hidden");
+            if (statusLabel) statusLabel.textContent = "All guidelines";
+            if (actionsWrap) {
+              actionsWrap.classList.add("hidden");
+              actionsWrap.classList.remove("flex");
+            }
+
+            document.querySelectorAll(".guideline-item").forEach((item) => {
+              item.style.display = "block";
+            });
+          });
+        });
+
         window.clearDeliverableFilter = clearDeliverableFilter;
         clearDeliverableFilter(true);
-      }
+        }
 
       document.addEventListener("DOMContentLoaded", () => {
         renderColors();
