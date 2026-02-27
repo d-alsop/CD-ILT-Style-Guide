@@ -32,6 +32,7 @@
                 darkgray: "#63666F",
                 extradark: "#2E2E33",
                 sharepoint: "#1A9BA1",
+                black: "#000000",
               },
             },
             fontFamily: {
@@ -227,14 +228,14 @@
 
       .guideline-item {
         border-top: 2px solid #e5e7eb;
-        padding-top: 1.65rem;
-        padding-bottom: 1.65rem;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
       }
 
       .guideline-text {
         font-size: 1rem;
-        color: #0c1935;
-        padding-left: 0.75rem;
+        color: #2E2E33;
+        padding-left: 0.77rem;
       }
 
       .guideline-actions {
@@ -252,15 +253,15 @@
         padding: 0.5rem 0.75rem;
         border-radius: 0.375rem;
         border: 1px solid #e5e7eb;
-        background-color: #f9fafb;
-        color: #374151;
+        background-color: #f6f6f9;
+        color: #626466;
         font-size: 0.8rem;
         font-weight: 600;
         transition: all 0.15s;
       }
       .btn-example:hover {
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        background-color: #f3f4f6;
+        background-color: #e7e8ea;
       }
 
       .icon-sm {
@@ -295,18 +296,18 @@
         top: 130%;
         transform: translateX(-50%);
         width: max-content;
-        max-width: 350px;
-        padding: 0.6rem 0.75rem;
+        max-width: 400px;
+        padding: 0.75rem 0.75rem;
         border-radius: 0.5rem;
         background: #0c1935; 
         color: #fff;
         font-family: "Open Sans", sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.95rem;
         line-height: 1.2;
         box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.15s ease-in-out;
+        transition: opacity 0.30s ease-in-out;
         z-index: 50;
       }
 
@@ -331,6 +332,49 @@
       .tooltip:focus-within::after,
       .tooltip:focus-within::before {
         opacity: 1;
+      }
+
+      .zoomable {
+        cursor: zoom-in;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 9999;
+      }
+
+      .lightbox[aria-hidden="false"] {
+        display: flex;
+      }
+
+      .lightbox__img {
+        max-width: min(1200px, 95vw);
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        cursor: zoom-out;
+      }
+
+      .lightbox__close {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        font-size: 36px;
+        line-height: 1;
+        background: transparent;
+        border: 0;
+        color: #fff;
+        cursor: pointer;
       }
 
     </style>
@@ -458,25 +502,25 @@
           </a>
           <a href="https://pe.ga/40l7EcQ" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-sharepoint transition mb-2">Instructor SharePoint</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">Instructor SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for instructors.</div>
             </div>
           </a>
           <a href="https://pe.ga/4tKXoYT" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-sharepoint transition mb-2">Student SharePoint</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">Student SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for students.</div>
             </div>
           </a>
           <a href="https://pe.ga/4b1gcvC" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-sharepoint transition mb-2">ATP SharePoint</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">ATP SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for Authorized Training Partners.</div>
             </div>
           </a>
           <a href="https://pe.ga/4cohJgD" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-sharepoint transition mb-2">UAP SharePoint</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">UAP SharePoint</div>
               <div class="text-xs text-gray-500">Published curriculum for the University Academic Program.</div>
             </div>
           </a>
@@ -485,13 +529,13 @@
         <div class="mt-12 rounded-xl border border-gray-200 bg-pega-lightgray p-6 shadow-sm" id="deliverable-hub">
           <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
             <div>
-              <h3 class="font-serif font-bold text-xl text-pega-pearl mb-1">Find guidance by deliverable <span class="text-sm font-normal inline-code">Beta</span></h3>
+              <h3 class="font-serif font-bold text-xl text-pega-extradark mb-1">Find guidance by deliverable <span class="text-sm font-normal inline-code">Beta</span></h3>
               <p class="text-sm text-gray-600">Select a deliverable to show only the most relevant guidelines.</p>
             </div>
 
             <div id="deliverable-filter-status" class="hidden md:text-right">
               <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Active filter</div>
-              <div class="text-sm text-pega-pearl font-semibold" id="deliverable-filter-label">All guidelines</div>
+              <div class="text-sm text-pega-extradark font-semibold" id="deliverable-filter-label">All guidelines</div>
             </div>
           </div>
 
@@ -533,7 +577,7 @@
         </div>
 
         <h2 class="section-heading">Naming course folders</h2>
-        <h3 class="font-sans font-semibold text-pega-pearl mt-12 mb-6">Course (top-level) folder</h3>
+        <h3 class="font-sans font-semibold text-pega-extradark mt-12 mb-6">Course (top-level) folder</h3>
         <div class="guideline-item" data-deliverables="naming-files">
           <div class="guideline-text">Name the parent folder using: <span class="text-sm inline-code">[Course abbrev] [Course version]</span></div>
           <div class="guideline-actions">
@@ -544,7 +588,7 @@
           </div>
         </div>
 
-        <h3 class="font-sans font-semibold text-pega-pearl mt-12 mb-6">Level 1 (required) folders</h3>
+        <h3 class="font-sans font-semibold text-pega-extradark mt-12 mb-6">Level 1 (required) folders</h3>
         <div class="guideline-item" data-deliverables="naming-files">
           <div class="guideline-text">Each course parent folder should contain the following three folders:</div>
           <div class="guideline-actions">
@@ -556,7 +600,7 @@
           </div>
         </div>
 
-        <h3 class="font-sans font-semibold text-pega-pearl mt-12 mb-6">Level 2 (module) folders</h3>
+        <h3 class="font-sans font-semibold text-pega-extradark mt-12 mb-6">Level 2 (module) folders</h3>
         <div class="guideline-item" data-deliverables="naming-files">
           <div class="guideline-text">Use a two-digit sequence number plus module name: <span class="text-sm inline-code">[##] [Module name]</span></div>
           <div class="guideline-actions">
@@ -579,7 +623,7 @@
         </div>
 
         <div class="rounded-lg border border-gray-200 bg-gray-50 p-3 mt-12 mb-6">
-          <h3 class="font-sans font-bold text-sm text-pega-pearl mt-0 mb-10">Example course folder and file structure</h3>
+          <h3 class="font-sans font-bold text-sm text-pega-extradark mt-0 mb-10">Example course folder and file structure</h3>
           <pre class="text-sm font-mono text-gray-700">
   <strong class="font-semibold">SSA 25</strong>
   │ 
@@ -619,11 +663,11 @@
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-pearl">Slide titles</span>
+                  <span class="text-pega-extradark">Slide titles</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Size</span>
-                  <span class="text-pega-pearl">22pt</span>
+                  <span class="text-pega-extradark">22pt</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Color</span>
@@ -631,7 +675,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/rczmvq7gxn" target="_blank">Download Lora</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/rczmvq7gxn" target="_blank">Download Lora</a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -640,11 +684,11 @@
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-pearl">Body text</span>
+                  <span class="text-pega-extradark">Body text</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Size</span>
-                  <span class="text-pega-pearl">12pt</span>
+                  <span class="text-pega-extradark">12pt</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Color</span>
@@ -652,7 +696,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/6lpgprcgcb" target="_blank">Download Open Sans</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pega.widen.net/s/6lpgprcgcb" target="_blank">Download Open Sans</a>
           </div>
 
           <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
@@ -661,11 +705,11 @@
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-pearl">Eyebrow, quotes</span>
+                  <span class="text-pega-extradark">Eyebrow, quotes</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Style</span>
-                  <span class="text-pega-pearl">Uppercase</span>
+                  <span class="text-pega-extradark">Uppercase</span>
                 </div>
                 <div class="flex justify-between border-b border-gray-100 pb-1">
                   <span class="font-bold text-gray-700">Color</span>
@@ -673,7 +717,7 @@
                 </div>
               </div>
             </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-pearl rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a" target="_blank">Download Chakra Petch</a>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition" href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a" target="_blank">Download Chakra Petch</a>
           </div>
         </div>
       </section>
@@ -698,57 +742,57 @@
         <h2 class="section-heading">Authoring</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 not-prose">
           <a href="https://pega.widen.net/s/n7kzc29vkv" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">verified</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">verified</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Pega Brand Guide</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Brand Guide</div>
               <div class="text-xs text-gray-500">Corporate guidelines.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/4qEGYyy" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">menu_book</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">menu_book</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Pega Technical Documentation Guidebook</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Technical Documentation Guidebook</div>
               <div class="text-xs text-gray-500">Pega Community COE guidelines.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/46bYT8t" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">sort_by_alpha</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">sort_by_alpha</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">A–Z words and terms</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">A–Z words and terms</div>
               <div class="text-xs text-gray-500">Words, terms, and names.</div>
             </div>
           </a>
 
           <a href="https://learn.microsoft.com/en-us/style-guide/welcome/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">spellcheck</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">spellcheck</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Microsoft Style Guide</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Microsoft Style Guide</div>
               <div class="text-xs text-gray-500">Primary reference for writing guidelines.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/3OgrcfP" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">school</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">school</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Pega Academy Guide</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Academy Guide</div>
               <div class="text-xs text-gray-500">Guidelines for Pega Academy content.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/3OfDwNq" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">screenshot_region</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">screenshot_region</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Using Snagit</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Using Snagit</div>
               <div class="text-xs text-gray-500">Guidelines and tutorials for using Snagit.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/4kGuLIg" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">movie</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">movie</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Using Camtasia</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Using Camtasia</div>
               <div class="text-xs text-gray-500">Guidelines and tutorials for using Camtasia.</div>
             </div>
           </a>
@@ -757,68 +801,68 @@
         <h2 class="section-heading">Design</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 not-prose">
           <a href="https://pegadigitalassethub.com/portals/fltsak5t/PegaBrandHub" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">palette</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">palette</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Pega Brand Hub</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Pega Brand Hub</div>
               <div class="text-xs text-gray-500">Corporate information and assets.</div>
             </div>
           </a>
 
           <a href="https://pe.ga/44GMKb8" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">inventory_2</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">inventory_2</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Internal team assets</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Internal team assets</div>
               <div class="text-xs text-gray-500">Collection of Pega approved icons and graphics.</div>
             </div>
           </a>
         </div>
 
-        <h3 class="font-sans font-bold text-pega-pearl mt-6 mb-6">Alternatives</h3>
+        <h3 class="font-sans font-bold text-pega-extradark mt-6 mb-6">Alternatives</h3>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 not-prose mt-6 mb-6">
           <a href="https://storyset.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">draw</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">draw</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Storyset</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Storyset</div>
               <div class="text-xs text-gray-500">Illustrations</div>
             </div>
           </a>
 
           <a href="https://icones.js.org/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">grid_view</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">grid_view</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Icônes</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Icônes</div>
               <div class="text-xs text-gray-500">Icons</div>
             </div>
           </a>
 
           <a href="https://worldvectorlogo.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">badge</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">badge</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Worldvectorlogo</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Worldvectorlogo</div>
               <div class="text-xs text-gray-500">SVG company logos</div>
             </div>
           </a>
 
           <a href="https://undraw.co/search" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">brush</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">brush</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">unDraw</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">unDraw</div>
               <div class="text-xs text-gray-500">Illustrations</div>
             </div>
           </a>
 
           <a href="https://uxwing.com/" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">category</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">category</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">UXWing</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">UXWing</div>
               <div class="text-xs text-gray-500">Icons</div>
             </div>
           </a>
 
           <a href="https://www.flaticon.com/animated-icons" target="_blank" rel="noopener noreferrer" class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-berry transition">
-            <span class="material-symbols-outlined text-pega-pearl mt-0.5">animation</span>
+            <span class="material-symbols-outlined text-pega-extradark mt-0.5">animation</span>
             <div class="min-w-0">
-              <div class="font-sans font-semibold text-pega-pearl group-hover:text-pega-berry transition mb-2">Flaticon</div>
+              <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-berry transition mb-2">Flaticon</div>
               <div class="text-xs text-gray-500">Animated icons</div>
             </div>
           </a>
@@ -834,7 +878,7 @@
 
         <h2 class="section-heading flex items-center gap-2">Whitespace
           <span class="tooltip" data-tooltip="Whitespace is intentional empty space that improves scanability and reduces cognitive load." aria-label="Whitespace definition">
-            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>          
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
@@ -852,7 +896,7 @@
 
         <h2 class="section-heading flex items-center gap-2">Alignment
           <span class="tooltip" data-tooltip="Alignment creates structure and makes slides easier to follow." aria-label="Alignment definition">
-            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>          
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
@@ -865,23 +909,26 @@
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Misaligned elements result in a disorganized, hard-to-follow design.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/AJePm5F.png"
-                alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."/>
+                    <img src="https://i.imgur.com/AJePm5F.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/AJePm5F.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Consistent alignment of text and images creates an organized, easy-to-read layout.</p></div>
-              <img class="rounded shadow-sm w-full" src="https://i.imgur.com/VCOTAap.png" />
+                    <img src="https://i.imgur.com/VCOTAap.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/VCOTAap.png"/>
             </div>
           </div>
         </div>
 
         <h2 class="section-heading flex items-center gap-2">Visual hierarchy
-          <span class="tooltip" data-tooltip="Visual hierarchy guides the viewer to what matters most, without extra explanation." aria-label="Alignment definition">
-            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          <span class="tooltip" data-tooltip="Visual hierarchy guides the viewer to what matters most, without extra explanation." aria-label="Visual hierarchy definition">
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>          
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
@@ -897,26 +944,26 @@
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Disrupted element order breaks the natural reading flow, causing confusion.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/5DDps1p.png"
-                alt="Example of poor visual hierarchy – elements are out of order, confusing the viewer."/>
+                    <img src="https://i.imgur.com/5DDps1p.png"
+                      alt="Example of poor visual hierarchy – elements are out of order, confusing the viewer."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/5DDps1p.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Elements follow a logical flow, directing focus naturally from text to image.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/11uERyH.png"
-                alt="Example of good visual hierarchy – elements are arranged logically, guiding the viewer's eye."/>
+                    <img src="https://i.imgur.com/11uERyH.png"
+                      alt="Example of good visual hierarchy – elements are arranged logically, guiding the viewer's eye./>"
+                      class="zoomable"
+                      data-full="https://i.imgur.com/11uERyH.png"/>
             </div>
           </div>
         </div>
 
         <h2 class="section-heading flex items-center gap-2">Image quality
-          <span class="tooltip" data-tooltip="Images must be clear and readable at presentation size." aria-label="Alignment definition">
-            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          <span class="tooltip" data-tooltip="Images must be clear and readable at presentation size." aria-label="Image quality definition">
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>          
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
@@ -935,26 +982,26 @@
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Blurry visuals reduce clarity, making details hard to read and understand.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/IeRmbU2.png"
-                alt="Example of a blurry image – details are unclear and hard to read."/>
+                    <img src="https://i.imgur.com/IeRmbU2.png"
+                      alt="Example of a blurry image – details are unclear and hard to read."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/IeRmbU2.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Clear visuals enhance user understanding by making details easy to read.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/DW9IO0v.png"
-                alt="Example of a sharp image – details are crisp and easy to distinguish."/>
+                    <img src="https://i.imgur.com/DW9IO0v.png"
+                      alt="Example of a sharp image – details are crisp and easy to distinguish."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/DW9IO0v.png"/>
             </div>
           </div>
         </div>
 
         <h2 class="section-heading flex items-center gap-2">Image scale
-          <span class="tooltip" data-tooltip="Scale images to fit the layout without distortion and maintain readability." aria-label="Alignment definition">
-            <span class="material-symbols-outlined text-gray-400 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          <span class="tooltip" data-tooltip="Scale images to fit the layout without distortion and maintain readability." aria-label="Image scale definition">
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>          
         </h2>
         <div class="guideline-item" data-deliverables="presentations">
@@ -974,19 +1021,19 @@
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Stretched or compressed images cause distortion, reducing professionalism.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/qsVXCRm.png"
-                alt="Example of a distorted image – it is stretched horizontally, making it look unprofessional."/>
+                    <img src="https://i.imgur.com/qsVXCRm.png"
+                      alt="Example of a distorted image – it is stretched horizontally, making it look unprofessional."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/qsVXCRm.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Properly scaled images maintain clarity and proportion, avoiding distortion.</p></div>
-              <img
-                class="rounded shadow-sm w-full"
-                src="https://i.imgur.com/9NWBvzy.png"
-                alt="Example of a properly scaled image – it retains its original proportions and looks professional."/>
+                    <img src="https://i.imgur.com/9NWBvzy.png"
+                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/9NWBvzy.png"/>
             </div>
           </div>
         </div>
@@ -1001,7 +1048,7 @@
 
         <h2 class="section-heading">Templates and themes</h2>
         <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Use the most up-to-date <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors"><u>template</u></a> appropriate for the content you're creating.</div>
+          <div class="guideline-text">Use the most up-to-date <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors"><u>template</u></a> appropriate for the content you're creating.</div>
         </div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">When bringing content in from another deck or source, paste using "Keep Text Only," then apply the correct template layout.</div>
@@ -1016,7 +1063,7 @@
         <h2 class="section-heading">Slide layouts</h2>
         <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
           <table class="w-full text-left text-sm">
-            <thead class="bg-pega-lightgray text-pega-pearl">
+            <thead class="bg-pega-lightgray text-pega-extradark">
               <tr>
                 <th class="p-2 font-bold">Layout name</th>
                 <th class="p-2 font-bold">Purpose</th>
@@ -1070,47 +1117,64 @@
           <div class="border-t-2 border-gray-300 w-full mb-6"></div>
         </div>
 
-        <h2 class="section-heading">Focus and cropping</h2>
+        <h2 class="section-heading flex items-center gap-2">Focus and cropping
+          <span class="tooltip" data-tooltip="" aria-label="Focus and cropping definition">
+            <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
+          </span>          
+        </h2>    
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.</div>
+          <div class="guideline-text">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace, but keep enough surrounding interface so learners can find the field or button.</div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
-              <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
+              <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Extra browser UI and whitespace distract from the area learners need to focus on.</p></div>
-              <img class="rounded shadow-md" src="https://i.imgur.com/XyxvJ0B.png" />
+                    <img src="https://i.imgur.com/XyxvJ0B.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/XyxvJ0B.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
-              <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
+              <div class="flex items-start gap-3 mt-2 mb-2">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Tight cropping keeps attention on the relevant area while preserving enough context to orient learners.</p></div>
-              <img class="rounded shadow-md" src="https://i.imgur.com/1Ybv4US.png" />
+                    <img src="https://i.imgur.com/1Ybv4US.png"
+                      alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/1Ybv4US.png"/>
             </div>
           </div>
         </div>
 
+
         <h2 class="section-heading">Sensitive data</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.</div>
+          <div class="text-base text-pega-extradark mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.</div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-red-600 mt-0.5">cancel</span>
                 <p class="text-sm text-gray-700">Sensitive information is visible, which creates privacy and compliance risks.</p></div>
-              <img class="rounded shadow-md" src="https://i.imgur.com/vkh8HdB.png" alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."/>
+                    <img src="https://i.imgur.com/vkh8HdB.png"
+                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/vkh8HdB.png"/>
             </div>
             <div class="bg-green-50 p-4 rounded-lg border border-green-100">
               <div class="flex items-start gap-3 mt-2 mb-2 pb-4">
                 <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
                 <p class="text-sm text-gray-700">Mock data or redaction protects sensitive information while keeping the screenshot instructionally useful.</p></div>
-              <img class="rounded shadow-md" src="https://i.imgur.com/sMmBJWU.png" />
+                    <img src="https://i.imgur.com/sMmBJWU.png"
+                      alt="Example of a properly scaled image – it retains its original proportions and looks professional."
+                      class="zoomable"
+                      data-full="https://i.imgur.com/sMmBJWU.png"/>
             </div>
           </div>
         </div>
 
         <h2 class="section-heading">Callouts</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-pearl mb-6">Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy) with a transparent fill. Avoid messy hand-drawn circles or arrows.</div>
+          <div class="text-base text-pega-extradark mb-6">Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy) with a transparent fill. Avoid messy hand-drawn circles or arrows.</div>
         </div>
       </section>
 
@@ -1545,7 +1609,7 @@
         </div>
         <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
           <table class="w-full text-left text-sm">
-            <thead class="bg-pega-lightgray text-pega-pearl">
+            <thead class="bg-pega-lightgray text-pega-extradark">
               <tr>
                 <th class="p-2 font-bold">Avoid</th>
                 <th class="p-2 font-bold">Use</th>
@@ -1564,7 +1628,7 @@
         </div>
         <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
           <table class="w-full text-left text-sm">
-            <thead class="bg-pega-lightgray text-pega-pearl">
+            <thead class="bg-pega-lightgray text-pega-extradark">
               <tr>
                 <th class="p-2 font-bold">UI Element</th>
                 <th class="p-2 font-bold">Preposition</th>
@@ -1584,7 +1648,7 @@
         </div>
         <div class="overflow-x-auto bg-white rounded-lg shadow-sm border border-gray-200">
           <table class="w-full text-left text-sm">
-            <thead class="bg-pega-lightgray text-pega-pearl font-bold">
+            <thead class="bg-pega-lightgray text-pega-extradark font-bold">
               <tr>
                 <th class="p-2">Icon</th>
                 <th class="p-2">Name / Meaning</th>
@@ -1592,67 +1656,67 @@
             </thead>
             <tbody class="divide-y divide-gray-100 text-gray-700">
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">add</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">add</span></td>
                 <td class="p-2">Add, Create</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">calendar_month</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">calendar_month</span></td>
                 <td class="p-2">Calendar</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">delete</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">delete</span></td>
                 <td class="p-2">Delete, Remove</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">edit</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">edit</span></td>
                 <td class="p-2">Edit</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">drag_indicator</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">drag_indicator</span></td>
                 <td class="p-2">Drag<sup class="text-pega-violet">*</sup></td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">filter_list</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">filter_list</span></td>
                 <td class="p-2">Filter</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">settings</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">settings</span></td>
                 <td class="p-2">Gear (was Properties)</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">help</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">help</span></td>
                 <td class="p-2">Help</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">menu</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">menu</span></td>
                 <td class="p-2">Menu (was More)</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">more_vert</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">more_vert</span></td>
                 <td class="p-2">More (also Action, depending on the app)</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">more_horiz</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">more_horiz</span></td>
                 <td class="p-2">More (iOS)</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">auto_awesome</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">auto_awesome</span></td>
                 <td class="p-2">Polaris</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">tune</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">tune</span></td>
                 <td class="p-2">Settings</td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">linear_scale</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">linear_scale</span></td>
                 <td class="p-2">Slider<sup class="text-pega-violet">**</sup></td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">toggle_on</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">toggle_on</span></td>
                 <td class="p-2">Switch<sup class="text-pega-violet">***</sup></td>
               </tr>
               <tr>
-                <td class="p-2"><span class="material-symbols-outlined text-pega-pearl">gps_fixed</span></td>
+                <td class="p-2"><span class="material-symbols-outlined text-pega-extradark">gps_fixed</span></td>
                 <td class="p-2">Target (was Open)</td>
               </tr>
             </tbody>
@@ -1716,9 +1780,9 @@
     <div id="example-modal" class="fixed inset-0 hidden z-50">
       <div class="absolute inset-0 bg-black/40" onclick="closeExample()"></div>
       <div class="absolute inset-0 flex items-center justify-center p-4">
-        <div class="relative w-full max-w-3xl rounded-xl bg-white shadow-xl border border-gray-200">
+        <div class="relative w-full max-w-4xl rounded-xl bg-white shadow-xl border border-gray-200">
           <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-            <div class="font-serif text-lg font-bold text-pega-pearl" id="example-title">Example</div>
+            <div class="font-serif text-lg font-bold text-pega-extradark" id="example-title">Example</div>
             <button type="button" class="p-2 rounded-md hover:bg-gray-100 text-gray-600" onclick="closeExample()" aria-label="Close">
               <span class="material-symbols-outlined leading-none text-lg">close</span>
             </button>
@@ -1729,7 +1793,11 @@
         </div>
       </div>
     </div>
-
+          <!-- Global lightbox (ONLY ONE IN FILE) -->
+          <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lightbox__close" type="button" aria-label="Close image">&times;</button>
+            <img class="lightbox__img" alt="" />
+          </div>
     <script>
 
 // ════════════════════════ Data ════════════════════════ //
@@ -1739,8 +1807,8 @@
           items: [
             { name: "Navy", hex: "#001F5F", text: "text-white" },
             { name: "Violet", hex: "#5F67B9", text: "text-white" },
-            { name: "Ice Blue", hex: "#D7E2F2", text: "text-pega-pearl" },
-            { name: "Mint", hex: "#82CEC7", text: "text-pega-pearl" },
+            { name: "Ice Blue", hex: "#D7E2F2", text: "text-pega-extradark" },
+            { name: "Mint", hex: "#82CEC7", text: "text-pega-extradark" },
             { name: "Teal", hex: "#10A5AC", text: "text-white" },
           ],
         },
@@ -1749,7 +1817,7 @@
           items: [
             { name: "Sapphire", hex: "#344A9B", text: "text-white" },
             { name: "Orange", hex: "#F76923", text: "text-white" },
-            { name: "Yellow", hex: "#FFC836", text: "text-pega-pearl" },
+            { name: "Yellow", hex: "#FFC836", text: "text-pega-extradark" },
             { name: "Pink", hex: "#EB3987", text: "text-white" },
           ],
         },
@@ -1761,7 +1829,7 @@
             { name: "Emerald", hex: "#005154", text: "text-white" },
             { name: "Berry", hex: "#AC1361", text: "text-white" },
             { name: "Wine", hex: "#661D34", text: "text-white" },
-            { name: "Extra Light Gray", hex: "#F6F6F9", text: "text-pega-pearl" },
+            { name: "Extra Light Gray", hex: "#F6F6F9", text: "text-pega-extradark" },
             { name: "Dark Gray", hex: "#63666F", text: "text-white" },
             { name: "Extra Dark Gray", hex: "#2E2E33", text: "text-white" },
           ],
@@ -1769,10 +1837,10 @@
         {
           category: "Expansion",
           items: [
-            { name: "Lavender", hex: "#99ADFF", text: "text-pega-pearl" },
-            { name: "Periwinkle", hex: "#C9D6FF", text: "text-pega-pearl" },
-            { name: "Mustard", hex: "#E7A832", text: "text-pega-pearl" },
-            { name: "Pale Yellow", hex: "#FFDF8E", text: "text-pega-pearl" },
+            { name: "Lavender", hex: "#99ADFF", text: "text-pega-extradark" },
+            { name: "Periwinkle", hex: "#C9D6FF", text: "text-pega-extradark" },
+            { name: "Mustard", hex: "#E7A832", text: "text-pega-extradark" },
+            { name: "Pale Yellow", hex: "#FFDF8E", text: "text-pega-extradark" },
             { name: "Burnt Orange", hex: "#B63800", text: "text-white" },
             { name: "Sunset", hex: "#FF931E", text: "text-white" },
           ],
@@ -1780,10 +1848,10 @@
         {
           category: "Grays",
           items: [
-            { name: "Gray F3", hex: "#F3F3F3", text: "text-pega-pearl" },
-            { name: "Gray E6", hex: "#E6E6E6", text: "text-pega-pearl" },
-            { name: "Gray CC", hex: "#CCCCCC", text: "text-pega-pearl" },
-            { name: "Gray B3", hex: "#B3B3B3", text: "text-pega-pearl" },
+            { name: "Gray F3", hex: "#F3F3F3", text: "text-pega-extradark" },
+            { name: "Gray E6", hex: "#E6E6E6", text: "text-pega-extradark" },
+            { name: "Gray CC", hex: "#CCCCCC", text: "text-pega-extradark" },
+            { name: "Gray B3", hex: "#B3B3B3", text: "text-pega-extradark" },
             { name: "Gray 99", hex: "#999999", text: "text-white" },
             { name: "Gray 81", hex: "#818181", text: "text-white" },
             { name: "Gray 66", hex: "#666666", text: "text-white" },
@@ -1937,23 +2005,23 @@
       const checklistItems = [
         { type: "heading", text: "Template and design" },
           { type: "item",
-              text: `Have you reviewed and followed the <a href="https://d-alsop.github.io/CD-ILT-Style-Guide/" target="_blank" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">CD Style Guide</a>?`},
+              text: `Have you reviewed and followed the <a href="https://d-alsop.github.io/CD-ILT-Style-Guide/" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">CD Style Guide</a>?`},
           { type: "item",
-              text: `Are you using the appropriate <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">template</a>?`},
+              text: `Are you using the appropriate <a href="https://pe.ga/46bplPy" target="_blank" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">template</a>?`},
           { type: "item",
-              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
+              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
           { type: "item",
-              text: `Are the correct <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">fonts</a>, font sizes, and font colors used throughout?`},
+              text: `Are the correct <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">fonts</a>, font sizes, and font colors used throughout?`},
 
         { type: "heading", text: "Titles and headings" },
           { type: "item",
               text: `Are the presentation title, slide titles, and subtitles in sentence case?`},
           { type: "item",
-              text: `Is sentence case used consistently, with exceptions only for proper nouns and <a href='#' onclick="navigate('appendix-headline-case'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">Pega-specific terms</a>?`},
+              text: `Is sentence case used consistently, with exceptions only for proper nouns and <a href='#' onclick="navigate('appendix-headline-case'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">Pega-specific terms</a>?`},
           { type: "item",
-              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
+              text: `Is there adequate <a href="#" onclick="navigate('visual-design'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">whitespace</a> between slide elements?`},
           { type: "item",
-              text: `Are <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-pearl font-semibold hover:text-pega-berry transition-colors">trademark symbols (™)</a> included only on the first occurrence of the product name in body text, and exluded from titles and headings?`},
+              text: `Are <a href='#' onclick="navigate('fonts'); return false;" class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors">trademark symbols (™)</a> included only on the first occurrence of the product name in body text, and exluded from titles and headings?`},
 
         { type: "heading", text: "Writing" },
           { type: "item",
@@ -2288,10 +2356,8 @@
         ${ex.why ? `
           <div class="md:col-span-2 rounded-lg border border-gray-200 bg-gray-50 p-3">
             <div class="flex items-start gap-2">
-              <span class="material-symbols-outlined text-base leading-none text-pearl mt-0.5">info</span>
               <div>
-                <div class="text-xs font-bold uppercase tracking-wider text-pearl mb-1">Why</div>
-                <div class="text-sm text-gray-700">${ex.why}</div>
+                <div class="text-md text-gray-700">${ex.why}</div>
               </div>
             </div>
           </div>
@@ -2301,9 +2367,9 @@
       
         ${badItems.length ? `
           <div class="${onlyBad ? "md:col-span-2" : ""} rounded-lg border border-red-200 bg-red-50 p-3">
-            <div class="flex items-start gap-2 text-pearl text-sm">
-              <span class="material-symbols-outlined text-base text-red-700 leading-none">cancel</span>
-              <div class="text-sm text-pearl space-y-2">
+            <div class="flex items-start gap-2 text-pearl text-base">
+              <span class="material-symbols-outlined text-red-700 leading-none">cancel</span>
+              <div class="text-base text-pearl space-y-2">
                 ${badItems.map((item) => `<div>${item}</div>`).join("")}</div>
             </div>
           </div>
@@ -2313,9 +2379,9 @@
       
         ${goodItems.length ? `
           <div class="${onlyGood ? "md:col-span-2" : ""} rounded-lg border border-green-200 bg-green-50 p-3">
-            <div class="flex items-start gap-2 text-pearl text-sm">
-              <span class="material-symbols-outlined text-base text-green-700 leading-none">check_circle</span>
-              <div class="text-sm text-pearl space-y-2">
+            <div class="flex items-start gap-2 text-pearl text-base">
+              <span class="material-symbols-outlined text-green-700 leading-none">check_circle</span>
+              <div class="text-base text-pearl space-y-2">
                 ${goodItems.map((item) => `<div>${item}</div>`).join("")}</div>
             </div>
           </div>
@@ -2412,7 +2478,7 @@
 
           section.innerHTML = `
           <div class="p-4 border rounded-lg">
-            <h3 class="font-sans font-semibold text-pega-pearl mt-0 mb-4">${cat.category}</h3>
+            <h3 class="font-sans font-semibold text-pega-extradark mt-0 mb-4">${cat.category}</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
               ${cat.items
                 .map(
@@ -2534,9 +2600,9 @@
           <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md cursor-pointer transition bg-white"
                onclick="openExample('${ex.key}')">
             <div class="flex items-center gap-2 mb-2">
-              <span class="text-xs font-semibold px-2 py-1 rounded-full bg-pega-lightgray text-pega-pearl uppercase">${ex.category}</span>
+              <span class="text-xs font-semibold px-2 py-1 rounded-full bg-pega-lightgray text-pega-extradark uppercase">${ex.category}</span>
             </div>
-            <h3 class="font-sans font-semibold text-pega-pearl pl-2 mb-2">${ex.title}</h3>
+            <h3 class="font-sans font-semibold text-pega-extradark pl-2 mb-2">${ex.title}</h3>
             <p class="text-sm text-gray-600 line-clamp-1 pl-2">${plainPreview}</p>
           </div>
         `;
@@ -2598,7 +2664,54 @@
         });
       }
 
-// ════════════════════════ Filters ════════════════════════ //
+
+  (function () {
+    const lightbox = document.getElementById("lightbox");
+    if (!lightbox) return; // ✅ prevents errors if lightbox isn't in DOM
+
+    const lightboxImg = lightbox.querySelector(".lightbox__img");
+    const closeBtn = lightbox.querySelector(".lightbox__close");
+    if (!lightboxImg || !closeBtn) return;
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "";
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+      lightboxImg.alt = "";
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("click", (e) => {
+      const img = e.target.closest("img.zoomable");
+      if (!img) return;
+
+      const fullSrc = img.getAttribute("data-full") || img.src;
+      openLightbox(fullSrc, img.alt);
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    lightboxImg.addEventListener("click", closeLightbox);
+    closeBtn.addEventListener("click", closeLightbox);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.getAttribute("aria-hidden") === "false") {
+        closeLightbox();
+      }
+    });
+  })();
+
+
+      // ════════════════════════ Filters ════════════════════════ //
       function initDeliverableFilter() {
         const homeSection = document.getElementById("home");
         const pills = document.querySelectorAll(".deliverable-pill");
@@ -2617,13 +2730,13 @@
             pill.classList.remove(
               "border-pega-ice",
               "bg-pega-ice",
-              "text-pega-pearl",
+              "text-pega-extradark",
               "border-gray-300",
               "bg-white",
               "text-gray-700"
             );
             if (isActive) {
-              pill.classList.add("border-pega-ice", "bg-pega-ice", "text-pega-pearl");
+              pill.classList.add("border-pega-ice", "bg-pega-ice", "text-pega-extradark");
             } else {
               pill.classList.add("border-gray-300", "bg-white", "text-gray-700");
             }
