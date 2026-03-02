@@ -258,7 +258,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-        margin-top: 1rem;
+        margin-top: 1.25rem;
         padding-left: 0.75rem;
       }
 
@@ -441,6 +441,16 @@
           <span class="material-symbols-outlined text-lg">folder</span>
           <span class="nav-label">Naming conventions</span>
         </button>
+        <button class="nav-btn" onclick="navigate('resources')">
+          <span class="material-symbols-outlined text-lg">menu_book</span>
+          <span class="nav-label">Resources</span>
+        </button>
+        <button class="nav-btn" onclick="navigate('generative-ai')">
+          <span class="material-symbols-outlined text-lg">smart_toy</span>
+          <span class="nav-label">Generative AI</span>
+        </button>
+
+        <div class="nav-group-label">Design standards</div>
         <button class="nav-btn" onclick="navigate('fonts')">
           <span class="material-symbols-outlined text-lg">text_fields</span>
           <span class="nav-label">Fonts</span>
@@ -449,12 +459,6 @@
           <span class="material-symbols-outlined text-lg">palette</span>
           <span class="nav-label">Colors</span>
         </button>
-        <button class="nav-btn" onclick="navigate('resources')">
-          <span class="material-symbols-outlined text-lg">menu_book</span>
-          <span class="nav-label">Resources</span>
-        </button>
-
-        <div class="nav-group-label">Design standards</div>
         <button class="nav-btn" onclick="navigate('visual-design')">
           <span class="material-symbols-outlined text-lg">grid_view</span>
           <span class="nav-label">Visual design</span>
@@ -484,10 +488,6 @@
         <button class="nav-btn" onclick="navigate('style-and-voice')">
           <span class="material-symbols-outlined text-lg">record_voice_over</span>
           <span class="nav-label">Style and voice</span>
-        </button>
-        <button class="nav-btn" onclick="navigate('generative-ai')">
-          <span class="material-symbols-outlined text-lg">smart_toy</span>
-          <span class="nav-label">Generative AI</span>
         </button>
 
         <div class="nav-group-label">References</div>
@@ -574,7 +574,7 @@
              class="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 hover:shadow-md hover:border-pega-sharepoint transition">
             <div class="min-w-0">
               <div class="font-sans font-semibold text-pega-extradark group-hover:text-pega-sharepoint transition mb-2">Student SharePoint</div>
-              <div class="text-xs text-gray-500">Published curriculum for students.</div>
+              <div class="text-xs text-gray-500">Published curriculum for learners.</div>
             </div>
           </a>
           <a href="https://pe.ga/4b1gcvC"
@@ -737,98 +737,7 @@
         </div>
       </section>
 
-      <!--════════════════════════ Fonts ════════════════════════-->
-      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="fonts">
-        <div class="mb-4">
-          <p class="eyebrow font-bold text-gray-400 mb-1">Fonts</p>
-          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
-        </div>
 
-        <h2 class="section-heading">Styles and usages</h2>
-        <div class="grid lg:grid-cols-3 gap-6">
-          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
-            <div class="flex-1">
-              <p class="text-2xl mb-4 text-pega-navy font-serif">Lora</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-extradark">Slide titles</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Size</span>
-                  <span class="text-pega-extradark">22pt</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Color</span>
-                  <span class="text-pega-navy">Navy (#001F5F)</span>
-                </div>
-              </div>
-            </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-               href="https://pega.widen.net/s/rczmvq7gxn"
-               target="_blank">Download Lora
-            </a>
-          </div>
-
-          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
-            <div class="flex-1">
-              <p class="text-2xl mb-4 text-gray-600 font-sans">Open Sans</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-extradark">Body text</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Size</span>
-                  <span class="text-pega-extradark">12pt</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Color</span>
-                  <span class="text-pega-darkgray">Dark gray (#63666F)</span>
-                </div>
-              </div>
-            </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-               href="https://pega.widen.net/s/6lpgprcgcb"
-               target="_blank">Download Open Sans
-            </a>
-          </div>
-
-          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
-            <div class="flex-1">
-              <p class="text-2xl mb-4 text-pega-violet font-eyebrow uppercase">Chakra Petch</p>
-              <div class="space-y-2 text-sm">
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Use</span>
-                  <span class="text-pega-extradark">Eyebrow, quotes</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Style</span>
-                  <span class="text-pega-extradark">Uppercase</span>
-                </div>
-                <div class="flex justify-between border-b border-gray-100 pb-1">
-                  <span class="font-bold text-gray-700">Color</span>
-                  <span class="text-pega-violet">Violet (#5F67B9)</span>
-                </div>
-              </div>
-            </div>
-            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
-               href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a"
-               target="_blank">Download Chakra Petch
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!--════════════════════════ Colors ════════════════════════-->
-      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="colors">
-        <div class="mb-4">
-          <p class="eyebrow font-bold text-gray-400 mb-1">Colors</p>
-          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
-        </div>
-        <h2 class="section-heading">Palettes</h2>
-        <div id="color-grids"></div>
-      </section>
 
       <!--════════════════════════ Resources ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="resources">
@@ -1013,6 +922,132 @@
         </div>
       </section>
 
+
+      <!--════════════════════════ Generative AI ════════════════════════-->
+      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="generative-ai">
+        <div class="mb-4">
+          <p class="eyebrow font-bold text-gray-400 mb-1">Generative AI</p>
+          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
+        </div>
+
+        <h2 class="section-heading">Responsible use</h2>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Never share sensitive, confidential, or proprietary information with public AI tools.</div>
+        </div>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Use only approved internal AI tools.</div>
+        </div>
+
+        <h2 class="section-heading">Accuracy</h2>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Confirm AI-generated technical concepts against official documentation. AI can confidently produce incorrect information.</div>
+        </div>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Confirm that all steps in a lab work correctly. Do not assume the AI knows the current software version or product behavior.</div>
+        </div>
+
+        <h2 class="section-heading">AI content review</h2>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Use AI to create outlines, draft module summaries, or brainstorm learning objectives.</div>
+        </div>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Rewrite AI-generated drafts to remove passive voice, jargon, and overly formal phrasing, and to match team formatting standards.</div>
+        </div>        
+      </section>
+
+      <!--════════════════════════ Fonts ════════════════════════-->
+      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="fonts">
+        <div class="mb-4">
+          <p class="eyebrow font-bold text-gray-400 mb-1">Fonts</p>
+          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
+        </div>
+
+        <h2 class="section-heading">Styles and usages</h2>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
+            <div class="flex-1">
+              <p class="text-2xl mb-4 text-pega-navy font-serif">Lora</p>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Use</span>
+                  <span class="text-pega-extradark">Slide titles</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Size</span>
+                  <span class="text-pega-extradark">22pt</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Color</span>
+                  <span class="text-pega-navy">Navy (#001F5F)</span>
+                </div>
+              </div>
+            </div>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pega.widen.net/s/rczmvq7gxn"
+               target="_blank">Download Lora
+            </a>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
+            <div class="flex-1">
+              <p class="text-2xl mb-4 text-gray-600 font-sans">Open Sans</p>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Use</span>
+                  <span class="text-pega-extradark">Body text</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Size</span>
+                  <span class="text-pega-extradark">12pt</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Color</span>
+                  <span class="text-pega-darkgray">Dark gray (#63666F)</span>
+                </div>
+              </div>
+            </div>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pega.widen.net/s/6lpgprcgcb"
+               target="_blank">Download Open Sans
+            </a>
+          </div>
+
+          <div class="border border-gray-200 rounded-xl p-6 hover:shadow-sm transition-shadow bg-white flex flex-col">
+            <div class="flex-1">
+              <p class="text-2xl mb-4 text-pega-violet font-eyebrow uppercase">Chakra Petch</p>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Use</span>
+                  <span class="text-pega-extradark">Eyebrow, quotes</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Style</span>
+                  <span class="text-pega-extradark">Uppercase</span>
+                </div>
+                <div class="flex justify-between border-b border-gray-100 pb-1">
+                  <span class="font-bold text-gray-700">Color</span>
+                  <span class="text-pega-violet">Violet (#5F67B9)</span>
+                </div>
+              </div>
+            </div>
+            <a class="mt-6 w-full py-2 font-sans text-sm font-semibold text-center text-pega-extradark rounded-lg border bg-white border-gray-200 hover:shadow-md hover:text-pega-berry hover:border-pega-berry transition"
+               href="https://pegasystems.sharepoint.com/sites/SP-ILTCurriculumDevelopment/_layouts/15/download.aspx?UniqueId=06c49104%2D9667%2D4257%2Dadf0%2D82415e03307a"
+               target="_blank">Download Chakra Petch
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--════════════════════════ Colors ════════════════════════-->
+      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="colors">
+        <div class="mb-4">
+          <p class="eyebrow font-bold text-gray-400 mb-1">Colors</p>
+          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
+        </div>
+        <h2 class="section-heading">Palettes</h2>
+        <div id="color-grids"></div>
+      </section>
+
       <!--════════════════════════ Visual design ════════════════════════-->
       <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="visual-design">
         <div class="mb-8">
@@ -1043,11 +1078,9 @@
             <span class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
           </span>
         </h2>
-        <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Alignment creates structure and makes slides easier to follow.</div>
-        </div>
+
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="guideline-text">Alignment creates structure and makes slides easier to follow.</div>
+          <div class="guideline-text">Align text boxes, images, and objects to consistent grid points on every slide.</div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
               <div class="flex items-start gap-3 mt-2 mb-2">
@@ -1080,6 +1113,7 @@
         </div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Limit emphasis styles; avoid combining bold, underline, and color on the same element.</div>
+        </div>          
           <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
             <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
               <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
@@ -1118,10 +1152,11 @@
          <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Crop to enlarge key detail rather than shrinking the whole image to fit.</div>
         </div>       
-        <div class="guideline-item" data-deliverables="presentations">
+         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Keep image styles consistent; don’t mix crisp vectors with heavily compressed screenshots on the same slide.</div>
+        </div> 
           <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-            <div class="guideline-text">Make the main takeaway the most prominent element, such as text or an image.</div>
+            <div class="guideline-text">Use high-resolution images; avoid using low-resolution or upscaled images that appear blurry at presentation size.</div>
               <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
                 <div class="bg-red-50 p-4 rounded-lg border border-red-100">
                   <div class="flex items-start gap-3 mt-2 mb-2">
@@ -1135,7 +1170,7 @@
                 <div class="bg-green-50 p-4 rounded-lg border border-green-100">
                   <div class="flex items-start gap-3 mt-2 mb-2">
                     <span class="material-symbols-outlined text-green-600 mt-0.5">check_circle</span>
-                    <p class="text-sm text-gray-700">Clear visuals enhance user understanding by making details easy to read.</p></div>
+                    <p class="text-sm text-gray-700">Clear visuals enhance learner understanding by making details easy to read.</p></div>
                   <img src="https://i.imgur.com/DW9IO0v.png"
                       alt="Example of misaligned elements – text and images are not aligned, creating a messy layout."
                       class="zoomable"
@@ -1219,13 +1254,11 @@
 
         <h2 class="section-heading">Content density</h2>
         <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Split complex topics across multiple slides rather than condensing them into one to prevent cognitive overload.</div>
+          <div class="guideline-text">Favor more slides with concise content over fewer slides packed with information; split complex topics across multiple slides to prevent cognitive overload.</div>
         </div>
         <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Favor more slides with concise content over fewer slides packed with information.</div>
+          <div class="guideline-text">Aim for no more than six bullets per slide and six words per bullet.</div>
         </div>
-        <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Aim for no more than six bullets per slide and six words per bullet.</div></div>
         <div class="guideline-item" data-deliverables="presentations">
           <div class="guideline-text">Use sentence fragments on slides and move full explanations into speaker notes.</div>
           <div class="guideline-actions">
@@ -1250,7 +1283,7 @@
           <div class="guideline-text">Do not write speaker notes as a script; write flexible talking points.</div>
         </div>
         <div class="guideline-item" data-deliverables="presentations">
-          <div class="guideline-text">Write speaker notes with both instructors and students in mind. Notes should be useful whether someone is teaching or self-reviewing.</div>
+          <div class="guideline-text">Write speaker notes with both instructors and learners in mind. Notes should be useful whether someone is teaching or self-reviewing.</div>
         </div>
       </section>
 
@@ -1259,6 +1292,17 @@
         <div class="mb-8">
           <p class="eyebrow font-bold text-gray-400 mb-1">Screenshots</p>
           <div class="border-t-2 border-gray-300 w-full mb-6"></div>
+        </div>
+
+        <h2 class="section-heading">Callouts</h2>
+        <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
+          <div class="guideline-text">Use a rectangle callout with a solid outline in Orange (#F76923), no fill, square corners, no shadow, and a stroke weight of 3–4 points depending on image size.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('writingsteps1')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
+          </div>
         </div>
 
         <h2 class="section-heading flex items-center gap-2">Focus and cropping
@@ -1293,7 +1337,7 @@
 
         <h2 class="section-heading">Sensitive data</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-extradark mb-6">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.
+          <div class="guideline-text">Protect sensitive information. Redact or use mock data for any personally identifiable information (PII) or confidential business data.
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-6">
             <div class="bg-red-50 p-4 rounded-lg border border-red-100">
@@ -1317,13 +1361,21 @@
           </div>
         </div>
 
-        <h2 class="section-heading">Callouts</h2>
+        <h2 class="section-heading">Simplified user interface (SUI)</h2>
         <div class="guideline-item" data-deliverables="general-content presentations solution-guide">
-          <div class="text-base text-pega-extradark mb-6">
-            Use consistent callouts. Highlight important areas using a solid, contrasting box (like Pega Violet or Navy)
-            with a transparent fill. Avoid messy hand-drawn circles or arrows.
+          <div class="guideline-text">Use Snagit's Simplify tool to remove unnecessary labels, icons, and buttons from screenshots, leaving only the elements the learner needs to complete the task.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('writingsteps1')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
           </div>
         </div>
+
+        
+
+
+        
       </section>
 
       <!--════════════════════════ Procedures and instructions ════════════════════════-->
@@ -1335,7 +1387,7 @@
 
         <h2 class="section-heading">Writing steps</h2>
         <div class="guideline-item" data-deliverables="solution-guide">
-          <div class="guideline-text">Use numbered steps for sequential tasks and bullet points for non-sequential information so learners can easily distinguish between required actions and informational lists.</div>
+          <div class="guideline-text">Use numbered steps for sequential tasks and bullet points for non-sequential information.</div>
         </div>
         <div class="guideline-item" data-deliverables="solution-guide">
           <div class="guideline-text">Capitalize the first word in each step and end the step with the appropriate end punctuation.</div>
@@ -1350,7 +1402,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="solution-guide">
-          <div class="guideline-text">When instructing the user to enter text, provide exactly how the text must be entered, including punctuation.</div>
+          <div class="guideline-text">When instructing the learner to enter text, provide exactly how the text must be entered, including punctuation.</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('writingsteps2')">
               <span class="icon-sm">visibility</span>
@@ -1360,7 +1412,7 @@
         </div>
         <div class="guideline-item" data-deliverables="solution-guide">
           <div class="guideline-text">
-            <p class="text-base text-gray-700">Use a <span class="inline-code text-sm">monospace</span> font for user-entered text.</p>
+            <p class="text-base text-gray-700">Use a <span class="inline-code text-sm">monospace</span> font for learner-entered text.</p>
           </div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('writingsteps3')">
@@ -1370,7 +1422,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="solution-guide">
-          <div class="guideline-text">Write steps in parallel structure (same verb form, same level of detail) so the sequence is easy to scan.</div>
+          <div class="guideline-text">Write steps in parallel structure (use the same verb form and the same level of detail)</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('writingsteps4')">
               <span class="icon-sm">visibility</span>
@@ -1379,7 +1431,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="solution-guide">
-          <div class="guideline-text">Orient the user first, then state the action to take.</div>
+          <div class="guideline-text">Orient the learner first, then state the action to take.</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('writingsteps5')">
               <span class="icon-sm">visibility</span>
@@ -1454,7 +1506,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Do not use camel case for UI items; Rule names no longer use camel case.</div>
+          <div class="guideline-text">Do not use camel case for UI items or Rule names."</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('grammar5')">
               <span class="icon-sm">visibility</span>
@@ -1570,7 +1622,7 @@
         </div>
 
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use an <strong class="font-semibold">em dash (—)</strong> to create an interruption in a sentence like a semicolon.</div>
+          <div class="guideline-text">Use an <strong class="font-semibold">em dash (—)</strong> to set off an aside or create an abrupt break in a sentence — use sparingly.</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('punctuation4')">
               <span class="icon-sm">visibility</span>
@@ -1610,7 +1662,7 @@
 
         <h2 class="section-heading">Voice and tone</h2>
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use a conversational, professional tone.</div>
+          <div class="guideline-text">Write as you would speak to a knowledgeable colleague; clear and direct, but not informal.</div>
         </div>
         <div class="guideline-item" data-deliverables="general-content">
           <div class="guideline-text">Prefer strong verbs over noun-heavy phrasing.</div>
@@ -1638,7 +1690,6 @@
         <div class="guideline-item" data-deliverables="general-content">
           <div class="guideline-text">Use second person ("you") when addressing the learner.</div>
         </div>
-
         <div class="guideline-item" data-deliverables="general-content">
           <div class="guideline-text">Use imperative mood for procedural steps.</div>
           <div class="guideline-actions">
@@ -1647,6 +1698,14 @@
               <span>View details</span>
             </button>
           </div>
+        </div>
+
+        <h2 class="section-heading">Inclusive language</h2>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Use gender-neutral language to keep examples applicable to all learners.</div>
+        </div>
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Avoid assumptions about culture, ability, or English fluency.</div>
         </div>
 
         <h2 class="section-heading">Plain language</h2>
@@ -1660,7 +1719,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Avoid unnecessary filler words.</div>
+          <div class="guideline-text">Avoid filler words, such as simply, basically, just, very, and really.</div>
           <div class="guideline-actions">
             <button type="button" class="btn-example" onclick="openExample('styleandvoice5')">
               <span class="icon-sm">visibility</span>
@@ -1678,7 +1737,7 @@
           </div>
         </div>
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use contractions selectively for a natural tone.</div>
+          <div class="guideline-text">Use contractions in explanatory body text for a natural tone, but avoid them in step instructions or formal titles.</div>
         </div>
         <div class="guideline-item" data-deliverables="general-content">
           <div class="guideline-text">Use consistent terminology for the same concept.</div>
@@ -1690,52 +1749,50 @@
           </div>
         </div>
 
-        <h2 class="section-heading">Inclusive language</h2>
+        <h2 class="section-heading">Modal verbs</h2>
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use gender-neutral language to keep examples applicable to all learners.</div>
-        </div>
+          <div class="guideline-text">Use modal verbs precisely and consistently. Each word carries a different level of obligation.</div>
+        </div>         
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Avoid assumptions about culture, ability, or English fluency.</div>
-        </div>
-      </section>
-
-      <!--════════════════════════ Generative AI ════════════════════════-->
-      <section class="view-section hidden p-8 md:p-12 max-w-5xl mx-auto" id="generative-ai">
-        <div class="mb-4">
-          <p class="eyebrow font-bold text-gray-400 mb-1">Generative AI</p>
-          <div class="border-t-2 border-gray-300 w-full mb-6"></div>
-        </div>
-
-        <div class="bg-pega-pearl text-white p-4 rounded-xl mb-6 mt-6">
-          <p><strong class="font-semibold">Remember</strong>: AI is a tool, not a crutch.</p>
-        </div>
-
-        <h2 class="section-heading">Responsible use</h2>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Never share sensitive, confidential, or proprietary information with public AI tools.</div>
-        </div>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use only approved internal AI tools.</div>
-        </div>
-
-        <h2 class="section-heading">Accuracy</h2>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Confirm AI-generated technical concepts against official documentation. AI can confidently produce incorrect information.</div>
-        </div>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Confirm that all steps in a lab actually work. Do not assume the AI knows the current software version or product behavior.</div>
-        </div>
-
-        <h2 class="section-heading">AI content review</h2>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Use AI to create outlines, draft module summaries, or brainstorm learning objectives.</div>
-        </div>
-        <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Always rewrite AI drafts to ensure they use simple language and match our team's formatting standards.</div>
+          <div class="guideline-text">Use <strong>must</strong> for requirements; the learner has no choice.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('styleandvoice8')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
+          </div>
         </div>        
         <div class="guideline-item" data-deliverables="general-content">
-          <div class="guideline-text">Edit AI output for passive voice, jargon, and overly formal phrasing before use.</div>
-        </div>  
+          <div class="guideline-text">Use <strong>should</strong> for recommendations; the learner is strongly advised but has some discretion.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('styleandvoice9')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
+          </div>
+        </div>        
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Use <strong>can</strong> to describe what the system or learner is capable of doing; it states possibility, not instruction.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('styleandvoice10')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
+          </div>
+        </div>      
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Use <strong>may</strong> sparingly and only to describe permission; not possibility. Prefer "can" for capability.</div>
+          <div class="guideline-actions">
+            <button type="button" class="btn-example" onclick="openExample('styleandvoice11')">
+              <span class="icon-sm">visibility</span>
+              <span>View details</span>
+            </button>
+          </div>
+        </div>              
+        <div class="guideline-item" data-deliverables="general-content">
+          <div class="guideline-text">Avoid mixing these words interchangeably. Using "should" where "must" is meant implies the step is optional. Using "must" where "can" is meant implies there is no choice when there is.</div>
+        </div>
+
       </section>
 
       <!--════════════════════════ Terms that take headline case ════════════════════════-->
@@ -1931,27 +1988,28 @@
 
       <div
         class="fixed bottom-8 right-8 bg-pega-pearl text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-40 transition-transform duration-300 flex items-center gap-3 z-50"
-        id="toast"
-      >
+        id="toast">
         <span class="material-symbols-outlined text-pega-mint" id="toast-icon">check_circle</span>
         <span id="toast-msg">Copied!</span>
       </div>
 
-      <div id="example-modal" class="fixed inset-0 hidden z-50">
-        <div class="absolute inset-0 bg-black/40" onclick="closeExample()"></div>
+      <div id="example-modal" class="fixed inset-0 hidden z-50" onclick="closeExample()">
+        <div class="absolute inset-0 bg-black/40"></div>
         <div class="absolute inset-0 flex items-center justify-center p-4">
-          <div class="relative w-full max-w-4xl rounded-xl bg-white shadow-xl border border-gray-200">
+          <div
+            class="relative w-full max-w-4xl rounded-xl bg-white shadow-xl border border-gray-200"
+            onclick="event.stopPropagation()">
             <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-              <div class="font-serif text-lg font-bold text-pega-extradark" id="example-title">Example</div>
+              <div class="font-eyebrow uppercase font-bold text-pega-extradark" id="example-title">Example</div>
               <button
                 type="button"
                 class="p-2 rounded-md hover:bg-gray-100 text-gray-600"
                 onclick="closeExample()"
-                aria-label="Close"
-              >
+                aria-label="Close">
                 <span class="material-symbols-outlined leading-none text-lg">close</span>
               </button>
             </div>
+
             <div class="p-5">
               <div id="example-body" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
             </div>
@@ -1963,7 +2021,9 @@
         <button class="lightbox__close" type="button" aria-label="Close image">×</button>
         <img class="lightbox__img" alt="" />
       </div>
-      <script>
+
+      
+    <script>
         
         // ════════════════════════ Data ════════════════════════ //
         const colors = [
@@ -2141,11 +2201,14 @@
           { avoid: "prior to", use: "before" },
           { avoid: "utilize", use: "use" },
           { avoid: "leverage.", use: "use, apply" },
-          { avoid: "critical", use: "crucial (unless referring to a severity level)" },
+          { avoid: "critical", use: "crucial; essential; required (unless referring to a severity level)" },
           { avoid: "streamline", use: "simplify" },
           { avoid: "stakeholders", use: "people" },
-          { avoid: "orchestrate", use: "organize, manage" },
+          { avoid: "orchestrate", use: "organize; manage; coordinate" },
           { avoid: "optimize", use: "improve (say what improves)" },
+          { avoid: "simply, just", use: "remove entirely, or rewrite the sentence" },
+          { avoid: "please", use: "remove entirely; instructions don't require it" },
+
         ];
 
         const uiInteraction = [
@@ -2216,7 +2279,7 @@
         // ════════════════════════ Examples modal data ════════════════════════ //
         const examples = {
           punctuation1: {
-            title: "General rule",
+            title: 'Spelling out "and"',
             why: "Ampersands are informal and easy to overlook; spelling out 'and' keeps the text clear and consistent.",
             bad: "Review the requirements & confirm access.",
             good: "Review the requirements and confirm access.",
@@ -2249,7 +2312,7 @@
             good: "The system sends notifications to admins, managers, or both.",
           },
           grammar1: {
-            title: "General rule",
+            title: "First acronym use",
             why: "Spelling out the full term first ensures all learners understand the acronym before it appears on its own.",
             bad: "Sign up for an ILT (instructor-led training) course today.",
             good: "Sign up for an instructor-led training (ILT) course today.",
@@ -2262,12 +2325,12 @@
           },
           grammar3: {
             title: "Common acronyms",
-            why: "Widely recognized acronyms are clearer and more natural than their spelled-out equivalents, which can feel awkward or unfamiliar.",
+            why: "Widely recognized acronyms are clearer and more natural than their spelled-out equivalents, which can feel awkward or unfamiliar to most readers.",
             bad: "Wireless fidelity",
             good: "Wi-Fi",
           },
           grammar4: {
-            title: "General rule",
+            title: "Default to sentence case",
             why: "Sentence case is easier to read and signals that text is descriptive content, not a formal title or UI label.",
             bad: "This is Headline Case.",
             good: "This is sentence case.",
@@ -2304,7 +2367,7 @@
           },
           grammar10: {
             title: "Ordinal numbers",
-            why: "Spelled-out ordinals read more naturally in prose and avoid the visual clutter of superscript abbreviations.",
+            why: "Spelled-out ordinals read more naturally in prose.",
             bad: "1st, 3rd, 12th",
             good: "first, third, twelfth",
           },
@@ -2328,31 +2391,31 @@
           },
           writingsteps3: {
             title: "Monospace text",
-            why: "Monospace text makes user input easier to spot and copy accurately.",
+            why: "Monospace text makes learner input easier to spot and copy accurately.",
             bad: ["Enter Case-001 in the <strong>Case ID</strong> field."],
             good: ['In the <strong>Case ID</strong> field, enter <span class="inline-code text-sm">Case-001</span>.'],
           },
           writingsteps4: {
             title: "Parallel steps",
             why: "Parallel steps are easier to scan and help learners follow the sequence without reinterpreting each line.",
-            bad: ["Click <strong>Create</strong>.", "Selecting <strong>Details</strong>.", "The user enters a description.",],
+            bad: ["Click <strong>Create</strong>.", "Selecting <strong>Details</strong>.", "The learner enters a description.",],
             good: ["Click <strong>Create</strong>.", "Select <strong>Details</strong>.", "Enter a description."],
           },
           writingsteps5: {
             title: "Orient first",
-            why: "Location-first phrasing helps learners find the right area before performing the action.",
+            why: "Location-first phrasing helps learners find the right area before performing the action; they know where to look before they know what to do.",
             bad: ["Click <strong>Submit</strong> in the Case form on the right side of the page.", "Click <strong>Case Type</strong> in the navigation pane.",],
             good: ["In the Case form, click <strong>Submit</strong>.","In the navigation pane, click <strong>Case Type</strong>.",],
           },
           writingsteps6: {
             title: "Expected results",
-            why: "Expected results help learners confirm progress and recover quickly if something looks wrong.",
-            bad: ["Click <strong>Save</strong>."],
-            good: ["Click <strong>Save</strong> to update the Case status."],
+            why: "Expected results help learners confirm they completed a step correctly, especially after a multi-field form or status change where a visible confirmation matters.",
+            bad: ["Complete all required fields, then click <strong>Save</strong>."],
+            good: ["Complete all required fields, and then click <strong>Save</strong> to change the Case status to Pending-Review."],
           },
           writingsteps7: {
             title: "Navigation paths",
-            why: "The <strong>></strong> symbol clearly shows the order of navigation and helps learners follow multi-level menu paths.",
+            why: "The right angle bracket <strong>(>)</strong> clearly shows the order of navigation and helps learners follow multi-level menu paths.",
             bad: ["Go to <strong>App Studio, Case Types, Service Request</strong>.", "Click <strong>Configure, then Org & Security, and then Access Manager</strong>.",],
             good: ["Go to <strong>App Studio > Case Types > Service Request</strong>.", "Click <strong>Configure > Org & Security > Access Manager</strong>.",],
           },
@@ -2371,7 +2434,7 @@
           styleandvoice3: {
             title: "Imperative mood",
             why: "Imperative verbs make steps concise and easier to scan.",
-            bad: ["You should click <strong>Next</strong>.", "The user must select <strong>Save</strong>."],
+            bad: ["You should click <strong>Next</strong>.", "The learner must select <strong>Save</strong>."],
             good: ["Click <strong>Next</strong>.", "Select <strong>Save</strong>."],
           },
           styleandvoice4: {
@@ -2388,15 +2451,39 @@
           },
           styleandvoice6: {
             title: "Jargon and idioms",
-            why: "Unexplained jargon and idioms can confuse learners and make content harder to translate.",
+            why: "Unexplained jargon and idioms can confuse learners and make content harder to translate. Replace them with plain, precise language.",
             bad: ["Kick off the Case flow.", "This is a quick win."],
             good: ["Start the Case workflow.", "This is a simple improvement."],
           },
           styleandvoice7: {
             title: "Term consistency",
-            why: "Consistent terms reduce confusion and help learners connect concepts across materials.",
-            bad: ["Using assignment, task, and work item interchangeably."],
-            good: ["Choose one term and use it consistently throughout the course."],
+            why: "Switching between synonyms signals to learners that these might be different things. Pick one term and use it throughout the course.",
+            bad: ["An Assignment is created and added to the worklist.", "Complete the task before the SLA expires.", "Work items older than 24 hours are escalated automatically."],
+            good: ["An Assignment is created and added to the worklist.", "Complete the Assignment before the SLA expires.", "Assignments older than 24 hours are escalated automatically."],
+          },
+          styleandvoice8: {
+            title: "Must",
+            why: '"Must" signals a requirement. Using "should" or "can" in its place implies the step is optional when it its not.',
+            bad: ["You should complete all required fields before submitting the Case."],
+            good: ["You must complete all required fields before submitting the Case."],
+          },
+          styleandvoice9: {
+            title: "Should",
+            why: '"Should" signals a recommendation. Using "must" in its place overstates the requirement and removes discretion.',
+            bad: ["You must review the Case details before escalating."],
+            good: ["You should review the Case details before escalating."],
+          },
+          styleandvoice10: {
+            title: "Can",
+            why: '"Can" describes what the system or learner is capable of doing. Using "may" in its place implies permission rather than capability, which changes the meaning.',
+            bad: ["You may add up to 10 attachments per Case."],
+            good: ["You can add up to 10 attachments per Case."],
+          },
+          styleandvoice11: {
+            title: "May",
+            why: '"May" signals permission. Using "can" in its place implies the action is a capability rather than a deliberate allowance, which understates the significance of the permission being granted.',
+            bad: ["Administrators can override the default SLA settings"],
+            good: ["Administrators may override the default SLA settings."],
           },
           naming1: {
             title: "Leading zero",
@@ -2431,9 +2518,9 @@
 
           visual1: {
             title: "Whitespace",
-            why: "Reduces cognitive load, allowing the audience to focus on the key message without being overwhelmed by visual clutter.",
-            bad: "The benefits of this approach are that it routes work faster and reduces handoffs.",
-            good: "Benefits: Faster routing and fewer handoffs.",
+            why: "Crowding content leaves no breathing room, making slides feel overwhelming and hard to scan. Whitespace signals structure and helps learners absorb one idea before moving to the next.",
+            bad: "",
+            good: "",
           },
         };
 
@@ -2470,6 +2557,10 @@
           { key: "styleandvoice5", category: "style", title: "Filler words" },
           { key: "styleandvoice6", category: "style", title: "Jargon and idioms" },
           { key: "styleandvoice7", category: "style", title: "Term consistency" },
+          { key: "styleandvoice8", category: "style", title: "Must" },
+          { key: "styleandvoice9", category: "style", title: "Should" },
+          { key: "styleandvoice10", category: "style", title: "Can" },
+          { key: "styleandvoice11", category: "style", title: "May" },
           { key: "naming1", category: "naming", title: "Leading zero" },
           { key: "naming2", category: "naming", title: "Parent folder" },
           { key: "naming3", category: "naming", title: "Child folder" },
@@ -2502,8 +2593,8 @@
           <div class="md:col-span-2 rounded-lg border border-gray-200 bg-gray-50 p-3">
             <div class="flex items-start gap-2">
               <div>
-                <div class="text-md text-gray-700">${ex.why}</div>
-              </div>s
+                <div class="text-sm text-gray-700">${ex.why}</div>
+              </div>
             </div>
           </div>
         `
@@ -2514,27 +2605,41 @@
           badItems.length
             ? `
           <div class="${onlyBad ? "md:col-span-2" : ""} rounded-lg border border-red-200 bg-red-50 p-3">
-            <div class="flex items-start gap-2 text-pearl text-base">
-              <span class="material-symbols-outlined text-red-700 leading-none">cancel</span>
-              <div class="text-base text-pearl space-y-2">
-                ${badItems.map((item) => `<div>${item}</div>`).join("")}</div>
+            <div class="space-y-2">
+              ${badItems
+                .map(
+                  (item) => `
+                    <div class="flex items-start gap-2 text-pearl text-sm">
+                      <span class="material-symbols-outlined w-5 h-5 shrink-0 inline-flex items-center justify-center leading-none self-start mt-0 text-red-700">cancel</span>
+                      <div class="text-sm text-pearl">${item}</div>
+                    </div>
+                  `
+                )
+                .join("")}
             </div>
           </div>
-        `
+             `
             : ``
         }
-      
+              
         ${
           goodItems.length
             ? `
           <div class="${onlyGood ? "md:col-span-2" : ""} rounded-lg border border-green-200 bg-green-50 p-3">
-            <div class="flex items-start gap-2 text-pearl text-base">
-              <span class="material-symbols-outlined text-green-700 leading-none">check_circle</span>
-              <div class="text-base text-pearl space-y-2">
-                ${goodItems.map((item) => `<div>${item}</div>`).join("")}</div>
+            <div class="space-y-2">
+              ${goodItems
+                .map(
+                  (item) => `
+                    <div class="flex items-start gap-2 text-pearl text-sm">
+                      <span class="material-symbols-outlined w-5 h-5 shrink-0 inline-flex items-center justify-center leading-none self-start mt-0 text-green-700">check_circle</span>
+                      <div class="text-sm text-pearl">${item}</div>
+                    </div>
+                  `
+                )
+                .join("")}
             </div>
           </div>
-        `
+           `
             : ``
         }
       `;
