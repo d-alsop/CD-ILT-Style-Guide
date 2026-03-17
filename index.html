@@ -226,8 +226,8 @@
 
     .guideline-item {
       border-top: 2px solid #e5e7eb;
-      padding-top: 1.7rem;
-      padding-bottom: 1.7rem;
+      padding-top: 0rem;
+      padding-bottom: 0rem;
     }
 
     .guideline-text {
@@ -446,6 +446,62 @@
     details[open] .accordion-panel {
       animation: accordionIn 600ms ease;
     }
+
+    /* Sidebar Tooltips (Only visible when collapsed on desktop) */
+  @media (min-width: 768px) {
+    #sidebar.sidebar-collapsed .nav-btn {
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Tooltip Bubble */
+    #sidebar.sidebar-collapsed .nav-btn::after {
+      content: attr(aria-label);
+      position: absolute;
+      left: calc(100% + 8px); /* Positions to the right of the button */
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #0c1935; /* Matches your Pega Pearl color */
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      padding: 0.4rem 0.75rem;
+      border-radius: 0.375rem;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Tooltip Arrow */
+    #sidebar.sidebar-collapsed .nav-btn::before {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #0c1935 transparent transparent;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      z-index: 1000;
+    }
+
+    /* Show on Hover */
+    #sidebar.sidebar-collapsed .nav-btn:hover::after,
+    #sidebar.sidebar-collapsed .nav-btn:hover::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   </style>
 </head>
 
@@ -700,9 +756,7 @@
             class="px-2.5 py-1 rounded-md border border-gray-300 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition">Clear filter</button>
         </div>
 
-        <!-- NEW SCROLLABLE CONTAINER -->
         <div id="inline-results-container" class="hidden mt-6 pt-6 border-t border-gray-300 max-h-[60vh] overflow-y-auto scrollbar-thin pr-4 space-y-4">
-            <!-- Filtered clones will be dynamically inserted here -->
         </div>
 
       </div>
@@ -716,15 +770,15 @@
       </div>
 
       <h2 class="section-heading">General rules</h2>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="naming-files">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="naming-files">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use sentence case, letters, numbers, and spaces as default; avoid special
             characters: <span class="text-sm inline-code">/ \ : * ? " &lt; &gt; |</span></span>
         </div>
       </div>
 
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="naming-files">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="naming-files">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use a single, consistent separator style; <span
               class="text-sm inline-code">space-hyphen-space (-)</span> is preferred.</span>
         </div>
@@ -732,7 +786,7 @@
 
       <div class="guideline-item" data-deliverables="naming-files">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="naming1">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use a leading zero for numbered items (<span
@@ -748,7 +802,7 @@
       <h3 class="font-sans font-semibold text-pega-extradark mt-12 mb-6">Course (top-level) folder</h3>
       <div class="guideline-item" data-deliverables="naming-files">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="naming2">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Name the parent folder using: <span class="text-sm inline-code">[Course abbrev]
@@ -761,7 +815,7 @@
       </div>
 
       <h3 class="font-sans font-semibold text-pega-extradark mt-8 mb-6">Level 1 (required) folders</h3>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="naming-files">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="naming-files">
         <div class="p-5">
           <span class="text-pega-pearl">Each course parent folder should contain the following three folders:</span>
           <div class="text-sm text-gray-700 mt-4">
@@ -775,7 +829,7 @@
       <h3 class="font-sans font-semibold text-pega-extradark mt-12 mb-6">Level 2 (module) folders</h3>
       <div class="guideline-item" data-deliverables="naming-files">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="naming3">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use a two-digit sequence number plus module name: <span
@@ -790,7 +844,7 @@
       <h2 class="section-heading">Naming files</h2>
       <div class="guideline-item" data-deliverables="naming-files">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="naming4">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use a four-digit number followed by a space and a descriptive title: <span
@@ -1010,43 +1064,121 @@
       </div>
 
       <h2 class="section-heading">Responsible use</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Never share sensitive, confidential, or proprietary information with public AI tools.</span>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Use only approved internal AI tools and resources.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Use only approved internal AI tools.</span>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Never enter sensitive, confidential, proprietary, or unreleased information.</span>
+        </div>
+      </div>
+      
+      <div class="mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          
+          <div class="bg-green-50 p-6 rounded-xl border border-green-200 shadow-sm flex flex-col h-full">
+            <div class="flex items-center gap-3 mb-3 border-b border-green-200 pb-4">
+              <span class="material-symbols-outlined text-3xl text-green-600 shrink-0">check_circle</span>
+              <h3 class="font-sans font-semibold text-pega-extradark m-0">When to use AI</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-green-600 shrink-0">check</span>
+                <span class="text-gray-700">Drafting slides, notes, or outlines</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-green-600 shrink-0 mb-0.5">check</span>
+                <span class="text-gray-700">Rewording for clarity or tone</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-green-600 shrink-0 mb-0.5">check</span>
+                <span class="text-gray-700">Summarizing source material or updates</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-green-600 shrink-0 mb-0.5">check</span>
+                <span class="text-gray-700">Creating exercises or examples</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-green-600 shrink-0 mb-0.5">check</span>
+                <span class="text-gray-700">Improving structure and flow</span>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="bg-red-50 p-6 rounded-xl border border-red-200 shadow-sm flex flex-col h-full">
+            <div class="flex items-center gap-3 mb-6 border-b border-red-200 pb-4">
+              <span class="material-symbols-outlined text-3xl text-red-600 shrink-0">cancel</span>
+              <h3 class="font-sans font-semibold text-pega-extradark m-0">When not to use AI</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-red-600 shrink-0 mb-0.5">close</span>
+                <span class="text-gray-700">Finalizing content without review</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-red-600 shrink-0 mb-0.5">close</span>
+                <span class="text-gray-700">Confirming technical accuracy</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-red-600 shrink-0 mb-0.5">close</span>
+                <span class="text-gray-700">Using confidential or unreleased information</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-red-600 shrink-0 mb-0.5">close</span>
+                <span class="text-gray-700">Replacing SME or developer judgment</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-xl text-red-600 shrink-0 mb-0.5">close</span>
+                <span class="text-gray-700">Working outside approved sources</span>
+              </li>
+            </ul>
+          </div>
+      
         </div>
       </div>
 
       <h2 class="section-heading">Accuracy</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Confirm AI-generated technical concepts against official documentation. AI can confidently produce incorrect information.</span>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Confirm facts, product details, and statistics against official sources.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Confirm that all steps in a lab work correctly. Do not assume the AI knows the current software version or product behavior.</span>
-        </div>
-      </div>
-
-      <h2 class="section-heading">AI content review</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Use AI to create outlines, draft module summaries, or brainstorm learning
-            objectives.</span>
-        </div>
-      </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
-          <span class="text-pega-pearl">Rewrite AI-generated drafts to remove passive voice, jargon, and overly formal
-            phrasing, and to match team formatting standards.</span>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Test all lab steps in the current product version.</span>
         </div>
       </div>
 
+      <h2 class="section-heading">Prompt guidance</h2>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Be specific about audience, purpose, tone, and format.</span>
+        </div>
+      </div>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Use prompts to guide drafts and refinements, not final decisions.</span>
+        </div>
+      </div>
+      
+      <h2 class="section-heading">Review AI output</h2>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Treat AI output as a starting point, not final content.</span>
+        </div>
+      </div>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Revise for accuracy, clarity, voice, and formatting standards.</span>
+        </div>
+      </div>
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
+          <span class="text-pega-pearl">Check for generic phrasing, unsupported claims, and source overlap.</span>
+        </div>
+      </div>
     </section>
 
     <!--════════════════════════ Fonts ════════════════════════-->
@@ -1152,13 +1284,13 @@
             class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
         </span>
       </h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Prefer spacing over lines or borders for separation.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="visual1">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use whitespace to separate distinct ideas and group related items.</span>
@@ -1175,7 +1307,7 @@
             class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
         </span>
       </h2>
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide">
         <div class="text-pega-pearl mb-6">Align text boxes, images, and objects to consistent grid points on every
           slide.</div>
@@ -1213,19 +1345,19 @@
         </span>
       </h2>
 
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use size, weight, and placement for emphasis before color.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Limit emphasis styles; avoid combining bold, underline, and color on the same
             element.</span>
         </div>
       </div>
 
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide">
         <div class="text-pega-pearl mb-6">Make the main takeaway the most prominent element, such as text or an image.
         </div>
@@ -1262,30 +1394,30 @@
             class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
         </span>
       </h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use original source images whenever possible; avoid “screenshots of
             screenshots.”</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Ensure any text inside images is readable from the back of the room.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Crop to enlarge key detail rather than shrinking the whole image to fit.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Keep image styles consistent; don’t mix crisp vectors with heavily compressed
             screenshots on the same slide.</span>
         </div>
       </div>
 
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide">
         <div class="text-pega-pearl mb-6">Use high-resolution images; avoid using low-resolution or upscaled images that
           appear blurry at presentation size.</div>
@@ -1322,30 +1454,30 @@
             class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
         </span>
       </h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Maintain aspect ratio; resize from corner handles.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Size visuals by importance; primary visuals should be easy to interpret
             quickly.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">If space is tight, crop instead of shrinking below readability.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Keep image styles consistent; don’t mix crisp vectors with heavily compressed
             screenshots on the same slide.</span>
         </div>
       </div>
 
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide">
         <div class="text-pega-pearl mb-6">Keep similar visuals (especially UI screenshots) at a consistent scale across
           the deck.</div>
@@ -1385,26 +1517,26 @@
       </div>
 
       <h2 class="section-heading">Templates and themes</h2>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use the most up-to-date <a href="https://pe.ga/46bplPy" target="_blank"
               class="text-pega-extradark font-semibold hover:text-pega-berry transition-colors"><u>template</u></a>
             appropriate for the content you're creating.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">When bringing content in from another deck or source, paste using "Keep Text
             Only," then apply the correct template layout.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use the preset theme included in the template.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">If you make any additions or edits to a template, notify the team so the change
             can be applied to any current work.</span>
         </div>
@@ -1424,20 +1556,20 @@
       </div>
 
       <h2 class="section-heading">Content density</h2>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Favor more slides with concise content over fewer slides packed with
             information; split complex topics across multiple slides to prevent cognitive overload.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Aim for no more than six bullets per slide and six words per bullet.</span>
         </div>
       </div>
       <div class="guideline-item" data-deliverables="presentations">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="presentations1">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use sentence fragments on slides and move full explanations into speaker
@@ -1450,30 +1582,30 @@
       </div>
 
       <h2 class="section-heading">Speaker notes</h2>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Include speaker notes on every instructional slide.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Do not repeat what is already on the slide; notes should expand, contextualize,
             or explain the content.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use speaker notes to explain why the slide content matters, not just what it
             is.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Do not write speaker notes as a script; write flexible talking points.</span>
         </div>
       </div>
-      <div class="guideline-item w-full text-left bg-gray-50 mb-10" data-deliverables="presentations">
-        <div class="p-5">
+      <div class="guideline-item w-full text-left bg-gray-50 mb-10 rounded-lg" data-deliverables="presentations">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Write speaker notes with both instructors and learners in mind. Notes should be
             useful whether someone is teaching or self-reviewing.</span>
         </div>
@@ -1491,7 +1623,7 @@
       <h2 class="section-heading">Callouts</h2>
       <div class="guideline-item" data-deliverables="general-content presentations solution-guide screenshot">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="screenshots1">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use a rectangle callout with a solid outline in Orange (#F76923), no fill,
@@ -1509,7 +1641,7 @@
             class="material-symbols-outlined text-gray-600 hover:text-pega-berry transition text-[18px] cursor-help">info</span>
         </span>
       </h2>
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide screenshot">
         <div class="text-pega-pearl mb-6">Focus on the relevant area. Remove browser UI, taskbars, and extra whitespace,
           but keep enough surrounding interface so learners can find the field or button.</div>
@@ -1540,7 +1672,7 @@
       </div>
 
       <h2 class="section-heading">Sensitive data</h2>
-      <div class="guideline-item w-full text-left bg-gray-50 px-5 mb-4"
+      <div class="guideline-item w-full text-left bg-gray-50 px-5 pt-5 pb-6 rounded-lg"
         data-deliverables="general-content presentations solution-guide screenshot">
         <div class="text-pega-pearl mb-6">Protect sensitive information. Redact or use mock data for any personally
           identifiable information (PII) or confidential business data.</div>
@@ -1573,7 +1705,7 @@
       <h2 class="section-heading">Simplified user interface (SUI)</h2>
       <div class="guideline-item" data-deliverables="general-content presentations solution-guide screenshot">
           <button type="button"
-            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10"
+            class="principle-card dynamic-accordion w-full text-left bg-gray-50 mb-10 rounded-lg"
             aria-expanded="false" data-example="screenshots2">
             <div class="flex justify-between items-center p-5">
               <span class="text-pega-pearl">Use Snagit's Simplify tool to remove unnecessary labels, icons, and buttons from
@@ -1595,21 +1727,21 @@
       </div>
 
       <h2 class="section-heading">Writing steps</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
         <div class="p-5">
           <span class="text-pega-pearl">Use numbered steps for sequential tasks and bullet points for non-sequential
             information.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Capitalize the first word in each step and end the step with the appropriate end
             punctuation.</span>
         </div>
       </div>
 
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps1">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Bold interface elements; avoid using all uppercase unless there is an explicit
@@ -1620,7 +1752,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps2">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">When instructing the learner to enter text, provide exactly how the text must be
@@ -1631,7 +1763,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps3">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use a <span class="inline-code text-sm">monospace</span> font for
@@ -1642,7 +1774,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps4">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Write steps in parallel structure (use the same verb form and the same level of
@@ -1653,7 +1785,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps5">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Orient the learner first, then state the action to take.</span>
@@ -1663,7 +1795,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps6">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">State the expected result when it helps confirm that the step was completed
@@ -1674,7 +1806,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="writingsteps7">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use the right angle bracket (>) to show navigation paths in the UI.</span>
@@ -1695,7 +1827,7 @@
 
       <h2 class="section-heading">Acronyms and abbreviations</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar1">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Spell out acronyms on the first reference, followed by the shortened version in
@@ -1706,7 +1838,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar2">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">When expressing plural acronyms, use a lowercase "s" without an
@@ -1717,7 +1849,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar3">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use your best judgment to determine if the acronym or abbreviation is common
@@ -1730,7 +1862,7 @@
 
       <h2 class="section-heading">Capitalization</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar4">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use sentence case by default; capitalize only proper nouns, Pega-specific terms,
@@ -1741,7 +1873,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar5">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Do not use camel case for UI items or Rule names.</span>
@@ -1751,7 +1883,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar6">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use sentence case for placeholder text and field labels in the UI.</span>
@@ -1763,7 +1895,7 @@
 
       <h2 class="section-heading">Dates and times</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar7">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use the 12-hour format, followed by a capitalized AM or PM.</span>
@@ -1773,7 +1905,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar8">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Write full month names and use four-digit years to avoid date confusion. If a
@@ -1786,7 +1918,7 @@
 
       <h2 class="section-heading">Numbers</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar9">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Spell out numbers from zero through nine; use numerals for numbers 10 and
@@ -1797,7 +1929,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar10">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Spell out ordinal numbers in text.</span>
@@ -1808,14 +1940,14 @@
       </button>
 
       <h2 class="section-heading">Trademarks</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use the full approved Pega trademark name with the correct ™ or ® symbol on
             first reference in each content asset; omit thereafter.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="grammar11">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use trademarked names exactly as listed in the Pega Trademarks Reference
@@ -1837,7 +1969,7 @@
 
       <h2 class="section-heading">Ampersands</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="punctuation1">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Avoid using ampersands (&amp;), except with proper nouns, Pega-specific terms,
@@ -1850,7 +1982,7 @@
 
       <h2 class="section-heading">Commas</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="punctuation2">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use an Oxford comma for a series of three or more items.</span>
@@ -1861,9 +1993,10 @@
       </button>
 
 
+      <h2 class="section-heading">Hyphens</h2>
       <div class="guideline-item" data-deliverables="general-content">
         <button type="button"
-          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
           aria-expanded="false" data-example="punctuation3">
           <div class="flex justify-between items-center p-5">
             <span class="text-pega-pearl">Use an <strong class="font-semibold">em dash (—)</strong> to set off an aside
@@ -1874,10 +2007,10 @@
           <div class="principle-details px-5 pb-5 cursor-default"></div>
         </button>
         <button type="button"
-          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
           aria-expanded="false" data-example="punctuation4">
           <div class="flex justify-between items-center p-5">
-            <span class="text-pega-pearl">Use an <strong class="font-semibold">en dash (–)</strong> without spaces to
+            <span class="text-pega-pearl">Use an <strong class="font-semibold">en dash (–)</strong> with spaces to
               indicate a range of values; think of it like the word <strong
                 class="font-semibold">through</strong>.</span>
             <span
@@ -1886,7 +2019,7 @@
           <div class="principle-details px-5 pb-5 cursor-default"></div>
         </button>
         <button type="button"
-          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
           aria-expanded="false" data-example="punctuation5">
           <div class="flex justify-between items-center p-5">
             <span class="text-pega-pearl">Use a <strong class="font-semibold">hyphen (-)</strong> to represent negative
@@ -1900,7 +2033,7 @@
 
         <h2 class="section-heading">Slashes</h2>
         <button type="button"
-          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+          class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
           aria-expanded="false" data-example="punctuation6">
           <div class="flex justify-between items-center p-5">
             <span class="text-pega-pearl">Avoid "either/or" and "and/or;" use full phrases instead.</span>
@@ -1920,14 +2053,14 @@
       </div>
 
       <h2 class="section-heading">Voice and tone</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Write as you would speak to a knowledgeable colleague; clear and direct, but not
             informal.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice1">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Prefer strong verbs over noun-heavy phrasing.</span>
@@ -1936,13 +2069,13 @@
         </div>
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Write in the present tense.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice2">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use active voice. In active voice, the subject performs the action.</span>
@@ -1953,13 +2086,13 @@
       </button>
 
       <h2 class="section-heading">Person and perspective</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use second person ("you") when addressing the learner.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice3">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use imperative mood for procedural steps.</span>
@@ -1970,20 +2103,20 @@
       </button>
 
       <h2 class="section-heading">Inclusive language</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use gender-neutral language to keep examples applicable to all learners.</span>
         </div>
       </div>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Avoid assumptions about culture, ability, or English fluency.</span>
         </div>
       </div>
 
       <h2 class="section-heading">Plain language</h2>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice4">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use familiar words and short, direct sentences.</span>
@@ -1993,7 +2126,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice5">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Avoid filler words, such as simply, basically, just, very, and really.</span>
@@ -2003,7 +2136,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice6">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Avoid jargon, idioms, and informal phrases unless they are defined.</span>
@@ -2012,14 +2145,14 @@
         </div>
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use contractions in explanatory body text for a natural tone, but avoid them in
             step instructions or formal titles.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice7">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use consistent terminology for the same concept.</span>
@@ -2030,14 +2163,14 @@
       </button>
 
       <h2 class="section-heading">Modal verbs</h2>
-      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10">
-        <div class="p-5">
+      <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
+        <div class="px-5 pt-5 pb-9">
           <span class="text-pega-pearl">Use modal verbs precisely and consistently. Each word carries a different level
             of obligation.</span>
         </div>
       </div>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice8">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use <strong>must</strong> for requirements; the learner has no choice.</span>
@@ -2047,7 +2180,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice9">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use <strong>should</strong> for recommendations; the learner is strongly advised
@@ -2058,7 +2191,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice10">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use <strong>can</strong> to describe what the system or learner is capable of
@@ -2069,7 +2202,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice11">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use <strong>may</strong> sparingly and only to describe permission; not
@@ -2080,7 +2213,7 @@
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
       <button type="button"
-        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10"
+        class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
         aria-expanded="false" data-example="styleandvoice12">
         <div class="flex justify-between items-center p-5">
           <span class="text-pega-pearl">Use consistent terminology for the same concept.</span>
@@ -2089,7 +2222,7 @@
         </div>
         <div class="principle-details px-5 pb-5 cursor-default"></div>
       </button>
-      <div class="p-5">
+      <div class="px-5 pt-5 pb-9">
         <span class="text-pega-pearl">Avoid mixing these words interchangeably. Using "should" where "must" is meant
           implies the step is optional. Using "must" where "can" is meant implies there is no choice when there
           is.</span>
@@ -2380,6 +2513,24 @@
             { name: "Gray 66", hex: "#666666", text: "text-white" },
             { name: "Gray 4E", hex: "#4E4E4E", text: "text-white" },
             { name: "Gray 33", hex: "#333333", text: "text-white" },
+          ],
+        },
+        {
+          category: "Primary Gradients",
+          items: [
+            { name: "Navy to Sapphire", hex: "#001F5F to #344A9B", gradient: "linear-gradient(to top, #001F5F, #344A9B)", text: "text-white" },
+            { name: "Navy to Bright Purple", hex: "#001F5F to #828CFF", gradient: "linear-gradient(to top, #001F5F, #828CFF)", text: "text-white" },
+            { name: "Teal to Mint", hex: "#10A5AC to #82CEC7", gradient: "linear-gradient(to top, #10A5AC, #82CEC7)", text: "text-pega-extradark" },
+            { name: "Navy to Teal", hex: "#001F5F to #10A5AC", gradient: "linear-gradient(to top, #001F5F, #10A5AC)", text: "text-white" },
+          ],
+        },
+        {
+          category: "Special Use Case Gradients",
+          items: [
+            { name: "Periwinkle Fade", hex: "30% to 100%", gradient: "linear-gradient(to right, rgba(201, 214, 255, 0.3), #C9D6FF)", text: "text-pega-extradark" },
+            { name: "Berry to Wine", hex: "#AC1361 to #661D34", gradient: "linear-gradient(to right, #AC1361, #661D34)", text: "text-white" },
+            { name: "Navy to Black Pearl", hex: "#001F5F to #0C1935", gradient: "linear-gradient(to right, #001F5F, #0C1935)", text: "text-white" },
+            { name: "Yellow to Orange", hex: "#FFC836 to #F76923", gradient: "linear-gradient(to right, #FFC836, #F76923)", text: "text-white" },
           ],
         },
       ];
@@ -3019,7 +3170,6 @@
           const labelEl = b.querySelector(".nav-label");
           if (!labelEl) return;
           const label = labelEl.textContent.trim();
-          b.setAttribute("title", label);
           b.setAttribute("aria-label", label);
         });
 
@@ -3036,6 +3186,49 @@
           setSidebarCollapsed(localStorage.getItem("sidebarCollapsed") === "1");
         }
       }
+
+      // ════════════════════════ Floating Sidebar Tooltips ════════════════════════ //
+      document.addEventListener("DOMContentLoaded", () => {
+
+        const sidebarTooltip = document.createElement('div');
+        
+        sidebarTooltip.className = 'fixed hidden bg-[#0c1935] text-white text-[0.85rem] font-semibold py-[0.4rem] px-[0.75rem] rounded-md shadow-md z-[9999] pointer-events-none transition-opacity duration-200 opacity-0 whitespace-nowrap font-sans';
+
+        document.body.appendChild(sidebarTooltip);
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+          btn.addEventListener('mouseenter', () => {
+
+            const sidebar = document.getElementById('sidebar');            
+            if (!sidebar.classList.contains('sidebar-collapsed') || window.innerWidth < 768) return;
+            const label = btn.getAttribute('aria-label');
+            if (!label) return;
+
+            sidebarTooltip.textContent = label;
+            sidebarTooltip.classList.remove('hidden');
+            
+            const rect = btn.getBoundingClientRect();            
+            const topPos = rect.top + (rect.height / 2) - (sidebarTooltip.offsetHeight / 2);
+            const leftPos = rect.right + 12; 
+
+            sidebarTooltip.style.top = `${topPos}px`;
+            sidebarTooltip.style.left = `${leftPos}px`;
+
+            requestAnimationFrame(() => {
+              sidebarTooltip.classList.remove('opacity-0');
+            });
+          });
+
+          btn.addEventListener('mouseleave', () => {
+            sidebarTooltip.classList.add('opacity-0');            
+            setTimeout(() => {
+              if (sidebarTooltip.classList.contains('opacity-0')) {
+                sidebarTooltip.classList.add('hidden');
+              }
+            }, 200);
+          });
+        });
+      });
+
 
       // ════════════════════════ Colors ════════════════════════ //
       function renderColors() {
@@ -3062,7 +3255,7 @@
                         aria-label="Copy ${c.name} ${c.hex}">
                         <div
                           class="h-24 rounded-lg shadow-sm flex items-center justify-center relative border border-black/10 transition-transform hover:scale-105 hover:shadow-md"
-                          style="background-color: ${c.hex}">
+                          style="${c.gradient ? `background: ${c.gradient}` : `background-color: ${c.hex}`}">
                           <span class="${c.text} opacity-0 group-hover:opacity-100 font-bold text-xs bg-black/20 px-2 py-1 rounded transition-opacity">
                             COPY
                           </span>
