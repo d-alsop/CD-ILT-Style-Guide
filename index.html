@@ -108,7 +108,7 @@
     #nav-container::-webkit-scrollbar-thumb:hover {
       background: #64748b;
     }
-    
+
     /* Global custom scrollbar for the new container */
     .scrollbar-thin::-webkit-scrollbar {
       width: 6px;
@@ -528,7 +528,7 @@
     </div>
 
     <!--════════════════════════ Navigation ════════════════════════-->
-    
+
     <nav class="flex-1 overflow-y-auto px-2 pb-8" id="nav-container">
       <div class="nav-group-label">Foundations</div>
       <button class="nav-btn active" onclick="navigate('home')">
@@ -862,23 +862,23 @@
         <pre class="text-sm font-mono text-gray-700">
 
 <strong class="font-semibold">SSA 25</strong>
-  │ 
+  │
   ├─<strong class="font-semibold"> 00 Course information</strong>
   │  ├─ Course outline.xlsx
   │  └─ Delivery guide.pptx
   │
   ├─<strong class="font-semibold"> 01 Facilitation resources</strong>
-  │  │ 
+  │  │
   │  ├─ <strong class="font-semibold"> 01 Foundations of Pega Platform</strong>
   │  │  ├─ 0101 Introduction to Center-out architecture.pptx
   │  │  └─ 0102 Low-code development and AI-powered design.pptx
-  │  │  
+  │  │
   │  └─ <strong class="font-semibold"> 02 Case design</strong>
   │      ├─ 0201 Case Lifecycle design in Pega Platform.pptx
   │      └─ 0202 Data Model design in Pega Platform.pptx
-  │     
+  │
   └─<strong class="font-semibold"> 02 Learner resources</strong>
-      ├─ Learners guide.pdf                 
+      ├─ Learners guide.pdf
       └─ Solution guide.pdf
           </pre>
       </div>
@@ -1074,10 +1074,10 @@
           <span class="text-pega-pearl">Never enter sensitive, confidential, proprietary, or unreleased information.</span>
         </div>
       </div>
-      
+
       <div class="mb-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          
+
           <div class="bg-green-50 p-6 rounded-xl border border-green-200 shadow-sm flex flex-col h-full">
             <div class="flex items-center gap-3 mb-3 border-b border-green-200 pb-4">
               <span class="material-symbols-outlined text-3xl text-green-600 shrink-0">check_circle</span>
@@ -1106,7 +1106,7 @@
               </li>
             </ul>
           </div>
-      
+
           <div class="bg-red-50 p-6 rounded-xl border border-red-200 shadow-sm flex flex-col h-full">
             <div class="flex items-center gap-3 mb-6 border-b border-red-200 pb-4">
               <span class="material-symbols-outlined text-3xl text-red-600 shrink-0">cancel</span>
@@ -1135,7 +1135,7 @@
               </li>
             </ul>
           </div>
-      
+
         </div>
       </div>
 
@@ -1162,7 +1162,7 @@
           <span class="text-pega-pearl">Use prompts to guide drafts and refinements, not final decisions.</span>
         </div>
       </div>
-      
+
       <h2 class="section-heading">Review AI output</h2>
       <div class="w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg">
         <div class="px-5 pt-5 pb-9">
@@ -1260,12 +1260,12 @@
         <p class="eyebrow font-bold text-gray-400 mb-1">Colors</p>
         <div class="border-t-2 border-gray-300 w-full mb-6"></div>
       </div>
-    
+
       <h2 class="section-heading">Palettes</h2>
       <p class="text-sm text-gray-600 mb-6">
         Click any color swatch to copy its hex code.
       </p>
-    
+
       <div id="color-grids"></div>
     </section>
 
@@ -1993,7 +1993,7 @@
       </button>
 
 
-      <h2 class="section-heading">Hyphens</h2>
+      <h2 class="section-heading">Hyphens and dashes</h2>
       <div class="guideline-item" data-deliverables="general-content">
         <button type="button"
           class="principle-card dynamic-accordion w-full text-left bg-gray-50 border-t-2 border-gray-200 mb-10 rounded-lg"
@@ -2740,14 +2740,14 @@
           good: "You can edit, add, or delete a Case Type.",
         },
         punctuation3: {
-          title: "en dashes",
-          why: "En dashes signal a range more precisely than a hyphen and are the standard for spans of numbers or dates.",
-          good: ["2020–2022", "Repeat steps 3–5"],
-        },
-        punctuation4: {
           title: "em dashes",
           why: "Em dashes add emphasis or set off a clause without the formality of parentheses or the ambiguity of commas.",
           good: "To indicate a break in the flow of a sentence—or an interruption—use an em dash.",
+        },
+        punctuation4: {
+          title: "en dashes",
+          why: "En dashes signal a range more precisely than a hyphen and are the standard for spans of numbers or dates.",
+          good: ["2020–2022", "Repeat steps 3–5"],
         },
         punctuation5: {
           title: "Hyphens",
@@ -3072,7 +3072,7 @@
         `
             : ``
           }
-      
+
         ${badItems.length
             ? `
           <div class="${onlyBad ? "md:col-span-2" : ""} rounded-lg border border-red-200 bg-red-50 p-3">
@@ -3092,7 +3092,7 @@
              `
             : ``
           }
-              
+
         ${goodItems.length
             ? `
           <div class="${onlyGood ? "md:col-span-2" : ""} rounded-lg border border-green-200 bg-green-50 p-3">
@@ -3191,24 +3191,24 @@
       document.addEventListener("DOMContentLoaded", () => {
 
         const sidebarTooltip = document.createElement('div');
-        
+
         sidebarTooltip.className = 'fixed hidden bg-[#0c1935] text-white text-[0.85rem] font-semibold py-[0.4rem] px-[0.75rem] rounded-md shadow-md z-[9999] pointer-events-none transition-opacity duration-200 opacity-0 whitespace-nowrap font-sans';
 
         document.body.appendChild(sidebarTooltip);
         document.querySelectorAll('.nav-btn').forEach(btn => {
           btn.addEventListener('mouseenter', () => {
 
-            const sidebar = document.getElementById('sidebar');            
+            const sidebar = document.getElementById('sidebar');
             if (!sidebar.classList.contains('sidebar-collapsed') || window.innerWidth < 768) return;
             const label = btn.getAttribute('aria-label');
             if (!label) return;
 
             sidebarTooltip.textContent = label;
             sidebarTooltip.classList.remove('hidden');
-            
-            const rect = btn.getBoundingClientRect();            
+
+            const rect = btn.getBoundingClientRect();
             const topPos = rect.top + (rect.height / 2) - (sidebarTooltip.offsetHeight / 2);
-            const leftPos = rect.right + 12; 
+            const leftPos = rect.right + 12;
 
             sidebarTooltip.style.top = `${topPos}px`;
             sidebarTooltip.style.left = `${leftPos}px`;
@@ -3219,7 +3219,7 @@
           });
 
           btn.addEventListener('mouseleave', () => {
-            sidebarTooltip.classList.add('opacity-0');            
+            sidebarTooltip.classList.add('opacity-0');
             setTimeout(() => {
               if (sidebarTooltip.classList.contains('opacity-0')) {
                 sidebarTooltip.classList.add('hidden');
@@ -3276,7 +3276,7 @@
         });
       }
 
-         
+
       // ════════════════════════ Lists references ════════════════════════ //
       function renderLists() {
         const headList = document.getElementById("headline-terms-list");
@@ -3339,7 +3339,7 @@
           // Clone to remove any previous event listeners, preventing multiple toggles
           const newCard = card.cloneNode(true);
           card.parentNode.replaceChild(newCard, card);
-          
+
           newCard.addEventListener("click", () => {
             const isOpen = newCard.getAttribute("aria-expanded") === "true";
             newCard.setAttribute("aria-expanded", isOpen ? "false" : "true");
@@ -3547,13 +3547,13 @@
           <span class="material-symbols-outlined text-base leading-none text-gray-700 mt-0.5">info</span>
           <p class="text-sm text-gray-600">${ex.why}</p>
         </div>` : ''}
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2 items-stretch">
           ${bad.length ? `
           <div class="bg-red-50 border border-red-100 p-4 rounded-lg flex flex-col gap-3 w-full h-full">
             ${renderItems(bad, 'bad')}
           </div>` : ''}
-          
+
           ${good.length ? `
           <div class="bg-green-50 border border-green-100 p-4 rounded-lg flex flex-col gap-3 w-full h-full">
             ${renderItems(good, 'good')}
@@ -3605,7 +3605,7 @@
             actionsWrap.classList.add("hidden");
             actionsWrap.classList.remove("flex");
           }
-          
+
           resultsContainer.innerHTML = "";
           resultsContainer.classList.add("hidden");
 
@@ -3627,29 +3627,29 @@
 
           resultsContainer.innerHTML = "";
           resultsContainer.classList.remove("hidden");
-          
+
           let totalMatches = 0;
           const allCards = document.querySelectorAll(".guideline-item");
-          
+
           allCards.forEach(card => {
-             if (resultsContainer.contains(card)) return; 
-             
+             if (resultsContainer.contains(card)) return;
+
              const raw = (card.getAttribute("data-deliverables") || "").trim();
              const tags = raw ? raw.split(/\s+/) : [];
-             
+
              if (tags.includes(deliverable)) {
                 const clone = card.cloneNode(true);
                 clone.classList.remove("mb-10", "bg-gray-50");
                 clone.classList.add("bg-white", "rounded-xl", "border", "border-gray-200", "shadow-sm", "p-6", "mb-4");
                 clone.style.display = "block";
-                
+
                 clone.querySelectorAll('.principle-card').forEach(c => c.setAttribute("aria-expanded", "false"));
-                
+
                 resultsContainer.appendChild(clone);
                 totalMatches++;
              }
           });
-          
+
           if (totalMatches === 0) {
              resultsContainer.innerHTML = `<p class="text-gray-500 italic text-center py-6">No matching guidelines found.</p>`;
           }
